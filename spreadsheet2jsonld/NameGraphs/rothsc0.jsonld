@@ -1,0 +1,7 @@
+{ 
+ "@context": "http://schema.org", 
+ "id": "http://catalogdata.library.illinois.edu/lod/entities/Persons/kp/rothsc0",
+ "sameAs": ["https://en.wikipedia.org/wiki/Rothschild_family", "https://fr.wikipedia.org/wiki/Famille_Rothschild"],
+ "type": "Organization",
+ "name": "Rothschild, famille"
+}

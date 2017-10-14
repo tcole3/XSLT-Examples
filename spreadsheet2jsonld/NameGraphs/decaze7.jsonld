@@ -1,0 +1,13 @@
+{ 
+ "@context": "http://schema.org", 
+ "id": "http://catalogdata.library.illinois.edu/lod/entities/Persons/kp/decaze7",
+ "type": "Person",
+ "name": "Decazes, Mlle Marguerite",
+ "familyName": "Decazes",
+ "givenName": "Marguerite",
+ "birthDate": "1890",
+ "gender": "Female",
+ "description": "fille du duc Decazes",
+ "parent": ["http://catalogdata.library.illinois.edu/lod/entities/Persons/kp/decaze1", "http://catalogdata.library.illinois.edu/lod/entities/Persons/kp/decaze2"],
+ "sibling": "http://catalogdata.library.illinois.edu/lod/entities/Persons/kp/decaze6"
+}

@@ -1,0 +1,13 @@
+{ 
+ "@context": "http://schema.org", 
+ "id": "http://catalogdata.library.illinois.edu/lod/entities/Persons/kp/adam8",
+ "sameAs": ["http://viaf.org/viaf/12370239", "https://en.wikipedia.org/wiki/Adolphe_Adam", "https://fr.wikipedia.org/wiki/Adolphe_Adam"],
+ "type": "Person",
+ "name": "Adam, Adolphe",
+ "familyName": "Adam",
+ "givenName": "Adolphe",
+ "birthDate": "1803",
+ "deathDate": "1856",
+ "gender": "Male",
+ "description": "compositeur"
+}

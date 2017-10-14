@@ -1,0 +1,13 @@
+{ 
+ "@context": "http://schema.org", 
+ "id": "http://catalogdata.library.illinois.edu/lod/entities/Persons/kp/halevy4",
+ "sameAs": ["http://viaf.org/viaf/66532548", "https://en.wikipedia.org/wiki/Élie_Halévy", "https://fr.wikipedia.org/wiki/Élie_Halévy"],
+ "type": "Person",
+ "name": "Halévy, Elie",
+ "familyName": "Halévy",
+ "givenName": "Elie",
+ "birthDate": "1870",
+ "deathDate": "1937",
+ "gender": "Male",
+ "description": "frère de Daniel Halévy"
+}

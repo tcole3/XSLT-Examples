@@ -1,0 +1,12 @@
+{ 
+ "@context": "http://schema.org", 
+ "id": "http://catalogdata.library.illinois.edu/lod/entities/Persons/kp/rothsc21",
+ "type": "Person",
+ "name": "Rothschild, baronne Gustave de",
+ "familyName": "Rothschild",
+ "givenName": "Gustave de",
+ "birthDate": "1840",
+ "deathDate": "1912",
+ "gender": "Male",
+ "description": "mère de Robert de Rothschild"
+}

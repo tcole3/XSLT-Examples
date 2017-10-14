@@ -1,0 +1,12 @@
+{ 
+ "@context": "http://schema.org", 
+ "id": "http://catalogdata.library.illinois.edu/lod/entities/Persons/kp/beauni3",
+ "type": "Person",
+ "name": "Beaunier, Raymond",
+ "familyName": "Beaunier",
+ "givenName": "Raymond",
+ "gender": "Male",
+ "description": "frère d'André Beaunier",
+ "parent": "http://catalogdata.library.illinois.edu/lod/entities/Persons/kp/beauni2",
+ "sibling": ["http://catalogdata.library.illinois.edu/lod/entities/Persons/kp/beauni1", "http://catalogdata.library.illinois.edu/lod/entities/Persons/kp/beauni4"]
+}

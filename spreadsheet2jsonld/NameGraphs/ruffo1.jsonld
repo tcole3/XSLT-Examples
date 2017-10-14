@@ -1,0 +1,13 @@
+{ 
+ "@context": "http://schema.org", 
+ "id": "http://catalogdata.library.illinois.edu/lod/entities/Persons/kp/ruffo1",
+ "sameAs": ["http://viaf.org/viaf/100214599", "https://en.wikipedia.org/wiki/Titta_Ruffo", "https://fr.wikipedia.org/wiki/Titta_Ruffo"],
+ "type": "Person",
+ "name": "Ruffo, Titta",
+ "familyName": "Ruffo",
+ "givenName": "Titta",
+ "birthDate": "1878",
+ "deathDate": "1953",
+ "gender": "Male",
+ "description": "chanteur baryton italien"
+}

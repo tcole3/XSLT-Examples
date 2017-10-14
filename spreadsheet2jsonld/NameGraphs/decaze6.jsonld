@@ -1,0 +1,13 @@
+{ 
+ "@context": "http://schema.org", 
+ "id": "http://catalogdata.library.illinois.edu/lod/entities/Persons/kp/decaze6",
+ "type": "Person",
+ "name": "Decazes, Louis marquis",
+ "familyName": "Decazes",
+ "givenName": "Louis ",
+ "birthDate": "1889",
+ "gender": "Male",
+ "description": "fils aîné du duc Decazes",
+ "parent": ["http://catalogdata.library.illinois.edu/lod/entities/Persons/kp/decaze1", "http://catalogdata.library.illinois.edu/lod/entities/Persons/kp/decaze2"],
+ "sibling": "http://catalogdata.library.illinois.edu/lod/entities/Persons/kp/decaze7"
+}

@@ -1,0 +1,439 @@
+<?xml version="1.0"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:html="http://www.w3.org/TR/REC-html40">
+ <DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+  <Author>Cole, Timothy W</Author>
+  <LastAuthor>Cole, Timothy W</LastAuthor>
+  <Created>2017-08-13T20:44:02Z</Created>
+  <LastSaved>2017-08-13T22:01:54Z</LastSaved>
+  <Version>16.00</Version>
+ </DocumentProperties>
+ <OfficeDocumentSettings xmlns="urn:schemas-microsoft-com:office:office">
+  <AllowPNG/>
+ </OfficeDocumentSettings>
+ <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
+  <WindowHeight>11340</WindowHeight>
+  <WindowWidth>23775</WindowWidth>
+  <WindowTopX>0</WindowTopX>
+  <WindowTopY>0</WindowTopY>
+  <ProtectStructure>False</ProtectStructure>
+  <ProtectWindows>False</ProtectWindows>
+ </ExcelWorkbook>
+ <Styles>
+  <Style ss:ID="Default" ss:Name="Normal">
+   <Alignment ss:Vertical="Bottom"/>
+   <Borders/>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11" ss:Color="#000000"/>
+   <Interior/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s62">
+   <Alignment ss:Vertical="Bottom" ss:WrapText="1"/>
+  </Style>
+  <Style ss:ID="s63">
+   <Alignment ss:Vertical="Bottom" ss:WrapText="1"/>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11" ss:Color="#000000"
+    ss:Bold="1"/>
+  </Style>
+  <Style ss:ID="s64">
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11" ss:Color="#000000"
+    ss:Bold="1"/>
+  </Style>
+ </Styles>
+ <Names>
+  <NamedRange ss:Name="birthDate" ss:RefersTo="=KolbProustNameData!C6"/>
+  <NamedRange ss:Name="children" ss:RefersTo="=KolbProustNameData!C10"/>
+  <NamedRange ss:Name="deathDate" ss:RefersTo="=KolbProustNameData!C7"/>
+  <NamedRange ss:Name="description" ss:RefersTo="=KolbProustNameData!C9"/>
+  <NamedRange ss:Name="EN_WIKIPEDIA" ss:RefersTo="=KolbProustNameData!C14"/>
+  <NamedRange ss:Name="familyName" ss:RefersTo="=KolbProustNameData!C4"/>
+  <NamedRange ss:Name="FR_WIKIPEDIA" ss:RefersTo="=KolbProustNameData!C15"/>
+  <NamedRange ss:Name="gender" ss:RefersTo="=KolbProustNameData!C8"/>
+  <NamedRange ss:Name="givenName" ss:RefersTo="=KolbProustNameData!C5"/>
+  <NamedRange ss:Name="KeyCode" ss:RefersTo="=KolbProustNameData!C3"/>
+  <NamedRange ss:Name="name" ss:RefersTo="=KolbProustNameData!C2"/>
+  <NamedRange ss:Name="parent" ss:RefersTo="=KolbProustNameData!C11"/>
+  <NamedRange ss:Name="sibling" ss:RefersTo="=KolbProustNameData!C12"/>
+  <NamedRange ss:Name="VIAF_Link" ss:RefersTo="=KolbProustNameData!C13"/>
+ </Names>
+ <Worksheet ss:Name="KolbProustNameData">
+  <Table ss:ExpandedColumnCount="15" ss:ExpandedRowCount="22" x:FullColumns="1"
+   x:FullRows="1" ss:DefaultRowHeight="15">
+   <Column ss:Index="2" ss:AutoFitWidth="0" ss:Width="159"/>
+   <Column ss:Index="4" ss:AutoFitWidth="0" ss:Width="66.75"/>
+   <Column ss:AutoFitWidth="0" ss:Width="61.5"/>
+   <Column ss:AutoFitWidth="0" ss:Width="51.75"/>
+   <Column ss:AutoFitWidth="0" ss:Width="57"/>
+   <Column ss:Index="9" ss:StyleID="s62" ss:AutoFitWidth="0" ss:Width="117"/>
+   <Column ss:StyleID="s62" ss:AutoFitWidth="0" ss:Width="48.75"/>
+   <Column ss:StyleID="s62" ss:AutoFitWidth="0" ss:Width="56.25"/>
+   <Column ss:StyleID="s62" ss:AutoFitWidth="0" ss:Width="54"/>
+   <Column ss:AutoFitWidth="0" ss:Width="132" ss:Span="1"/>
+   <Column ss:Index="15" ss:AutoFitWidth="0" ss:Width="121.5"/>
+   <Row ss:AutoFitHeight="0" ss:Height="21.9375" ss:StyleID="s64">
+    <Cell><Data ss:Type="String">ID</Data></Cell>
+    <Cell><Data ss:Type="String">name</Data><NamedCell ss:Name="name"/></Cell>
+    <Cell><Data ss:Type="String">KeyCode</Data><NamedCell ss:Name="KeyCode"/></Cell>
+    <Cell><Data ss:Type="String">familyName</Data><NamedCell ss:Name="familyName"/></Cell>
+    <Cell><Data ss:Type="String">givenName</Data><NamedCell ss:Name="givenName"/></Cell>
+    <Cell><Data ss:Type="String">birthDate</Data><NamedCell ss:Name="birthDate"/></Cell>
+    <Cell><Data ss:Type="String">deathDate</Data><NamedCell ss:Name="deathDate"/></Cell>
+    <Cell><Data ss:Type="String">gender</Data><NamedCell ss:Name="gender"/></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">description</Data><NamedCell
+      ss:Name="description"/></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">children</Data><NamedCell
+      ss:Name="children"/></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">parent</Data><NamedCell
+      ss:Name="parent"/></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">sibling</Data><NamedCell
+      ss:Name="sibling"/></Cell>
+    <Cell><Data ss:Type="String">VIAF_Link</Data><NamedCell ss:Name="VIAF_Link"/></Cell>
+    <Cell><Data ss:Type="String">EN_WIKIPEDIA</Data><NamedCell
+      ss:Name="EN_WIKIPEDIA"/></Cell>
+    <Cell><Data ss:Type="String">FR_WIKIPEDIA</Data><NamedCell
+      ss:Name="FR_WIKIPEDIA"/></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="21.9375">
+    <Cell><Data ss:Type="Number">56</Data></Cell>
+    <Cell><Data ss:Type="String">Adam, Adolphe</Data><NamedCell ss:Name="name"/></Cell>
+    <Cell><Data ss:Type="String">adam8</Data><NamedCell ss:Name="KeyCode"/></Cell>
+    <Cell><Data ss:Type="String">Adam</Data><NamedCell ss:Name="familyName"/></Cell>
+    <Cell><Data ss:Type="String">Adolphe</Data><NamedCell ss:Name="givenName"/></Cell>
+    <Cell><Data ss:Type="Number">1803</Data><NamedCell ss:Name="birthDate"/></Cell>
+    <Cell><Data ss:Type="Number">1856</Data><NamedCell ss:Name="deathDate"/></Cell>
+    <Cell><Data ss:Type="String">Male</Data><NamedCell ss:Name="gender"/></Cell>
+    <Cell><Data ss:Type="String">compositeur</Data><NamedCell ss:Name="description"/></Cell>
+    <Cell ss:Index="13"><Data ss:Type="String">http://viaf.org/viaf/12370239</Data><NamedCell
+      ss:Name="VIAF_Link"/></Cell>
+    <Cell><Data ss:Type="String">https://en.wikipedia.org/wiki/Adolphe_Adam</Data><NamedCell
+      ss:Name="EN_WIKIPEDIA"/></Cell>
+    <Cell><Data ss:Type="String">https://fr.wikipedia.org/wiki/Adolphe_Adam</Data><NamedCell
+      ss:Name="FR_WIKIPEDIA"/></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="21.9375">
+    <Cell><Data ss:Type="Number">57</Data></Cell>
+    <Cell><Data ss:Type="String">Adam, Antoine</Data><NamedCell ss:Name="name"/></Cell>
+    <Cell><Data ss:Type="String">adam7</Data><NamedCell ss:Name="KeyCode"/></Cell>
+    <Cell><Data ss:Type="String">Adam</Data><NamedCell ss:Name="familyName"/></Cell>
+    <Cell><Data ss:Type="String">Antoine</Data><NamedCell ss:Name="givenName"/></Cell>
+    <Cell ss:Index="8"><Data ss:Type="String">Male</Data><NamedCell
+      ss:Name="gender"/></Cell>
+    <Cell ss:Index="13"><Data ss:Type="String">http://viaf.org/viaf/29542201</Data><NamedCell
+      ss:Name="VIAF_Link"/></Cell>
+    <Cell><Data ss:Type="String"> </Data><NamedCell ss:Name="EN_WIKIPEDIA"/></Cell>
+    <Cell><Data ss:Type="String">https://fr.wikipedia.org/wiki/Antoine_Adam</Data><NamedCell
+      ss:Name="FR_WIKIPEDIA"/></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="21.9375">
+    <Cell><Data ss:Type="Number">58</Data></Cell>
+    <Cell><Data ss:Type="String">Adam, Edmond</Data><NamedCell ss:Name="name"/></Cell>
+    <Cell><Data ss:Type="String">adam9</Data><NamedCell ss:Name="KeyCode"/></Cell>
+    <Cell><Data ss:Type="String">Adam</Data><NamedCell ss:Name="familyName"/></Cell>
+    <Cell><Data ss:Type="String">Edmond</Data><NamedCell ss:Name="givenName"/></Cell>
+    <Cell><Data ss:Type="Number">1816</Data><NamedCell ss:Name="birthDate"/></Cell>
+    <Cell><Data ss:Type="Number">1877</Data><NamedCell ss:Name="deathDate"/></Cell>
+    <Cell><Data ss:Type="String">Male</Data><NamedCell ss:Name="gender"/></Cell>
+    <Cell><Data ss:Type="String">banquier; politicien</Data><NamedCell
+      ss:Name="description"/></Cell>
+    <Cell ss:Index="13"><Data ss:Type="String">http://viaf.org/viaf/36912154</Data><NamedCell
+      ss:Name="VIAF_Link"/></Cell>
+    <Cell><Data ss:Type="String"> </Data><NamedCell ss:Name="EN_WIKIPEDIA"/></Cell>
+    <Cell><Data ss:Type="String">https://fr.wikipedia.org/wiki/Edmond_Adam</Data><NamedCell
+      ss:Name="FR_WIKIPEDIA"/></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="21.9375">
+    <Cell><Data ss:Type="Number">59</Data></Cell>
+    <Cell><Data ss:Type="String">Adam, famille</Data><NamedCell ss:Name="name"/></Cell>
+    <Cell><Data ss:Type="String">adam0</Data><NamedCell ss:Name="KeyCode"/></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell><Data ss:Type="Number">543</Data></Cell>
+    <Cell><Data ss:Type="String">Beaunier, André</Data><NamedCell ss:Name="name"/></Cell>
+    <Cell><Data ss:Type="String">beauni1</Data><NamedCell ss:Name="KeyCode"/></Cell>
+    <Cell><Data ss:Type="String">Beaunier</Data><NamedCell ss:Name="familyName"/></Cell>
+    <Cell><Data ss:Type="String">André</Data><NamedCell ss:Name="givenName"/></Cell>
+    <Cell><Data ss:Type="Number">1869</Data><NamedCell ss:Name="birthDate"/></Cell>
+    <Cell><Data ss:Type="Number">1925</Data><NamedCell ss:Name="deathDate"/></Cell>
+    <Cell><Data ss:Type="String">Male</Data><NamedCell ss:Name="gender"/></Cell>
+    <Cell><Data ss:Type="String">homme de lettres</Data><NamedCell
+      ss:Name="description"/></Cell>
+    <Cell ss:Index="11"><Data ss:Type="String">beauni2</Data><NamedCell
+      ss:Name="parent"/></Cell>
+    <Cell><Data ss:Type="String">beauni3; beauni4</Data><NamedCell
+      ss:Name="sibling"/></Cell>
+    <Cell><Data ss:Type="String">http://viaf.org/viaf/51685468</Data><NamedCell
+      ss:Name="VIAF_Link"/></Cell>
+    <Cell><Data ss:Type="String">https://en.wikipedia.org/wiki/André_Beaunier</Data><NamedCell
+      ss:Name="EN_WIKIPEDIA"/></Cell>
+    <Cell><Data ss:Type="String">https://fr.wikipedia.org/wiki/André_Beaunier</Data><NamedCell
+      ss:Name="FR_WIKIPEDIA"/></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell><Data ss:Type="Number">544</Data></Cell>
+    <Cell><Data ss:Type="String">Beaunier, Mlle Thérèse</Data><NamedCell
+      ss:Name="name"/></Cell>
+    <Cell><Data ss:Type="String">beauni4</Data><NamedCell ss:Name="KeyCode"/></Cell>
+    <Cell><Data ss:Type="String">Beaunier</Data><NamedCell ss:Name="familyName"/></Cell>
+    <Cell><Data ss:Type="String">Thérèse</Data><NamedCell ss:Name="givenName"/></Cell>
+    <Cell ss:Index="8"><Data ss:Type="String">Female</Data><NamedCell
+      ss:Name="gender"/></Cell>
+    <Cell><Data ss:Type="String">soeur d'André Beaunier</Data><NamedCell
+      ss:Name="description"/></Cell>
+    <Cell ss:Index="11"><Data ss:Type="String">beauni2</Data><NamedCell
+      ss:Name="parent"/></Cell>
+    <Cell><Data ss:Type="String">beauni1; beauni3</Data><NamedCell
+      ss:Name="sibling"/></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell><Data ss:Type="Number">546</Data></Cell>
+    <Cell><Data ss:Type="String">Beaunier, Raymond</Data><NamedCell ss:Name="name"/></Cell>
+    <Cell><Data ss:Type="String">beauni3</Data><NamedCell ss:Name="KeyCode"/></Cell>
+    <Cell><Data ss:Type="String">Beaunier</Data><NamedCell ss:Name="familyName"/></Cell>
+    <Cell><Data ss:Type="String">Raymond</Data><NamedCell ss:Name="givenName"/></Cell>
+    <Cell ss:Index="8"><Data ss:Type="String">Male</Data><NamedCell
+      ss:Name="gender"/></Cell>
+    <Cell><Data ss:Type="String">frère d'André Beaunier</Data><NamedCell
+      ss:Name="description"/></Cell>
+    <Cell ss:Index="11"><Data ss:Type="String">beauni2</Data><NamedCell
+      ss:Name="parent"/></Cell>
+    <Cell><Data ss:Type="String">beauni1; beauni4</Data><NamedCell
+      ss:Name="sibling"/></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell><Data ss:Type="Number">2043</Data></Cell>
+    <Cell><Data ss:Type="String">Decazes, Louis marquis</Data><NamedCell
+      ss:Name="name"/></Cell>
+    <Cell><Data ss:Type="String">decaze6</Data><NamedCell ss:Name="KeyCode"/></Cell>
+    <Cell><Data ss:Type="String">Decazes</Data><NamedCell ss:Name="familyName"/></Cell>
+    <Cell><Data ss:Type="String">Louis </Data><NamedCell ss:Name="givenName"/></Cell>
+    <Cell><Data ss:Type="Number">1889</Data><NamedCell ss:Name="birthDate"/></Cell>
+    <Cell ss:Index="8"><Data ss:Type="String">Male</Data><NamedCell
+      ss:Name="gender"/></Cell>
+    <Cell><Data ss:Type="String">fils aîné du duc Decazes</Data><NamedCell
+      ss:Name="description"/></Cell>
+    <Cell ss:Index="11"><Data ss:Type="String">decaze1; decaze2</Data><NamedCell
+      ss:Name="parent"/></Cell>
+    <Cell><Data ss:Type="String">decaze7</Data><NamedCell ss:Name="sibling"/></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell><Data ss:Type="Number">2044</Data></Cell>
+    <Cell><Data ss:Type="String">Decazes, Mlle Marguerite</Data><NamedCell
+      ss:Name="name"/></Cell>
+    <Cell><Data ss:Type="String">decaze7</Data><NamedCell ss:Name="KeyCode"/></Cell>
+    <Cell><Data ss:Type="String">Decazes</Data><NamedCell ss:Name="familyName"/></Cell>
+    <Cell><Data ss:Type="String">Marguerite</Data><NamedCell ss:Name="givenName"/></Cell>
+    <Cell><Data ss:Type="Number">1890</Data><NamedCell ss:Name="birthDate"/></Cell>
+    <Cell ss:Index="8"><Data ss:Type="String">Female</Data><NamedCell
+      ss:Name="gender"/></Cell>
+    <Cell><Data ss:Type="String">fille du duc Decazes</Data><NamedCell
+      ss:Name="description"/></Cell>
+    <Cell ss:Index="11"><Data ss:Type="String">decaze1; decaze2</Data><NamedCell
+      ss:Name="parent"/></Cell>
+    <Cell><Data ss:Type="String">decaze6</Data><NamedCell ss:Name="sibling"/></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="45">
+    <Cell><Data ss:Type="Number">3379</Data></Cell>
+    <Cell><Data ss:Type="String">Hahn, Carlos</Data><NamedCell ss:Name="name"/></Cell>
+    <Cell><Data ss:Type="String">hahn2</Data><NamedCell ss:Name="KeyCode"/></Cell>
+    <Cell><Data ss:Type="String">Hahn</Data><NamedCell ss:Name="familyName"/></Cell>
+    <Cell><Data ss:Type="String">Carlos</Data><NamedCell ss:Name="givenName"/></Cell>
+    <Cell><Data ss:Type="Number">1822</Data><NamedCell ss:Name="birthDate"/></Cell>
+    <Cell><Data ss:Type="Number">1897</Data><NamedCell ss:Name="deathDate"/></Cell>
+    <Cell><Data ss:Type="String">Male</Data><NamedCell ss:Name="gender"/></Cell>
+    <Cell><Data ss:Type="String">père de Reynaldo Hahn</Data><NamedCell
+      ss:Name="description"/></Cell>
+    <Cell><Data ss:Type="String">hahn1; hahn5; semina4</Data><NamedCell
+      ss:Name="children"/></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell><Data ss:Type="Number">3381</Data></Cell>
+    <Cell><Data ss:Type="String">Hahn, Elisa ou Eliza</Data><NamedCell
+      ss:Name="name"/></Cell>
+    <Cell><Data ss:Type="String">hahn5</Data><NamedCell ss:Name="KeyCode"/></Cell>
+    <Cell><Data ss:Type="String">Hahn</Data><NamedCell ss:Name="familyName"/></Cell>
+    <Cell><Data ss:Type="String">Elisa </Data><NamedCell ss:Name="givenName"/></Cell>
+    <Cell ss:Index="8"><Data ss:Type="String">Female</Data><NamedCell
+      ss:Name="gender"/></Cell>
+    <Cell><Data ss:Type="String">soeur de Reynaldo Hahn</Data><NamedCell
+      ss:Name="description"/></Cell>
+    <Cell ss:Index="11"><Data ss:Type="String">hahn2; hahn3</Data><NamedCell
+      ss:Name="parent"/></Cell>
+    <Cell><Data ss:Type="String">hahn1; semina4</Data><NamedCell ss:Name="sibling"/></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="21.9375">
+    <Cell><Data ss:Type="Number">3382</Data></Cell>
+    <Cell><Data ss:Type="String">Hahn, famille</Data><NamedCell ss:Name="name"/></Cell>
+    <Cell><Data ss:Type="String">hahn0</Data><NamedCell ss:Name="KeyCode"/></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell><Data ss:Type="Number">3383</Data></Cell>
+    <Cell><Data ss:Type="String">Hahn, Reynaldo</Data><NamedCell ss:Name="name"/></Cell>
+    <Cell><Data ss:Type="String">hahn1</Data><NamedCell ss:Name="KeyCode"/></Cell>
+    <Cell><Data ss:Type="String">Hahn</Data><NamedCell ss:Name="familyName"/></Cell>
+    <Cell><Data ss:Type="String">Reynaldo</Data><NamedCell ss:Name="givenName"/></Cell>
+    <Cell><Data ss:Type="Number">1874</Data><NamedCell ss:Name="birthDate"/></Cell>
+    <Cell><Data ss:Type="Number">1947</Data><NamedCell ss:Name="deathDate"/></Cell>
+    <Cell><Data ss:Type="String">Male</Data><NamedCell ss:Name="gender"/></Cell>
+    <Cell><Data ss:Type="String">compositeur</Data><NamedCell ss:Name="description"/></Cell>
+    <Cell ss:Index="11"><Data ss:Type="String">hahn2; hahn3</Data><NamedCell
+      ss:Name="parent"/></Cell>
+    <Cell><Data ss:Type="String">hahn5; semina4</Data><NamedCell ss:Name="sibling"/></Cell>
+    <Cell><Data ss:Type="String">http://viaf.org/viaf/97880170</Data><NamedCell
+      ss:Name="VIAF_Link"/></Cell>
+    <Cell><Data ss:Type="String">https://en.wikipedia.org/wiki/Reynaldo_Hahn</Data><NamedCell
+      ss:Name="EN_WIKIPEDIA"/></Cell>
+    <Cell><Data ss:Type="String">https://fr.wikipedia.org/wiki/Reynaldo_Hahn</Data><NamedCell
+      ss:Name="FR_WIKIPEDIA"/></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="21.9375">
+    <Cell><Data ss:Type="Number">3384</Data></Cell>
+    <Cell><Data ss:Type="String">Halévy, Daniel</Data><NamedCell ss:Name="name"/></Cell>
+    <Cell><Data ss:Type="String">halevy1</Data><NamedCell ss:Name="KeyCode"/></Cell>
+    <Cell><Data ss:Type="String">Halévy</Data><NamedCell ss:Name="familyName"/></Cell>
+    <Cell><Data ss:Type="String">Daniel</Data><NamedCell ss:Name="givenName"/></Cell>
+    <Cell><Data ss:Type="Number">1872</Data><NamedCell ss:Name="birthDate"/></Cell>
+    <Cell><Data ss:Type="Number">1962</Data><NamedCell ss:Name="deathDate"/></Cell>
+    <Cell><Data ss:Type="String">Male</Data><NamedCell ss:Name="gender"/></Cell>
+    <Cell ss:Index="13"><Data ss:Type="String">http://viaf.org/viaf/14771013</Data><NamedCell
+      ss:Name="VIAF_Link"/></Cell>
+    <Cell><Data ss:Type="String">https://en.wikipedia.org/wiki/Daniel_Halévy</Data><NamedCell
+      ss:Name="EN_WIKIPEDIA"/></Cell>
+    <Cell><Data ss:Type="String">https://fr.wikipedia.org/wiki/Daniel_Halévy</Data><NamedCell
+      ss:Name="FR_WIKIPEDIA"/></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="21.9375">
+    <Cell><Data ss:Type="Number">3385</Data></Cell>
+    <Cell><Data ss:Type="String">Halévy, Elie</Data><NamedCell ss:Name="name"/></Cell>
+    <Cell><Data ss:Type="String">halevy4</Data><NamedCell ss:Name="KeyCode"/></Cell>
+    <Cell><Data ss:Type="String">Halévy</Data><NamedCell ss:Name="familyName"/></Cell>
+    <Cell><Data ss:Type="String">Elie</Data><NamedCell ss:Name="givenName"/></Cell>
+    <Cell><Data ss:Type="Number">1870</Data><NamedCell ss:Name="birthDate"/></Cell>
+    <Cell><Data ss:Type="Number">1937</Data><NamedCell ss:Name="deathDate"/></Cell>
+    <Cell><Data ss:Type="String">Male</Data><NamedCell ss:Name="gender"/></Cell>
+    <Cell><Data ss:Type="String">frère de Daniel Halévy</Data><NamedCell
+      ss:Name="description"/></Cell>
+    <Cell ss:Index="13"><Data ss:Type="String">http://viaf.org/viaf/66532548</Data><NamedCell
+      ss:Name="VIAF_Link"/></Cell>
+    <Cell><Data ss:Type="String">https://en.wikipedia.org/wiki/Élie_Halévy</Data><NamedCell
+      ss:Name="EN_WIKIPEDIA"/></Cell>
+    <Cell><Data ss:Type="String">https://fr.wikipedia.org/wiki/Élie_Halévy</Data><NamedCell
+      ss:Name="FR_WIKIPEDIA"/></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell><Data ss:Type="Number">6060</Data></Cell>
+    <Cell><Data ss:Type="String">Rothschild, baronne Gustave de</Data><NamedCell
+      ss:Name="name"/></Cell>
+    <Cell><Data ss:Type="String">rothsc21</Data><NamedCell ss:Name="KeyCode"/></Cell>
+    <Cell><Data ss:Type="String">Rothschild</Data><NamedCell ss:Name="familyName"/></Cell>
+    <Cell><Data ss:Type="String">Gustave de</Data><NamedCell ss:Name="givenName"/></Cell>
+    <Cell><Data ss:Type="Number">1840</Data><NamedCell ss:Name="birthDate"/></Cell>
+    <Cell><Data ss:Type="Number">1912</Data><NamedCell ss:Name="deathDate"/></Cell>
+    <Cell><Data ss:Type="String">Male</Data><NamedCell ss:Name="gender"/></Cell>
+    <Cell><Data ss:Type="String">mère de Robert de Rothschild</Data><NamedCell
+      ss:Name="description"/></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="21.9375">
+    <Cell><Data ss:Type="Number">6066</Data></Cell>
+    <Cell><Data ss:Type="String">Rothschild, famille</Data><NamedCell
+      ss:Name="name"/></Cell>
+    <Cell><Data ss:Type="String">rothsc0</Data><NamedCell ss:Name="KeyCode"/></Cell>
+    <Cell ss:Index="14"><Data ss:Type="String">https://en.wikipedia.org/wiki/Rothschild_family</Data><NamedCell
+      ss:Name="EN_WIKIPEDIA"/></Cell>
+    <Cell><Data ss:Type="String">https://fr.wikipedia.org/wiki/Famille_Rothschild</Data><NamedCell
+      ss:Name="FR_WIKIPEDIA"/></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="21.9375">
+    <Cell><Data ss:Type="Number">6067</Data></Cell>
+    <Cell><Data ss:Type="String">Rothschild, Henri de</Data><NamedCell
+      ss:Name="name"/></Cell>
+    <Cell><Data ss:Type="String">rothsc2</Data><NamedCell ss:Name="KeyCode"/></Cell>
+    <Cell><Data ss:Type="String">Rothschild</Data><NamedCell ss:Name="familyName"/></Cell>
+    <Cell><Data ss:Type="String">Henri de</Data><NamedCell ss:Name="givenName"/></Cell>
+    <Cell><Data ss:Type="Number">1872</Data><NamedCell ss:Name="birthDate"/></Cell>
+    <Cell><Data ss:Type="Number">1946</Data><NamedCell ss:Name="deathDate"/></Cell>
+    <Cell><Data ss:Type="String">Male</Data><NamedCell ss:Name="gender"/></Cell>
+    <Cell ss:Index="13"><Data ss:Type="String">http://viaf.org/viaf/51728562</Data><NamedCell
+      ss:Name="VIAF_Link"/></Cell>
+    <Cell><Data ss:Type="String">https://en.wikipedia.org/wiki/Henri_de_Rothschild</Data><NamedCell
+      ss:Name="EN_WIKIPEDIA"/></Cell>
+    <Cell><Data ss:Type="String">https://fr.wikipedia.org/wiki/Henri_de_Rothschild</Data><NamedCell
+      ss:Name="FR_WIKIPEDIA"/></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell><Data ss:Type="Number">6173</Data></Cell>
+    <Cell><Data ss:Type="String">Rubinstein, Arthur</Data><NamedCell ss:Name="name"/></Cell>
+    <Cell><Data ss:Type="String">rubins1</Data><NamedCell ss:Name="KeyCode"/></Cell>
+    <Cell><Data ss:Type="String">Rubinstein</Data><NamedCell ss:Name="familyName"/></Cell>
+    <Cell><Data ss:Type="String">Arthur</Data><NamedCell ss:Name="givenName"/></Cell>
+    <Cell><Data ss:Type="Number">1887</Data><NamedCell ss:Name="birthDate"/></Cell>
+    <Cell><Data ss:Type="Number">1982</Data><NamedCell ss:Name="deathDate"/></Cell>
+    <Cell><Data ss:Type="String">Male</Data><NamedCell ss:Name="gender"/></Cell>
+    <Cell><Data ss:Type="String">pianiste polonais puis américain</Data><NamedCell
+      ss:Name="description"/></Cell>
+    <Cell ss:Index="13"><Data ss:Type="String">http://viaf.org/viaf/73859563</Data><NamedCell
+      ss:Name="VIAF_Link"/></Cell>
+    <Cell><Data ss:Type="String">https://en.wikipedia.org/wiki/Arthur_Rubinstein</Data><NamedCell
+      ss:Name="EN_WIKIPEDIA"/></Cell>
+    <Cell><Data ss:Type="String">https://fr.wikipedia.org/wiki/Arthur_Rubinstein</Data><NamedCell
+      ss:Name="FR_WIKIPEDIA"/></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="21.9375">
+    <Cell><Data ss:Type="Number">6174</Data></Cell>
+    <Cell><Data ss:Type="String">Rubinstein, Ida</Data><NamedCell ss:Name="name"/></Cell>
+    <Cell><Data ss:Type="String">rubins2</Data><NamedCell ss:Name="KeyCode"/></Cell>
+    <Cell><Data ss:Type="String">Rubinstein</Data><NamedCell ss:Name="familyName"/></Cell>
+    <Cell><Data ss:Type="String">Ida</Data><NamedCell ss:Name="givenName"/></Cell>
+    <Cell><Data ss:Type="Number">1885</Data><NamedCell ss:Name="birthDate"/></Cell>
+    <Cell><Data ss:Type="Number">1960</Data><NamedCell ss:Name="deathDate"/></Cell>
+    <Cell><Data ss:Type="String">Female</Data><NamedCell ss:Name="gender"/></Cell>
+    <Cell><Data ss:Type="String">danseuse russe</Data><NamedCell
+      ss:Name="description"/></Cell>
+    <Cell ss:Index="13"><Data ss:Type="String">http://viaf.org/viaf/29614722</Data><NamedCell
+      ss:Name="VIAF_Link"/></Cell>
+    <Cell><Data ss:Type="String">https://en.wikipedia.org/wiki/Ida_Rubinstein</Data><NamedCell
+      ss:Name="EN_WIKIPEDIA"/></Cell>
+    <Cell><Data ss:Type="String">https://fr.wikipedia.org/wiki/Ida_Rubinstein</Data><NamedCell
+      ss:Name="FR_WIKIPEDIA"/></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="21.9375">
+    <Cell><Data ss:Type="Number">6175</Data></Cell>
+    <Cell><Data ss:Type="String">Ruffo, Titta</Data><NamedCell ss:Name="name"/></Cell>
+    <Cell><Data ss:Type="String">ruffo1</Data><NamedCell ss:Name="KeyCode"/></Cell>
+    <Cell><Data ss:Type="String">Ruffo</Data><NamedCell ss:Name="familyName"/></Cell>
+    <Cell><Data ss:Type="String">Titta</Data><NamedCell ss:Name="givenName"/></Cell>
+    <Cell><Data ss:Type="Number">1878</Data><NamedCell ss:Name="birthDate"/></Cell>
+    <Cell><Data ss:Type="Number">1953</Data><NamedCell ss:Name="deathDate"/></Cell>
+    <Cell><Data ss:Type="String">Male</Data><NamedCell ss:Name="gender"/></Cell>
+    <Cell><Data ss:Type="String">chanteur baryton italien</Data><NamedCell
+      ss:Name="description"/></Cell>
+    <Cell ss:Index="13"><Data ss:Type="String">http://viaf.org/viaf/100214599</Data><NamedCell
+      ss:Name="VIAF_Link"/></Cell>
+    <Cell><Data ss:Type="String">https://en.wikipedia.org/wiki/Titta_Ruffo</Data><NamedCell
+      ss:Name="EN_WIKIPEDIA"/></Cell>
+    <Cell><Data ss:Type="String">https://fr.wikipedia.org/wiki/Titta_Ruffo</Data><NamedCell
+      ss:Name="FR_WIKIPEDIA"/></Cell>
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <PageSetup>
+    <Header x:Margin="0.3"/>
+    <Footer x:Margin="0.3"/>
+    <PageMargins x:Bottom="0.75" x:Left="0.7" x:Right="0.7" x:Top="0.75"/>
+   </PageSetup>
+   <Unsynced/>
+   <Print>
+    <ValidPrinterInfo/>
+    <HorizontalResolution>600</HorizontalResolution>
+    <VerticalResolution>600</VerticalResolution>
+   </Print>
+   <Selected/>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+</Workbook>

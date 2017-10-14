@@ -1,0 +1,12 @@
+{ 
+ "@context": "http://schema.org", 
+ "id": "http://catalogdata.library.illinois.edu/lod/entities/Persons/kp/halevy1",
+ "sameAs": ["http://viaf.org/viaf/14771013", "https://en.wikipedia.org/wiki/Daniel_Halévy", "https://fr.wikipedia.org/wiki/Daniel_Halévy"],
+ "type": "Person",
+ "name": "Halévy, Daniel",
+ "familyName": "Halévy",
+ "givenName": "Daniel",
+ "birthDate": "1872",
+ "deathDate": "1962",
+ "gender": "Male"
+}

@@ -1,0 +1,13 @@
+{ 
+ "@context": "http://schema.org", 
+ "id": "http://catalogdata.library.illinois.edu/lod/entities/Persons/kp/rubins2",
+ "sameAs": ["http://viaf.org/viaf/29614722", "https://en.wikipedia.org/wiki/Ida_Rubinstein", "https://fr.wikipedia.org/wiki/Ida_Rubinstein"],
+ "type": "Person",
+ "name": "Rubinstein, Ida",
+ "familyName": "Rubinstein",
+ "givenName": "Ida",
+ "birthDate": "1885",
+ "deathDate": "1960",
+ "gender": "Female",
+ "description": "danseuse russe"
+}

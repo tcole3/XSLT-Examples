@@ -1,0 +1,13 @@
+{ 
+ "@context": "http://schema.org", 
+ "id": "http://catalogdata.library.illinois.edu/lod/entities/Persons/kp/rubins1",
+ "sameAs": ["http://viaf.org/viaf/73859563", "https://en.wikipedia.org/wiki/Arthur_Rubinstein", "https://fr.wikipedia.org/wiki/Arthur_Rubinstein"],
+ "type": "Person",
+ "name": "Rubinstein, Arthur",
+ "familyName": "Rubinstein",
+ "givenName": "Arthur",
+ "birthDate": "1887",
+ "deathDate": "1982",
+ "gender": "Male",
+ "description": "pianiste polonais puis américain"
+}

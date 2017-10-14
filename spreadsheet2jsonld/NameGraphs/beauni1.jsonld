@@ -1,0 +1,15 @@
+{ 
+ "@context": "http://schema.org", 
+ "id": "http://catalogdata.library.illinois.edu/lod/entities/Persons/kp/beauni1",
+ "sameAs": ["http://viaf.org/viaf/51685468", "https://en.wikipedia.org/wiki/André_Beaunier", "https://fr.wikipedia.org/wiki/André_Beaunier"],
+ "type": "Person",
+ "name": "Beaunier, André",
+ "familyName": "Beaunier",
+ "givenName": "André",
+ "birthDate": "1869",
+ "deathDate": "1925",
+ "gender": "Male",
+ "description": "homme de lettres",
+ "parent": "http://catalogdata.library.illinois.edu/lod/entities/Persons/kp/beauni2",
+ "sibling": ["http://catalogdata.library.illinois.edu/lod/entities/Persons/kp/beauni3", "http://catalogdata.library.illinois.edu/lod/entities/Persons/kp/beauni4"]
+}

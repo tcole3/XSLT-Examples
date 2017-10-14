@@ -1,0 +1,13 @@
+{ 
+ "@context": "http://schema.org", 
+ "id": "http://catalogdata.library.illinois.edu/lod/entities/Persons/kp/hahn2",
+ "type": "Person",
+ "name": "Hahn, Carlos",
+ "familyName": "Hahn",
+ "givenName": "Carlos",
+ "birthDate": "1822",
+ "deathDate": "1897",
+ "gender": "Male",
+ "description": "père de Reynaldo Hahn",
+ "children": ["http://catalogdata.library.illinois.edu/lod/entities/Persons/kp/hahn1", "http://catalogdata.library.illinois.edu/lod/entities/Persons/kp/hahn5", "http://catalogdata.library.illinois.edu/lod/entities/Persons/kp/semina4"]
+}

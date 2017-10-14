@@ -1,0 +1,6 @@
+{ 
+ "@context": "http://schema.org", 
+ "id": "http://catalogdata.library.illinois.edu/lod/entities/Persons/kp/adam0",
+ "type": "Organization",
+ "name": "Adam, famille"
+}

@@ -1,0 +1,12 @@
+{ 
+ "@context": "http://schema.org", 
+ "id": "http://catalogdata.library.illinois.edu/lod/entities/Persons/kp/rothsc2",
+ "sameAs": ["http://viaf.org/viaf/51728562", "https://en.wikipedia.org/wiki/Henri_de_Rothschild", "https://fr.wikipedia.org/wiki/Henri_de_Rothschild"],
+ "type": "Person",
+ "name": "Rothschild, Henri de",
+ "familyName": "Rothschild",
+ "givenName": "Henri de",
+ "birthDate": "1872",
+ "deathDate": "1946",
+ "gender": "Male"
+}

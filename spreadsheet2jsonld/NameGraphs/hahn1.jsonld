@@ -1,0 +1,15 @@
+{ 
+ "@context": "http://schema.org", 
+ "id": "http://catalogdata.library.illinois.edu/lod/entities/Persons/kp/hahn1",
+ "sameAs": ["http://viaf.org/viaf/97880170", "https://en.wikipedia.org/wiki/Reynaldo_Hahn", "https://fr.wikipedia.org/wiki/Reynaldo_Hahn"],
+ "type": "Person",
+ "name": "Hahn, Reynaldo",
+ "familyName": "Hahn",
+ "givenName": "Reynaldo",
+ "birthDate": "1874",
+ "deathDate": "1947",
+ "gender": "Male",
+ "description": "compositeur",
+ "parent": ["http://catalogdata.library.illinois.edu/lod/entities/Persons/kp/hahn2", "http://catalogdata.library.illinois.edu/lod/entities/Persons/kp/hahn3"],
+ "sibling": ["http://catalogdata.library.illinois.edu/lod/entities/Persons/kp/hahn5", "http://catalogdata.library.illinois.edu/lod/entities/Persons/kp/semina4"]
+}

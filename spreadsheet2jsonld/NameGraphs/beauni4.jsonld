@@ -1,0 +1,12 @@
+{ 
+ "@context": "http://schema.org", 
+ "id": "http://catalogdata.library.illinois.edu/lod/entities/Persons/kp/beauni4",
+ "type": "Person",
+ "name": "Beaunier, Mlle Thérèse",
+ "familyName": "Beaunier",
+ "givenName": "Thérèse",
+ "gender": "Female",
+ "description": "soeur d'André Beaunier",
+ "parent": "http://catalogdata.library.illinois.edu/lod/entities/Persons/kp/beauni2",
+ "sibling": ["http://catalogdata.library.illinois.edu/lod/entities/Persons/kp/beauni1", "http://catalogdata.library.illinois.edu/lod/entities/Persons/kp/beauni3"]
+}

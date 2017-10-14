@@ -1,0 +1,12 @@
+{ 
+ "@context": "http://schema.org", 
+ "id": "http://catalogdata.library.illinois.edu/lod/entities/Persons/kp/hahn5",
+ "type": "Person",
+ "name": "Hahn, Elisa ou Eliza",
+ "familyName": "Hahn",
+ "givenName": "Elisa ",
+ "gender": "Female",
+ "description": "soeur de Reynaldo Hahn",
+ "parent": ["http://catalogdata.library.illinois.edu/lod/entities/Persons/kp/hahn2", "http://catalogdata.library.illinois.edu/lod/entities/Persons/kp/hahn3"],
+ "sibling": ["http://catalogdata.library.illinois.edu/lod/entities/Persons/kp/hahn1", "http://catalogdata.library.illinois.edu/lod/entities/Persons/kp/semina4"]
+}

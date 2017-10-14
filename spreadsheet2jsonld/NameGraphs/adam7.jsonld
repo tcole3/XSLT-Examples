@@ -1,0 +1,10 @@
+{ 
+ "@context": "http://schema.org", 
+ "id": "http://catalogdata.library.illinois.edu/lod/entities/Persons/kp/adam7",
+ "sameAs": ["http://viaf.org/viaf/29542201", " ", "https://fr.wikipedia.org/wiki/Antoine_Adam"],
+ "type": "Person",
+ "name": "Adam, Antoine",
+ "familyName": "Adam",
+ "givenName": "Antoine",
+ "gender": "Male"
+}

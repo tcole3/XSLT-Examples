@@ -1,0 +1,13 @@
+{ 
+ "@context": "http://schema.org", 
+ "id": "http://catalogdata.library.illinois.edu/lod/entities/Persons/kp/adam9",
+ "sameAs": ["http://viaf.org/viaf/36912154", " ", "https://fr.wikipedia.org/wiki/Edmond_Adam"],
+ "type": "Person",
+ "name": "Adam, Edmond",
+ "familyName": "Adam",
+ "givenName": "Edmond",
+ "birthDate": "1816",
+ "deathDate": "1877",
+ "gender": "Male",
+ "description": ["banquier", "politicien"]
+}
