@@ -1,0 +1,2251 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252"/>
+<meta name="Generator" content="Microsoft Word 15 (filtered)"/>
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:"Lucida Console";
+	panose-1:2 11 6 9 4 5 4 2 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:0in;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{mso-style-link:"Header Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{mso-style-link:"Footer Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+span.MsoEndnoteReference
+	{vertical-align:super;}
+p.MsoEndnoteText, li.MsoEndnoteText, div.MsoEndnoteText
+	{mso-style-link:"Endnote Text Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Calibri",sans-serif;}
+a:link, span.MsoHyperlink
+	{color:#0563C1;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:#954F72;
+	text-decoration:underline;}
+span.HeaderChar
+	{mso-style-name:"Header Char";
+	mso-style-link:Header;}
+span.FooterChar
+	{mso-style-name:"Footer Char";
+	mso-style-link:Footer;}
+span.EndnoteTextChar
+	{mso-style-name:"Endnote Text Char";
+	mso-style-link:"Endnote Text";}
+.MsoChpDefault
+	{font-family:"Calibri",sans-serif;}
+.MsoPapDefault
+	{margin-bottom:8.0pt;
+	line-height:107%;}
+ /* Page Definitions */
+ @page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection1
+	{page:WordSection1;}
+@page WordSection2
+	{size:11.0in 8.5in;
+	margin:.5in .5in .5in .5in;}
+div.WordSection2
+	{page:WordSection2;}
+@page WordSection3
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection3
+	{page:WordSection3;}
+-->
+</style>
+
+</head>
+
+<body lang='EN-US' link="#0563C1" vlink="#954F72">
+
+<div class='WordSection1'>
+
+<p class='MsoNormal' align='center' style='margin-bottom:0in;margin-bottom:.0001pt;
+text-align:center'><b><span style='font-size:14.0pt;line-height:107%'>The
+Transformative Potential of XSLT</span></b></p>
+
+<p class='MsoNormal' style='margin-bottom:0in;margin-bottom:.0001pt'><span
+style='font-size:10.0pt;line-height:107%'>&#xA0;</span></p>
+
+<p class='MsoNormal' align='center' style='margin-bottom:0in;margin-bottom:.0001pt;
+text-align:center'>Timothy W. Cole and Myung-Ja (MJ) K. Han</p>
+
+<p class='MsoNormal' style='margin-bottom:0in;margin-bottom:.0001pt'>&#xA0;</p>
+
+<p class='MsoNormal' style='margin-bottom:0in;margin-bottom:.0001pt;text-align:
+justify'>When discussing EXstensible Stylesheet Language for Transformations
+(XSLT), a natural tendency is to focus on bridging XML Schemas, i.e., taking a
+set of XML documents that conform to one XML Schema Definition (XSD) and
+transforming these documents to conform to a different XSD. This is a common use
+case for XSLT; however, XSLT can be a useful tool for transforming XML-serialized
+information into non-XML formats as well. Transforming XML into HTML or into
+plain text illustrate incremental extensions of XML-to-XML use cases. The example
+described below illustrates a more ambitious use case -- showing how
+information about people and families contained in an Excel spreadsheet (saved
+as XML) can be re-serialized in JavaScript Object Notation for Linked Data
+(JSON-LD) using XSLT. </p>
+
+<p class='MsoNormal' style='margin-bottom:0in;margin-bottom:.0001pt;text-align:
+justify'>&#xA0;</p>
+
+<p class='MsoNormal' style='margin-bottom:0in;margin-bottom:.0001pt;text-align:
+justify'><i>Background</i></p>
+
+<p class='MsoNormal' style='margin-bottom:0in;margin-bottom:.0001pt;text-align:
+justify'>&#xA0;</p>
+
+<p class='MsoNormal' style='margin-bottom:0in;margin-bottom:.0001pt;text-align:
+justify'>This example is drawn from a real-world use case. The University of
+Illinois Kolb-Proust Archive for Research<a href="#_edn1" name="_ednref1"
+title=""><span class='MsoEndnoteReference'><span class='MsoEndnoteReference'><span
+style='font-size:11.0pt;line-height:107%;font-family:"Calibri",sans-serif'>[1]</span></span></span></a>
+includes a name authority database that has evolved over the 25 years of the
+project and now contains almost 7,000 names of people and families that were connected
+in various ways to the French author Marcel Proust and his family (based on the
+research of Philip Kolb). Until recently these name data have only been visible
+through the Archive's search interface (advanced search tab and as facets on
+search result views). Behind the scenes name strings and information about each
+person or family are stored in a relational database with a
+custom-to-the-project database schema. As part of a new project at Illinois
+focusing on Linked Open Data, all name descriptions from our database were
+exported for editing, augmentation and further processing to a Microsoft Excel Workbook
+(2016 version) containing a single spreadsheet. Figure 1 (next page) shows a
+simplified and abbreviated version of this spreadsheet. </p>
+
+<p class='MsoNormal' style='margin-bottom:0in;margin-bottom:.0001pt;text-align:
+justify'>&#xA0;</p>
+
+<p class='MsoNormal' style='margin-bottom:0in;margin-bottom:.0001pt;text-align:
+justify'>The name metadata shown in Figure 1 have been organized into columns
+that align (by design) with the semantics of the Schema.org vocabulary.
+Schema.org is a collaborative ongoing project to develop, maintain and promote a
+data model for structured information on the Web.<a href="#_edn2"
+name="_ednref2" title=""><span class='MsoEndnoteReference'><span
+class='MsoEndnoteReference'><span style='font-size:11.0pt;line-height:107%;
+font-family:"Calibri",sans-serif'>[2]</span></span></span></a> The data model
+is designed to be inherently compatible with the W3C Resource Description
+Framework (RDF)<a href="#_edn3" name="_ednref3" title=""><span
+class='MsoEndnoteReference'><span class='MsoEndnoteReference'><span
+style='font-size:11.0pt;line-height:107%;font-family:"Calibri",sans-serif'>[3]</span></span></span></a>
+which underpins the Semantic Web and most current Linked Open Data services and
+applications. The task for which XSLT was needed focused on transforming the metadata
+contained in the spreadsheet to JSON-LD, an RDF-compatible serialization often
+used and well-understood by many Schema.org-based services (including
+harvesters). Essentially the goal of this transformation was to turn each row
+of the spreadsheet into an RDF graph (serialized as a JSON-LD text file) describing
+an entity of either schema.org/Person<a href="#_edn4" name="_ednref4" title=""><span
+class='MsoEndnoteReference'><span class='MsoEndnoteReference'><span
+style='font-size:11.0pt;line-height:107%;font-family:"Calibri",sans-serif'>[4]</span></span></span></a>
+or schema.org/Organization<a href="#_edn5" name="_ednref5" title=""><span
+class='MsoEndnoteReference'><span class='MsoEndnoteReference'><span
+style='font-size:11.0pt;line-height:107%;font-family:"Calibri",sans-serif'>[5]</span></span></span></a>
+(for this project families were treated as schema.org/Organizations). </p>
+
+<p class='MsoNormal' style='margin-bottom:0in;margin-bottom:.0001pt;text-align:
+justify'>&#xA0;</p>
+
+<p class='MsoNormal' style='margin-bottom:0in;margin-bottom:.0001pt;text-align:
+justify'><i>JSON-LD</i></p>
+
+<p class='MsoNormal' style='margin-bottom:0in;margin-bottom:.0001pt;text-align:
+justify'>&#xA0;</p>
+
+<p class='MsoNormal' style='margin-bottom:0in;margin-bottom:.0001pt;text-align:
+justify'>JSON<a href="#_edn6" name="_ednref6" title=""><span
+class='MsoEndnoteReference'><span class='MsoEndnoteReference'><span
+style='font-size:11.0pt;line-height:107%;font-family:"Calibri",sans-serif'>[6]</span></span></span></a>
+is a plain-text data-interchange format derived from the JavaScript programming
+language.<a href="#_edn7" name="_ednref7" title=""><span
+class='MsoEndnoteReference'><span class='MsoEndnoteReference'><span
+style='font-size:11.0pt;line-height:107%;font-family:"Calibri",sans-serif'>[7]</span></span></span></a>
+Code libraries now exist to make JSON easy to use with other popular
+programming languages. JSON is hierarchical and stores data in name-value pair
+structures. The names, always within quotation marks, are called keys. Each key
+is followed by a colon and then a value, which can be any of a string, a
+number, a Boolean true/false, an object (another set of name-value pairs), an
+array of any of the preceding, or null. </p>
+
+</div>
+
+<span style='font-size:11.0pt;line-height:107%;font-family:"Calibri",sans-serif'><br
+clear='all' style='page-break-before:always'>
+</span>
+
+<div class=WordSection2>
+
+<p class='MsoNormal' style='margin-bottom:0in;margin-bottom:.0001pt;text-align:
+justify'>&#xA0;</p>
+
+<p class='MsoNormal' style='margin-bottom:0in;margin-bottom:.0001pt;text-align:
+justify'><img width='958' height='582' src="about_files/image001.png"></p>
+
+<p class='MsoNormal' style='margin-bottom:0in;margin-bottom:.0001pt;text-align:
+justify'>&#xA0;</p>
+
+<p class='MsoNormal' align='center' style='margin-bottom:0in;margin-bottom:.0001pt;
+text-align:center'>Figure 1: The Kolb-Proust Archive name authority Excel
+spreadsheet (simplified and abbreviated for this illustration)</p>
+
+<p class='MsoNormal' style='margin-bottom:0in;margin-bottom:.0001pt;text-align:
+justify'>&#xA0;</p>
+
+</div>
+
+<span style='font-size:11.0pt;line-height:107%;font-family:"Calibri",sans-serif'><br
+clear='all' style='page-break-before:always'>
+</span>
+
+<div class=WordSection3>
+
+<p class='MsoNormal' style='margin-bottom:0in;margin-bottom:.0001pt;text-align:
+justify'>JSON objects are delineated by curly braces ({ }). A JSON document
+instance in its entirety is a kind of JSON object, and so is itself enclosed in
+curly braces when serialized in a text file. Square brackets ([ ]) denote an
+array. Name-value pairs are separated one from another by commas. Figure 2 is a
+simple JSON document instance. As in XML, the indentation is not required but
+can be helpful for readability.</p>
+
+<p class='MsoNormal' style='margin-bottom:0in;margin-bottom:.0001pt;text-align:
+justify'>&#xA0;</p>
+
+<div style='border:solid windowtext 2.25pt;padding:1.0pt 4.0pt 1.0pt 4.0pt;
+margin-left:1.5in;margin-right:1.5in'>
+
+<p class='MsoNormal' style='margin-bottom:0in;margin-bottom:.0001pt;text-align:
+justify;line-height:115%;border:none;padding:0in'><span style='font-size:10.0pt;
+line-height:115%;font-family:"Lucida Console"'>{</span></p>
+
+<p class='MsoNormal' style='margin-bottom:0in;margin-bottom:.0001pt;text-align:
+justify;line-height:115%;border:none;padding:0in'><span style='font-size:10.0pt;
+line-height:115%;font-family:"Lucida Console"'> &quot;title&quot;:
+&quot;Using OAI-PMH&quot;,</span></p>
+
+<p class='MsoNormal' style='margin-bottom:0in;margin-bottom:.0001pt;text-align:
+justify;line-height:115%;border:none;padding:0in'><span style='font-size:10.0pt;
+line-height:115%;font-family:"Lucida Console"'> &quot;creator&quot;: [</span></p>
+
+<p class='MsoNormal' style='margin-bottom:0in;margin-bottom:.0001pt;text-align:
+justify;line-height:115%;border:none;padding:0in'><span style='font-size:10.0pt;
+line-height:115%;font-family:"Lucida Console"'>  &quot;Timothy W.
+Cole&quot;,</span></p>
+
+<p class='MsoNormal' style='margin-bottom:0in;margin-bottom:.0001pt;text-align:
+justify;line-height:115%;border:none;padding:0in'><span style='font-size:10.0pt;
+line-height:115%;font-family:"Lucida Console"'>  &quot;Muriel
+Foulonneau&quot; ]</span></p>
+
+<p class='MsoNormal' style='margin-bottom:0in;margin-bottom:.0001pt;text-align:
+justify;line-height:115%;border:none;padding:0in'><span style='font-size:10.0pt;
+line-height:115%;font-family:"Lucida Console"'>}</span></p>
+
+</div>
+
+<p class='MsoNormal' align='center' style='margin-bottom:0in;margin-bottom:.0001pt;
+text-align:center'>Figure 2: A simple illustration of a JSON document instance</p>
+
+<p class='MsoNormal' style='margin-bottom:0in;margin-bottom:.0001pt;text-align:
+justify'>&#xA0;</p>
+
+<p class='MsoNormal' style='margin-bottom:6.0pt;text-align:justify'>RDF is
+designed to express sets of subject-predicate-object assertions, such as: the
+resource identified by http://www.worldcat.org/oclc/751406981 is of type (as
+defined in the RDF ontology) Book (as defined by http://schema.org/Book), has a
+title or name (as defined by http://schema.org/name), &quot;Using
+OAI-PMH&quot;, and two creators (as defined by http://schema.org/creator) named
+&quot;Timothy W. Cole&quot; and &quot;Muriel Foulonneau&quot;. These 6 assertions
+('RDF triples') are graphically represented as shown in Figure 3. Note the
+insertion by the processing software (in this case the W3C RDF Validation
+Service<a href="#_edn8" name="_ednref8" title=""><span
+class='MsoEndnoteReference'><span class='MsoEndnoteReference'><span
+style='font-size:11.0pt;line-height:107%;font-family:"Calibri",sans-serif'>[8]</span></span></span></a>)
+of two intermediate nodes in the graph to represent the creators as objects,
+each of which is the subject of a name assertion.</p>
+
+<p class='MsoNormal' style='margin-bottom:0in;margin-bottom:.0001pt;text-align:
+justify'><img width='628' height='125' id="Picture 5" src="about_files/image002.png"
+alt="graph representation of RDF data"></p>
+
+<p class='MsoNormal' align='center' style='margin-bottom:0in;margin-bottom:.0001pt;
+text-align:center'>Figure 3: Graphical representation of 6 assertions, aka RDF
+triples, about a book</p>
+
+<p class='MsoNormal' style='margin-bottom:0in;margin-bottom:.0001pt;text-align:
+justify'>&#xA0;</p>
+
+<p class='MsoNormal' style='margin-bottom:0in;margin-bottom:.0001pt;text-align:
+justify'>JSON-LD adds special keys to facilitate serializing RDF graphs in
+JSON. One key, &quot;@id&quot;, is used to express the identifier of a resource
+used as an RDF subject or object. Another key, &quot;@type&quot;, is used to
+express the RDF type of a resource. Thus the graph of figure 3 can be
+serialized as shown in Figure 4.</p>
+
+<p class='MsoNormal' style='margin-bottom:0in;margin-bottom:.0001pt;text-align:
+justify'>&#xA0;</p>
+
+<div style='border:solid windowtext 2.25pt;padding:1.0pt 4.0pt 1.0pt 4.0pt;
+margin-left:.8in;margin-right:.8in'>
+
+<p class='MsoNormal' style='margin-bottom:0in;margin-bottom:.0001pt;text-align:
+justify;line-height:115%;border:none;padding:0in'><span style='font-size:10.0pt;
+line-height:115%;font-family:"Lucida Console"'>{</span></p>
+
+<p class='MsoNormal' style='margin-bottom:0in;margin-bottom:.0001pt;text-align:
+justify;line-height:115%;border:none;padding:0in'><span style='font-size:10.0pt;
+line-height:115%;font-family:"Lucida Console"'> &quot;@id&quot; :
+&quot;http://www.worldcat.org/oclc/751406981&quot;,</span></p>
+
+<p class='MsoNormal' style='margin-bottom:0in;margin-bottom:.0001pt;text-align:
+justify;line-height:115%;border:none;padding:0in'><span style='font-size:10.0pt;
+line-height:115%;font-family:"Lucida Console"'> &quot;@type&quot; :
+&quot;http://schema.org/Book&quot;,</span></p>
+
+<p class='MsoNormal' style='margin-bottom:0in;margin-bottom:.0001pt;text-align:
+justify;line-height:115%;border:none;padding:0in'><span style='font-size:10.0pt;
+line-height:115%;font-family:"Lucida Console"'> &quot;http://schema.org/name&quot;:
+&quot;Using OAI-PMH&quot;,</span></p>
+
+<p class='MsoNormal' style='margin-bottom:0in;margin-bottom:.0001pt;text-align:
+justify;line-height:115%;border:none;padding:0in'><span style='font-size:10.0pt;
+line-height:115%;font-family:"Lucida Console"'> &quot;http://schema.org/creator&quot;:
+[</span></p>
+
+<p class='MsoNormal' style='margin-bottom:0in;margin-bottom:.0001pt;text-align:
+justify;line-height:115%;border:none;padding:0in'><span style='font-size:10.0pt;
+line-height:115%;font-family:"Lucida Console"'> {
+&quot;http://schema.org/name&quot;: &quot;Timothy W. Cole&quot; },</span></p>
+
+<p class='MsoNormal' style='margin-bottom:0in;margin-bottom:.0001pt;text-align:
+justify;line-height:115%;border:none;padding:0in'><span style='font-size:10.0pt;
+line-height:115%;font-family:"Lucida Console"'> {
+&quot;http://schema.org/name&quot;: &quot;Muriel Foulonneau&quot;} ]</span></p>
+
+<p class='MsoNormal' style='margin-bottom:0in;margin-bottom:.0001pt;text-align:
+justify;line-height:115%;border:none;padding:0in'><span style='font-size:10.0pt;
+line-height:115%;font-family:"Lucida Console"'>}</span></p>
+
+</div>
+
+<p class='MsoNormal' align='center' style='margin-bottom:0in;margin-bottom:.0001pt;
+text-align:center'>Figure 4: </p>
+
+<p class='MsoNormal' style='margin-bottom:0in;margin-bottom:.0001pt;text-align:
+justify'>&#xA0;</p>
+
+<p class='MsoNormal' style='margin-bottom:0in;margin-bottom:.0001pt;text-align:
+justify'>JSON-LD adds one more special key, &quot;@context&quot;, to further
+simplify how RDF graphs are expressed in JSON. This key is used as an easy way
+to declare namespaces used in an RDF graph and to provide a mapping of simple keys
+to namespaced properties (e.g, &quot;name&quot; mapped to
+&quot;http://schema.org/name&quot;, and &quot;creator&quot; mapped to
+&quot;http://schema.org/creator&quot;). Figure 5 is a context document for this
+example, and Figure 6 is the JSON-LD document instance for this example, given this
+context document.</p>
+
+<p class='MsoNormal' style='margin-bottom:0in;margin-bottom:.0001pt;text-align:
+justify'>&#xA0;</p>
+
+<div style='border:solid windowtext 2.25pt;padding:1.0pt 4.0pt 1.0pt 4.0pt;
+margin-left:.7in;margin-right:.7in'>
+
+<p class='MsoNormal' style='margin-bottom:0in;margin-bottom:.0001pt;text-align:
+justify;line-height:115%;border:none;padding:0in'><span style='font-size:10.0pt;
+line-height:115%;font-family:"Lucida Console"'>{</span></p>
+
+<p class='MsoNormal' style='margin-bottom:0in;margin-bottom:.0001pt;text-align:
+justify;line-height:115%;border:none;padding:0in'><span style='font-size:10.0pt;
+line-height:115%;font-family:"Lucida Console"'> &quot;@context&quot;: {</span></p>
+
+<p class='MsoNormal' style='margin-bottom:0in;margin-bottom:.0001pt;text-align:
+justify;line-height:115%;border:none;padding:0in'><span style='font-size:10.0pt;
+line-height:115%;font-family:"Lucida Console"'> &quot;type&quot;:
+&quot;@type&quot;,</span></p>
+
+<p class='MsoNormal' style='margin-bottom:0in;margin-bottom:.0001pt;text-align:
+justify;line-height:115%;border:none;padding:0in'><span style='font-size:10.0pt;
+line-height:115%;font-family:"Lucida Console"'> &quot;id&quot;:
+&quot;@id&quot;,</span></p>
+
+<p class='MsoNormal' style='margin-bottom:0in;margin-bottom:.0001pt;text-align:
+justify;line-height:115%;border:none;padding:0in'><span style='font-size:10.0pt;
+line-height:115%;font-family:"Lucida Console"'> &quot;schema&quot;:
+&quot;http://schema.org/&quot;,</span></p>
+
+<p class='MsoNormal' style='margin-bottom:0in;margin-bottom:.0001pt;text-align:
+justify;line-height:115%;border:none;padding:0in'><span style='font-size:10.0pt;
+line-height:115%;font-family:"Lucida Console"'> &quot;rdf&quot;:
+&quot;http://www.w3.org/1999/02/22-rdf-syntax-ns#&quot;,</span></p>
+
+<p class='MsoNormal' style='margin-bottom:0in;margin-bottom:.0001pt;text-align:
+justify;line-height:115%;border:none;padding:0in'><span style='font-size:10.0pt;
+line-height:115%;font-family:"Lucida Console"'> &quot;Book&quot;:
+{&quot;@id&quot;: &quot;schema:Book&quot;},</span></p>
+
+<p class='MsoNormal' style='margin-bottom:0in;margin-bottom:.0001pt;text-align:
+justify;line-height:115%;border:none;padding:0in'><span style='font-size:10.0pt;
+line-height:115%;font-family:"Lucida Console"'> &quot;creator&quot;: {
+&quot;@id&quot;: &quot;schema:creator&quot;},</span></p>
+
+<p class='MsoNormal' style='margin-bottom:0in;margin-bottom:.0001pt;text-align:
+justify;line-height:115%;border:none;padding:0in'><span style='font-size:10.0pt;
+line-height:115%;font-family:"Lucida Console"'> &quot;name&quot;: {
+&quot;@id&quot;: &quot;schema:name&quot;}</span></p>
+
+<p class='MsoNormal' style='margin-bottom:0in;margin-bottom:.0001pt;text-align:
+justify;line-height:115%;border:none;padding:0in'><span style='font-size:10.0pt;
+line-height:115%;font-family:"Lucida Console"'> }</span></p>
+
+<p class='MsoNormal' style='margin-bottom:0in;margin-bottom:.0001pt;text-align:
+justify;line-height:115%;border:none;padding:0in'><span style='font-size:10.0pt;
+line-height:115%;font-family:"Lucida Console"'>}</span></p>
+
+</div>
+
+<p class='MsoNormal' align='center' style='margin-bottom:0in;margin-bottom:.0001pt;
+text-align:center'>Figure 5: The JSON-LD context document 'myContext.jsonld'
+provides mappings to simplify serialization</p>
+
+<p class='MsoNormal' style='margin-bottom:0in;margin-bottom:.0001pt;text-align:
+justify'>&#xA0;</p>
+
+<p class='MsoNormal' style='margin-bottom:0in;margin-bottom:.0001pt;text-align:
+justify'>As can be seen (compare Figure 4 to Figure 6), reference to a context
+document can greatly enhance the readability of an RDF graph serialization in
+JSON-LD. Schema.org maintains its own context document which can be retrieved
+(using content negotiation) from http://schema.org.</p>
+
+<p class='MsoNormal' style='margin-bottom:0in;margin-bottom:.0001pt;text-align:
+justify'>&#xA0;</p>
+
+<div style='border:solid windowtext 2.25pt;padding:1.0pt 4.0pt 1.0pt 4.0pt;
+margin-left:1.2in;margin-right:1.2in'>
+
+<p class='MsoNormal' style='margin-bottom:0in;margin-bottom:.0001pt;text-align:
+justify;line-height:115%;border:none;padding:0in'><span style='font-size:10.0pt;
+line-height:115%;font-family:"Lucida Console"'>&#xA0;</span></p>
+
+<p class='MsoNormal' style='margin-bottom:0in;margin-bottom:.0001pt;text-align:
+justify;line-height:115%;border:none;padding:0in'><span style='font-size:10.0pt;
+line-height:115%;font-family:"Lucida Console"'>{</span></p>
+
+<p class='MsoNormal' style='margin-bottom:0in;margin-bottom:.0001pt;text-align:
+justify;line-height:115%;border:none;padding:0in'><span style='font-size:10.0pt;
+line-height:115%;font-family:"Lucida Console"'> &quot;@context&quot;:
+&quot;myContext.jsonld&quot;,</span></p>
+
+<p class='MsoNormal' style='margin-bottom:0in;margin-bottom:.0001pt;text-align:
+justify;line-height:115%;border:none;padding:0in'><span style='font-size:10.0pt;
+line-height:115%;font-family:"Lucida Console"'> &quot;id&quot;:
+&quot;http://www.worldcat.org/oclc/751406981&quot;,</span></p>
+
+<p class='MsoNormal' style='margin-bottom:0in;margin-bottom:.0001pt;text-align:
+justify;line-height:115%;border:none;padding:0in'><span style='font-size:10.0pt;
+line-height:115%;font-family:"Lucida Console"'> &quot;type&quot;:
+&quot;Book&quot;,</span></p>
+
+<p class='MsoNormal' style='margin-bottom:0in;margin-bottom:.0001pt;text-align:
+justify;line-height:115%;border:none;padding:0in'><span style='font-size:10.0pt;
+line-height:115%;font-family:"Lucida Console"'> &quot;name&quot;: &quot;Using
+OAI-PMH&quot;,</span></p>
+
+<p class='MsoNormal' style='margin-bottom:0in;margin-bottom:.0001pt;text-align:
+justify;line-height:115%;border:none;padding:0in'><span style='font-size:10.0pt;
+line-height:115%;font-family:"Lucida Console"'> &quot;creator&quot;: [</span></p>
+
+<p class='MsoNormal' style='margin-bottom:0in;margin-bottom:.0001pt;text-align:
+justify;line-height:115%;border:none;padding:0in'><span style='font-size:10.0pt;
+line-height:115%;font-family:"Lucida Console"'> { &quot;name&quot;:
+&quot;Timothy W. Cole&quot; },</span></p>
+
+<p class='MsoNormal' style='margin-bottom:0in;margin-bottom:.0001pt;text-align:
+justify;line-height:115%;border:none;padding:0in'><span style='font-size:10.0pt;
+line-height:115%;font-family:"Lucida Console"'> { &quot;name&quot;:
+&quot;Muriel Foulonneau&quot; } ]</span></p>
+
+<p class='MsoNormal' style='margin-bottom:0in;margin-bottom:.0001pt;text-align:
+justify;line-height:115%;border:none;padding:0in'><span style='font-size:10.0pt;
+line-height:115%;font-family:"Lucida Console"'>}</span></p>
+
+</div>
+
+<p class='MsoNormal' align='center' style='margin-bottom:0in;margin-bottom:.0001pt;
+text-align:center'>Figure 6: The serialization from Figure 4 simplified using
+the mappings of 'myContext.jsonld'.</p>
+
+<p class='MsoNormal' style='margin-bottom:0in;margin-bottom:.0001pt;text-align:
+justify'>&#xA0;</p>
+
+<p class='MsoNormal' style='margin-bottom:0in;margin-bottom:.0001pt;text-align:
+justify'>So our goal in this exercise is to use XSLT to transform spreadsheet
+rows to JSON-LD document instances. For example, Row 1 of the spreadsheet shown
+in Figure 1 transforms to the JSON-LD shown in Figure 7. </p>
+
+<p class='MsoNormal' style='margin-bottom:0in;margin-bottom:.0001pt;text-align:
+justify'>&#xA0;</p>
+
+<div style='border:solid windowtext 2.25pt;padding:1.0pt 4.0pt 1.0pt 4.0pt;
+margin-left:0in;margin-right:-.2in'>
+
+<p class='MsoNormal' style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+115%;border:none;padding:0in'><span style='font-size:9.0pt;line-height:115%;
+font-family:"Lucida Console"'>{ </span></p>
+
+<p class='MsoNormal' style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+115%;border:none;padding:0in'><span style='font-size:9.0pt;line-height:115%;
+font-family:"Lucida Console"'>&quot;@context&quot;:
+&quot;http://schema.org&quot;, </span></p>
+
+<p class='MsoNormal' style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+115%;border:none;padding:0in'><span style='font-size:9.0pt;line-height:115%;
+font-family:"Lucida Console"'>&quot;id&quot;:
+&quot;http://catalogdata.library.illinois.edu/lod/entities/Persons/kp/adam8&quot;,</span></p>
+
+<p class='MsoNormal' style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+115%;border:none;padding:0in'><span style='font-size:9.0pt;line-height:115%;
+font-family:"Lucida Console"'>&quot;sameAs&quot;:
+[&quot;http://viaf.org/viaf/12370239&quot;, &quot;https://en.wikipedia.org/wiki/Adolphe_Adam&quot;,
+</span></p>
+
+<p class='MsoNormal' style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+115%;border:none;padding:0in'><span style='font-size:9.0pt;line-height:115%;
+font-family:"Lucida Console"'>
+&quot;https://fr.wikipedia.org/wiki/Adolphe_Adam&quot;],</span></p>
+
+<p class='MsoNormal' style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+115%;border:none;padding:0in'><span style='font-size:9.0pt;line-height:115%;
+font-family:"Lucida Console"'>&quot;type&quot;: &quot;Person&quot;,</span></p>
+
+<p class='MsoNormal' style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+115%;border:none;padding:0in'><span style='font-size:9.0pt;line-height:115%;
+font-family:"Lucida Console"'>&quot;name&quot;: &quot;Adam, Adolphe&quot;,</span></p>
+
+<p class='MsoNormal' style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+115%;border:none;padding:0in'><span style='font-size:9.0pt;line-height:115%;
+font-family:"Lucida Console"'>&quot;familyName&quot;: &quot;Adam&quot;,</span></p>
+
+<p class='MsoNormal' style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+115%;border:none;padding:0in'><span style='font-size:9.0pt;line-height:115%;
+font-family:"Lucida Console"'>&quot;givenName&quot;: &quot;Adolphe&quot;,</span></p>
+
+<p class='MsoNormal' style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+115%;border:none;padding:0in'><span style='font-size:9.0pt;line-height:115%;
+font-family:"Lucida Console"'>&quot;birthDate&quot;: &quot;1803&quot;,</span></p>
+
+<p class='MsoNormal' style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+115%;border:none;padding:0in'><span style='font-size:9.0pt;line-height:115%;
+font-family:"Lucida Console"'>&quot;deathDate&quot;: &quot;1856&quot;,</span></p>
+
+<p class='MsoNormal' style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+115%;border:none;padding:0in'><span style='font-size:9.0pt;line-height:115%;
+font-family:"Lucida Console"'>&quot;gender&quot;: &quot;Male&quot;,</span></p>
+
+<p class='MsoNormal' style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+115%;border:none;padding:0in'><span style='font-size:9.0pt;line-height:115%;
+font-family:"Lucida Console"'>&quot;description&quot;: &quot;compositeur&quot;</span></p>
+
+<p class='MsoNormal' style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+115%;border:none;padding:0in'><span style='font-size:9.0pt;line-height:115%;
+font-family:"Lucida Console"'>}</span></p>
+
+</div>
+
+<p class='MsoNormal' align='center' style='margin-bottom:0in;margin-bottom:.0001pt;
+text-align:center'>Figure 7: Row 1 of the simplified Kolb-Proust Archive
+name-authority spreadsheet serialized as JSON-LD</p>
+
+<p class='MsoNormal' style='margin-bottom:0in;margin-bottom:.0001pt;text-align:
+justify'>&#xA0;</p>
+
+<p class='MsoNormal' style='margin-bottom:0in;margin-bottom:.0001pt;text-align:
+justify'><i>The Source XML for the Transformation</i></p>
+
+<p class='MsoNormal' style='margin-bottom:0in;margin-bottom:.0001pt;text-align:
+justify'>&#xA0;</p>
+
+<p class='MsoNormal' style='margin-bottom:0in;margin-bottom:.0001pt;text-align:
+justify'><span style='position:relative;z-index:251660287;left:-3px;top:0px;
+width:627px;height:295px'><img width='627' height='295'
+src="about_files/image003.png"></span><br clear=ALL>
+<span style='position:absolute;z-index:251661312;left:0px;margin-left:240px;
+margin-top:203px;width:123px;height:261px'><img width='123' height='261'
+src="about_files/image004.png"></span>As mentioned the metadata of interest
+were edited in spreadsheet format. There are various options for exporting
+these metadata to XML. One of the easiest is to save the spreadsheet ('Save As'
+menu) in the Microsoft-defined &quot;XML Spreadsheet 2003&quot; format. Before
+doing so it is useful to explicitly define a name for each column in the
+spreadsheet. The name manager feature of Excel is used. This is normally done
+to facilitate the use of column values in formulas, but also ensures that the
+cells are all named in the XML serialization as well. Simply highlight the
+column of interest and click on the 'Define Name' button visible under the
+'Formulas' tab. By default the Define Name function will use the value in the
+first row of the column as the default name. Click 'OK' and move on to the next
+column until all are done (Figure 8). </p>
+
+<p class='MsoNormal' align='center' style='margin-bottom:0in;margin-bottom:.0001pt;
+text-align:center'>Figure 8: Managing column names in Excel</p>
+
+<p class='MsoNormal' style='margin-bottom:0in;margin-bottom:.0001pt'>&#xA0;</p>
+
+<p class='MsoNormal' align='center' style='margin-bottom:0in;margin-bottom:.0001pt;
+text-align:center'><img width='503' height='297' id="Picture 6"
+src="about_files/image005.png"></p>
+
+<p class='MsoNormal' align='center' style='margin-bottom:0in;margin-bottom:.0001pt;
+text-align:center'>Figure 9: Saving an Excel spreadsheet in Microsoft's XML
+Spreadsheet 2003 format</p>
+
+<p class='MsoNormal' style='margin-bottom:0in;margin-bottom:.0001pt;text-align:
+justify'>Then use the File - Save As dialog (Figure 9) and select Save as type 'XML
+Spreadsheet 2003 (*.xml)'. The spreadsheet will be serialized as XML. Each row
+of the spreadsheet will be a node, as illustrated in Figure 10. Note that each
+Cell node in a Row node contains a Data node and a NamedCell node. The latter
+includes as an attribute the name of each Cell as established in the Define
+Name step described above. </p>
+
+<p class='MsoNormal' style='margin-bottom:0in;margin-bottom:.0001pt'>&#xA0;</p>
+
+<div style='border:solid windowtext 2.25pt;padding:1.0pt 4.0pt 1.0pt 4.0pt;
+background:white;margin-left:0in;margin-right:-.3in'>
+
+<p class='MsoNormal' style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+125%;background:white;text-autospace:none;border:none;padding:0in'><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:black;background:white'> </span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:#000096;background:white'>&lt;Row</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#F5844C;background:white'> ss:AutoFitHeight</span><span style='font-size:
+9.0pt;line-height:125%;font-family:"Lucida Console";color:#FF8040;background:
+white'>=</span><span style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#993300;background:white'>&quot;0&quot;</span><span style='font-size:
+9.0pt;line-height:125%;font-family:"Lucida Console";color:#F5844C;background:
+white'> ss:Height</span><span style='font-size:9.0pt;line-height:125%;
+font-family:"Lucida Console";color:#FF8040;background:white'>=</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#993300;background:white'>&quot;21.9375&quot;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#000096;background:white'>&gt;</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:black;background:white'><br>
+ </span><span style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#000096;background:white'>&lt;Cell&gt;&lt;Data</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#F5844C;background:white'> ss:Type</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:#FF8040;background:white'>=</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#993300;background:white'>&quot;Number&quot;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#000096;background:white'>&gt;</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:black;background:white'>56</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#000096;background:white'>&lt;/Data&gt;&lt;/Cell&gt;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:black;background:white'><br>
+ </span><span style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#000096;background:white'>&lt;Cell&gt;&lt;Data</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#F5844C;background:white'> ss:Type</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:#FF8040;background:white'>=</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#993300;background:white'>&quot;String&quot;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#000096;background:white'>&gt;</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:black;background:white'>Adam,
+Adolphe</span><span style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#000096;background:white'>&lt;/Data&gt;&lt;NamedCell</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#F5844C;background:white'> ss:Name</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:#FF8040;background:white'>=</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#993300;background:white'>&quot;name&quot;</span><span style='font-size:
+9.0pt;line-height:125%;font-family:"Lucida Console";color:#000096;background:
+white'>/&gt;&lt;/Cell&gt;</span><span style='font-size:9.0pt;line-height:125%;
+font-family:"Lucida Console";color:black;background:white'><br>
+ </span><span style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#000096;background:white'>&lt;Cell&gt;&lt;Data</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#F5844C;background:white'> ss:Type</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:#FF8040;background:white'>=</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#993300;background:white'>&quot;String&quot;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#000096;background:white'>&gt;</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:black;background:white'>adam8</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#000096;background:white'>&lt;/Data&gt;&lt;NamedCell</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#F5844C;background:white'> ss:Name</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:#FF8040;background:white'>=</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#993300;background:white'>&quot;KeyCode&quot;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#000096;background:white'>/&gt;&lt;/Cell&gt;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:black;background:white'><br>
+ </span><span style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#000096;background:white'>&lt;Cell&gt;&lt;Data</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#F5844C;background:white'> ss:Type</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:#FF8040;background:white'>=</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#993300;background:white'>&quot;String&quot;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#000096;background:white'>&gt;</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:black;background:white'>Adam</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#000096;background:white'>&lt;/Data&gt;&lt;NamedCell</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#F5844C;background:white'> ss:Name</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:#FF8040;background:white'>=</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#993300;background:white'>&quot;familyName&quot;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#000096;background:white'>/&gt;&lt;/Cell&gt;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:black;background:white'><br>
+ </span><span style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#000096;background:white'>&lt;Cell&gt;&lt;Data</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#F5844C;background:white'> ss:Type</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:#FF8040;background:white'>=</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#993300;background:white'>&quot;String&quot;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#000096;background:white'>&gt;</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:black;background:white'>Adolphe</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#000096;background:white'>&lt;/Data&gt;&lt;NamedCell</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#F5844C;background:white'> ss:Name</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:#FF8040;background:white'>=</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#993300;background:white'>&quot;givenName&quot;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#000096;background:white'>/&gt;&lt;/Cell&gt;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:black;background:white'><br>
+ </span><span style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#000096;background:white'>&lt;Cell&gt;&lt;Data</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#F5844C;background:white'> ss:Type</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:#FF8040;background:white'>=</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#993300;background:white'>&quot;Number&quot;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#000096;background:white'>&gt;</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:black;background:white'>1803</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#000096;background:white'>&lt;/Data&gt;&lt;NamedCell</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#F5844C;background:white'> ss:Name</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:#FF8040;background:white'>=</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#993300;background:white'>&quot;birthDate&quot;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#000096;background:white'>/&gt;&lt;/Cell&gt;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:black;background:white'><br>
+ </span><span style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#000096;background:white'>&lt;Cell&gt;&lt;Data</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#F5844C;background:white'> ss:Type</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:#FF8040;background:white'>=</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#993300;background:white'>&quot;Number&quot;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#000096;background:white'>&gt;</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:black;background:white'>1856</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#000096;background:white'>&lt;/Data&gt;&lt;NamedCell</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#F5844C;background:white'> ss:Name</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:#FF8040;background:white'>=</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#993300;background:white'>&quot;deathDate&quot;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#000096;background:white'>/&gt;&lt;/Cell&gt;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:black;background:white'><br>
+ </span><span style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#000096;background:white'>&lt;Cell&gt;&lt;Data</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#F5844C;background:white'> ss:Type</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:#FF8040;background:white'>=</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#993300;background:white'>&quot;String&quot;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#000096;background:white'>&gt;</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:black;background:white'>Male</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#000096;background:white'>&lt;/Data&gt;&lt;NamedCell</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#F5844C;background:white'> ss:Name</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:#FF8040;background:white'>=</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#993300;background:white'>&quot;gender&quot;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#000096;background:white'>/&gt;&lt;/Cell&gt;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:black;background:white'><br>
+ </span><span style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#000096;background:white'>&lt;Cell&gt;&lt;Data</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#F5844C;background:white'> ss:Type</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:#FF8040;background:white'>=</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#993300;background:white'>&quot;String&quot;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#000096;background:white'>&gt;</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:black;background:white'>compositeur</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#000096;background:white'>&lt;/Data&gt;&lt;NamedCell</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#F5844C;background:white'> ss:Name</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:#FF8040;background:white'>=</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#993300;background:white'>&quot;description&quot;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#000096;background:white'>/&gt;&lt;/Cell&gt;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:black;background:white'><br>
+ </span><span style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#000096;background:white'>&lt;Cell&gt;&lt;Data</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#F5844C;background:white'> ss:Type</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:#FF8040;background:white'>=</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#993300;background:white'>&quot;String&quot;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#000096;background:white'>&gt;</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:black;background:white'>http://viaf.org/viaf/12370239</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#000096;background:white'>&lt;/Data&gt;&lt;NamedCell</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:black;background:white'><br>
+</span><span style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#F5844C;background:white'> ss:Name</span><span style='font-size:
+9.0pt;line-height:125%;font-family:"Lucida Console";color:#FF8040;background:
+white'>=</span><span style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#993300;background:white'>&quot;VIAF_Link&quot;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#000096;background:white'>/&gt;&lt;/Cell&gt;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:black;background:white'><br>
+ </span><span style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#000096;background:white'>&lt;Cell&gt;&lt;Data</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#F5844C;background:white'> ss:Type</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:#FF8040;background:white'>=</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#993300;background:white'>&quot;String&quot;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#000096;background:white'>&gt;</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:black;background:white'>https://en.wikipedia.org/wiki/Adolphe_Adam</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#000096;background:white'>&lt;/Data&gt;&lt;NamedCell</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:black;background:white'><br>
+</span><span style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#F5844C;background:white'> ss:Name</span><span style='font-size:
+9.0pt;line-height:125%;font-family:"Lucida Console";color:#FF8040;background:
+white'>=</span><span style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#993300;background:white'>&quot;EN_WIKIPEDIA&quot;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#000096;background:white'>/&gt;&lt;/Cell&gt;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:black;background:white'><br>
+ </span><span style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#000096;background:white'>&lt;Cell&gt;&lt;Data</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#F5844C;background:white'> ss:Type</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:#FF8040;background:white'>=</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#993300;background:white'>&quot;String&quot;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#000096;background:white'>&gt;</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:black;background:white'>https://fr.wikipedia.org/wiki/Adolphe_Adam</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#000096;background:white'>&lt;/Data&gt;&lt;NamedCell</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:black;background:white'><br>
+</span><span style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#F5844C;background:white'> ss:Name</span><span style='font-size:
+9.0pt;line-height:125%;font-family:"Lucida Console";color:#FF8040;background:
+white'>=</span><span style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#993300;background:white'>&quot;FR_WIKIPEDIA&quot;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#000096;background:white'>/&gt;&lt;/Cell&gt;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:black;background:white'><br>
+ </span><span style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#000096;background:white'>&lt;/Row&gt;</span></p>
+
+</div>
+
+<p class='MsoNormal' align='center' style='margin-bottom:0in;margin-bottom:.0001pt;
+text-align:center'>figure 10: A row from the spreadsheet serialized in the XML
+Spreadsheet 2003 format</p>
+
+<p class='MsoNormal' style='margin-bottom:0in;margin-bottom:.0001pt'>&#xA0;</p>
+
+<p class='MsoNormal' style='margin-bottom:0in;margin-bottom:.0001pt'><i>The XSLT
+Transform</i></p>
+
+<p class='MsoNormal' style='margin-bottom:0in;margin-bottom:.0001pt'>&#xA0;</p>
+
+<p class='MsoNormal' style='margin-bottom:0in;margin-bottom:.0001pt;text-align:
+justify'><b>1. Root element, namespace declaration and global variables</b>:
+Figure 11 shows the stylesheet's root element opening tag (with attributes) as
+well as declarations for two globally scoped stylesheet variables, $<i>needPrefix</i>
+and $<i>prefix</i> having fixed values. These variables are used to ensure that
+local identifier values from the parent, sibling and children columns are
+transformed into global identifiers (URIs) before being added to the
+result-tree. Note that in addition to declaring the usual XSL/Transform and
+XMLSchema namespaces (namespace prefixes xsl: and xs:), an additional namespace
+prefix, ss:, is bound to a Microsoft spreadsheet-specific namespace. This
+allows for the selection in the stylesheet of essential elements and attributes
+found in the source XML file. Also note that this XSLT makes use of certain
+version 2.0 XPath and XSLT features, hence the version=&quot;2.0&quot;
+attribute included on the root element.</p>
+
+<p class='MsoNormal' style='margin-bottom:0in;margin-bottom:.0001pt'>&#xA0;</p>
+
+<div style='border:solid windowtext 2.25pt;padding:1.0pt 4.0pt 1.0pt 4.0pt;
+background:white;margin-left:0in;margin-right:-.2in'>
+
+<p class='MsoNormal' style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+125%;background:white;text-autospace:none;border:none;padding:0in'><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#8B26C9;background:white'>&lt;?xml version=&quot;1.0&quot;
+encoding=&quot;UTF-8&quot;?&gt;</span><span style='font-size:9.0pt;line-height:
+125%;font-family:"Lucida Console";color:black;background:white'><br>
+</span><span style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#005AB4;background:white'>&lt;xsl:stylesheet</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#F5844C;background:white'> </span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:black;background:white'><br>
+</span><span style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#F5844C;background:white'> </span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:#0099CC;background:white'>xmlns:xsl</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#FF8040;background:white'>=</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:#993300;background:white'>&quot;http://www.w3.org/1999/XSL/Transform&quot;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:black;background:white'><br>
+</span><span style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#F5844C;background:white'> </span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:#0099CC;background:white'>xmlns:xs</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#FF8040;background:white'>=</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:#993300;background:white'>&quot;http://www.w3.org/2001/XMLSchema&quot;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:black;background:white'><br>
+</span><span style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#F5844C;background:white'> </span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:#0099CC;background:white'>xmlns:ss</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#FF8040;background:white'>=</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:#993300;background:white'>&quot;urn:schemas-microsoft-com:office:spreadsheet&quot;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:black;background:white'><br>
+</span><span style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#F5844C;background:white'> version</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:#FF8040;background:white'>=</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#993300;background:white'>&quot;2.0&quot;</span><span style='font-size:
+9.0pt;line-height:125%;font-family:"Lucida Console";color:#000096;background:
+white'>&gt;</span><span style='font-size:9.0pt;line-height:125%;font-family:
+"Lucida Console";color:black;background:white'><br>
+<br>
+ </span><span style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:darkgreen;background:white'>&lt;!-- Global Variables: --&gt;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:black;background:white'><br>
+ </span><span style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:darkgreen;background:white'>&lt;!-- these spreadsheet columns contain
+local identifiers of related resources; </span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:black;background:white'><br>
+</span><span style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:darkgreen;background:white'> these values must be prefixed to
+yield globally valid resource URIs --&gt;</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:black;background:white'><br>
+ </span><span style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#005AB4;background:white'>&lt;xsl:variable</span><span style='font-size:
+9.0pt;line-height:125%;font-family:"Lucida Console";color:#F5844C;background:
+white'> name</span><span style='font-size:9.0pt;line-height:125%;font-family:
+"Lucida Console";color:#FF8040;background:white'>=</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#993300;background:white'>&quot;needPrefix&quot;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#000096;background:white'>&gt;</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:black;background:white'>
+parent sibling children </span><span style='font-size:9.0pt;line-height:125%;
+font-family:"Lucida Console";color:#005AB4;background:white'>&lt;/xsl:variable&gt;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:black;background:white'> <br>
+ </span><span style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#005AB4;background:white'>&lt;xsl:variable</span><span style='font-size:
+9.0pt;line-height:125%;font-family:"Lucida Console";color:#F5844C;background:
+white'> name</span><span style='font-size:9.0pt;line-height:125%;font-family:
+"Lucida Console";color:#FF8040;background:white'>=</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#993300;background:white'>&quot;prefix&quot;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#000096;background:white'>&gt;<br>
+ </span><span style='font-size:9.0pt;line-height:125%;font-family:
+"Lucida Console";color:black;background:white'>http://catalogdata.library.illinois.edu/lod/entities/Persons/kp/</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#005AB4;background:white'>&lt;/xsl:variable&gt;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:black;background:white'> </span></p>
+
+</div>
+
+<p class='MsoNormal' align='center' style='margin-bottom:0in;margin-bottom:.0001pt;
+text-align:center'>Figure 11: XSLT root element and global variable bindings </p>
+
+<p class='MsoNormal' style='margin-bottom:0in;margin-bottom:.0001pt;text-align:
+justify'><b>2. match=&quot;/&quot; template and result document</b>: Figure 12
+shows the top portion of the stylesheet's main template, which matches on the
+root of the XML source-tree. Note that the first Row of the source XML simply
+recapitulates the column names and therefore can be skipped during the
+transform. This is accomplished by including the test for position()&gt;1 in
+the initial for-each instruction's select attribute. The second test included
+in the select attribute ensures that all subsequent Rows having a NamedCell
+grandchild node with a Name attribute value of 'KeyCode' are transformed by the
+for-each instruction. The first step in transforming a Row is to bind 3 variables,
+<i>$localID</i>, <i>$saveAs</i>, <i>$uri</i>, to values found in the Row. These
+variables are used to set both the filename for saving the Row's JSON-LD
+serialization and the global identifier for the Person or Organization entity
+being described. A result-document instruction is used create the file for
+saving the result-tree. The value of the href attribute of this element becomes
+the name of the file to be saved. Since JSON-LD is a plain-text serialization,
+the output (method) is set to text. Then the initial curly brace, the JSON-LD context
+reference (same for all Rows) and the global identifier of the
+Person/Organization are written to the result-tree using xsl:text instructions.
+</p>
+
+<p class='MsoNormal' style='margin-bottom:0in;margin-bottom:.0001pt'>&#xA0;</p>
+
+<div style='border:solid windowtext 2.25pt;padding:1.0pt 4.0pt 1.0pt 4.0pt;
+background:white;margin-left:0in;margin-right:-.15in'>
+
+<p class='MsoNormal' style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+125%;background:white;text-autospace:none;border:none;padding:0in'><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#005AB4;background:white'>&lt;xsl:template</span><span style='font-size:
+9.0pt;line-height:125%;font-family:"Lucida Console";color:#F5844C;background:
+white'> match</span><span style='font-size:9.0pt;line-height:125%;font-family:
+"Lucida Console";color:#FF8040;background:white'>=</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#993300;background:white'>'/'</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:#000096;background:white'>&gt;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:black;background:white'><br>
+</span><span style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#005AB4;background:white'>&lt;xsl:for-each</span><span style='font-size:
+9.0pt;line-height:125%;font-family:"Lucida Console";color:#F5844C;background:
+white'> <br>
+ select</span><span style='font-size:9.0pt;line-height:125%;font-family:
+"Lucida Console";color:#FF8040;background:white'>=</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#993300;background:white'>&quot;//ss:Row[position()&gt;1][ss:Cell/ss:NamedCell/@ss:Name='KeyCode']&quot;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#000096;background:white'>&gt;</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:black;background:white'><br>
+<br>
+ </span><span style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:darkgreen;background:white'>&lt;!-- this spreadsheet column contains
+local identifier of the resource being</span></p>
+
+<p class='MsoNormal' style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+125%;background:white;text-autospace:none;border:none;padding:0in'><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:darkgreen;background:white'> described by the row, from which the
+global resource URI and local file</span></p>
+
+<p class='MsoNormal' style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+125%;background:white;text-autospace:none;border:none;padding:0in'><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:darkgreen;background:white'> location for saving can be derived
+--&gt;</span><span style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:black;background:white'><br>
+ </span><span style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#005AB4;background:white'>&lt;xsl:variable</span><span style='font-size:
+9.0pt;line-height:125%;font-family:"Lucida Console";color:#F5844C;background:
+white'> name</span><span style='font-size:9.0pt;line-height:125%;font-family:
+"Lucida Console";color:#FF8040;background:white'>=</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#993300;background:white'>&quot;localId&quot;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#F5844C;background:white'> <br>
+ select</span><span style='font-size:9.0pt;line-height:125%;font-family:
+"Lucida Console";color:#FF8040;background:white'>=</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#993300;background:white'>&quot;./ss:Cell[ss:NamedCell/@ss:Name='KeyCode']/ss:Data&quot;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#000096;background:white'>/&gt;</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:black;background:white'><br>
+ </span><span style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#005AB4;background:white'>&lt;xsl:variable</span><span style='font-size:
+9.0pt;line-height:125%;font-family:"Lucida Console";color:#F5844C;background:
+white'> name</span><span style='font-size:9.0pt;line-height:125%;font-family:
+"Lucida Console";color:#FF8040;background:white'>=</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#993300;background:white'>&quot;saveAs&quot;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#F5844C;background:white'> select</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:#FF8040;background:white'>=</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#993300;background:white'>&quot;concat('NameGraphs/',$localId,
+'.jsonld')&quot;</span><span style='font-size:9.0pt;line-height:125%;
+font-family:"Lucida Console";color:#000096;background:white'>/&gt;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:black;background:white'><br>
+ </span><span style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#005AB4;background:white'>&lt;xsl:variable</span><span style='font-size:
+9.0pt;line-height:125%;font-family:"Lucida Console";color:#F5844C;background:
+white'> name</span><span style='font-size:9.0pt;line-height:125%;font-family:
+"Lucida Console";color:#FF8040;background:white'>=</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#993300;background:white'>'uri'</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:#F5844C;background:white'>
+select</span><span style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#FF8040;background:white'>=</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:#993300;background:white'>&quot;concat($prefix,
+$localId )&quot;</span><span style='font-size:9.0pt;line-height:125%;
+font-family:"Lucida Console";color:#000096;background:white'>/&gt;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:black;background:white'><br>
+<br>
+ </span><span style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#005AB4;background:white'>&lt;xsl:result-document</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#F5844C;background:white'> href</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:#FF8040;background:white'>=</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#993300;background:white'>&quot;{$saveAs}&quot;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#F5844C;background:white'> method</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:#FF8040;background:white'>=</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#993300;background:white'>'text'</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:#F5844C;background:white'>
+exclude-result-prefixes</span><span style='font-size:9.0pt;line-height:125%;
+font-family:"Lucida Console";color:#FF8040;background:white'>=</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#993300;background:white'>&quot;#all&quot;</span><span style='font-size:
+9.0pt;line-height:125%;font-family:"Lucida Console";color:#F5844C;background:
+white'> </span><span style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:black;background:white'><br>
+</span><span style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#F5844C;background:white'> omit-xml-declaration</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#FF8040;background:white'>=</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:#993300;background:white'>&quot;yes&quot;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#F5844C;background:white'> indent</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:#FF8040;background:white'>=</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#993300;background:white'>&quot;no&quot;</span><span style='font-size:
+9.0pt;line-height:125%;font-family:"Lucida Console";color:#F5844C;background:
+white'> encoding</span><span style='font-size:9.0pt;line-height:125%;
+font-family:"Lucida Console";color:#FF8040;background:white'>=</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#993300;background:white'>&quot;UTF-8&quot;</span><span style='font-size:
+9.0pt;line-height:125%;font-family:"Lucida Console";color:#000096;background:
+white'>&gt;</span><span style='font-size:9.0pt;line-height:125%;font-family:
+"Lucida Console";color:black;background:white'><br>
+<br>
+ </span><span style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#005AB4;background:white'>&lt;xsl:text&gt;</span><span style='font-size:
+9.0pt;line-height:125%;font-family:"Lucida Console";color:black;background:
+white'>{ </span><span style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#969600;background:white'>&amp;#10;</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:black;background:white'>
+&quot;@context&quot;: &quot;http://schema.org&quot;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#005AB4;background:white'>&lt;/xsl:text&gt;</span><span style='font-size:
+9.0pt;line-height:125%;font-family:"Lucida Console";color:black;background:
+white'><br>
+ </span><span style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#005AB4;background:white'>&lt;xsl:text&gt;</span><span style='font-size:
+9.0pt;line-height:125%;font-family:"Lucida Console";color:black;background:
+white'>, </span><span style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#969600;background:white'>&amp;#10;</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:black;background:white'>
+&quot;id&quot;: &quot;</span><span style='font-size:9.0pt;line-height:125%;
+font-family:"Lucida Console";color:#005AB4;background:white'>&lt;/xsl:text&gt;&lt;xsl:value-of</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#F5844C;background:white'> select</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:#FF8040;background:white'>=</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#993300;background:white'>'$uri'</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:#000096;background:white'>/&gt;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#005AB4;background:white'>&lt;xsl:text&gt;</span><span style='font-size:
+9.0pt;line-height:125%;font-family:"Lucida Console";color:black;background:
+white'>&quot;</span><span style='font-size:9.0pt;line-height:125%;font-family:
+"Lucida Console";color:#005AB4;background:white'>&lt;/xsl:text&gt;</span></p>
+
+</div>
+
+<p class='MsoNormal' align='center' style='margin-bottom:0in;margin-bottom:.0001pt;
+text-align:center'>Figure 12: First part of the XSLT's main template
+(match='/')</p>
+
+<p class='MsoNormal' style='margin-bottom:0in;margin-bottom:.0001pt'>&#xA0;</p>
+
+<p class='MsoNormal' style='margin-bottom:0in;margin-bottom:.0001pt;text-align:
+justify'><b>3.</b> <b>The addValues named template</b>: Figure 13 (next page)
+shows the next section of the main template. In this section of the transform, a
+variable, <i>$myLinks</i>, is bound. This variable will be a Row-specific node
+sequence containing 0, 1, or more than 1 &quot;value&quot; elements. A
+xsl:for-each instruction is used to populate <i>$myLinks</i> variable with
+strings drawn from the VIAF_Link, EN_WIKIPEDIA AND FR_WIKIPEDIA columns. These
+values are additional URLs for retrieving information about the person or
+family being described. In schema.org semantics these links are recorded as values
+of the sameAs predicate. Note that consistent with JSON-LD syntax, each URL is
+surrounded with quotes before being added to the <i>$myLinks</i> variable. Once
+the <i>$myLinks</i> variable has been populated, a named template, addValues
+(Figure 14), is called with 2 parameters, <i>$valueKey</i> and <i>$valueArray</i>.
+The string &quot;sameAs&quot; is provided for <i>$valueKey</i>, and the
+variable <i>$myLinks</i> is passed for the parameter <i>$valueArray</i>. The
+addValues template consists of a xsl:choose instruction that branches according
+to the length of the <i>$valueArray</i> node sequence. If consisting of only a
+single node, the contained string is written to the result-tree as the value of
+the sameAs key. If more than one node, an array of all the strings from the
+sequence is written to the result-tree as the value of the sameAs key. If zero nodes,
+nothing is written to the result-tree (absence of xsl:otherwise). Note the use
+of the separator attribute on the xsl:value-of instruction. If the xsl:value-of
+instruction's select attribute value is a node sequence, the value of the
+separator attribute will be used to delineate values of items in the sequence.
+Once control is passed back to the main match=&quot;/&quot; template, another
+choose is used to write the type of object being described (Person or
+Organization) to the result-tree. </p>
+
+<p class='MsoNormal' style='margin-bottom:0in;margin-bottom:.0001pt'>&#xA0;</p>
+
+<div style='border:solid windowtext 2.25pt;padding:1.0pt 4.0pt 1.0pt 4.0pt;
+background:white'>
+
+<p class='MsoNormal' style='margin-bottom:6.0pt;line-height:125%;background:white;
+text-autospace:none;border:none;padding:0in'><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:black;background:white'></span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:darkgreen;background:white'>&lt;!-- URIs found in these spreadsheet
+columns will be conflated to yield the </span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:black;background:white'><br>
+</span><span style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:darkgreen;background:white'> value of the schema:sameAs property
+for resource being described --&gt;</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:black;background:white'><br>
+ </span><span style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#005AB4;background:white'>&lt;xsl:variable</span><span style='font-size:
+9.0pt;line-height:125%;font-family:"Lucida Console";color:#F5844C;background:
+white'> name</span><span style='font-size:9.0pt;line-height:125%;font-family:
+"Lucida Console";color:#FF8040;background:white'>=</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#993300;background:white'>&quot;myLinks&quot;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#000096;background:white'>&gt;</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:black;background:white'><br>
+ </span><span style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#005AB4;background:white'>&lt;xsl:for-each</span><span style='font-size:
+9.0pt;line-height:125%;font-family:"Lucida Console";color:#F5844C;background:
+white'> select</span><span style='font-size:9.0pt;line-height:125%;font-family:
+"Lucida Console";color:#FF8040;background:white'>=</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#993300;background:white'>&quot;./ss:Cell[ss:NamedCell/@ss:Name='VIAF_Link'
+or </span><span style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:black;background:white'><br>
+</span><span style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#993300;background:white'> ss:NamedCell/@ss:Name='EN_WIKIPEDIA'
+or <br>
+ ss:NamedCell/@ss:Name='FR_WIKIPEDIA']/ss:Data&quot;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#000096;background:white'>&gt;</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:black;background:white'><br>
+ </span><span style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#000096;background:white'>&lt;value&gt;</span><span style='font-size:
+9.0pt;line-height:125%;font-family:"Lucida Console";color:black;background:
+white'>&quot;</span><span style='font-size:9.0pt;line-height:125%;font-family:
+"Lucida Console";color:#005AB4;background:white'>&lt;xsl:value-of</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#F5844C;background:white'> select</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:#FF8040;background:white'>=</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#993300;background:white'>&quot;.&quot;</span><span style='font-size:
+9.0pt;line-height:125%;font-family:"Lucida Console";color:#000096;background:
+white'>/&gt;</span><span style='font-size:9.0pt;line-height:125%;font-family:
+"Lucida Console";color:black;background:white'>&quot;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#000096;background:white'>&lt;/value&gt;</span><span style='font-size:
+9.0pt;line-height:125%;font-family:"Lucida Console";color:black;background:
+white'><br>
+ </span><span style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#005AB4;background:white'>&lt;/xsl:for-each&gt;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:black;background:white'><br>
+ </span><span style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#005AB4;background:white'>&lt;/xsl:variable&gt;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:black;background:white'> <br>
+ </span><span style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#005AB4;background:white'>&lt;xsl:call-template</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#F5844C;background:white'> name</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:#FF8040;background:white'>=</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#993300;background:white'>&quot;addValues&quot;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#000096;background:white'>&gt;</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:black;background:white'><br>
+ </span><span style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#005AB4;background:white'>&lt;xsl:with-param</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#F5844C;background:white'> name</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:#FF8040;background:white'>=</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#993300;background:white'>&quot;valueKey&quot;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#000096;background:white'>&gt;</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:black;background:white'>sameAs</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#005AB4;background:white'>&lt;/xsl:with-param&gt;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:black;background:white'><br>
+ </span><span style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#005AB4;background:white'>&lt;xsl:with-param</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#F5844C;background:white'> name</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:#FF8040;background:white'>=</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#993300;background:white'>&quot;valueArray&quot;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#F5844C;background:white'> select</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:#FF8040;background:white'>=</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#993300;background:white'>&quot;$myLinks&quot;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#F5844C;background:white'> </span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:#000096;background:white'>/&gt;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:black;background:white'><br>
+ </span><span style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#005AB4;background:white'>&lt;/xsl:call-template&gt;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:black;background:white'><br>
+ </span><span style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#005AB4;background:white'>&lt;xsl:choose&gt;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:black;background:white'> </span></p>
+
+<p class='MsoNormal' style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+125%;background:white;text-autospace:none;border:none;padding:0in'><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:black;background:white'> </span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:#005AB4;background:white'>&lt;xsl:when</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#F5844C;background:white'> </span></p>
+
+<p class='MsoNormal' style='margin-bottom:6.0pt;line-height:125%;background:white;
+text-autospace:none;border:none;padding:0in'><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:#F5844C;background:white'>
+test</span><span style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#FF8040;background:white'>=</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:#993300;background:white'>&quot;contains(./ss:Cell[ss:NamedCell/@ss:Name='name']/ss:Data,
+'famille')&quot;</span><span style='font-size:9.0pt;line-height:125%;
+font-family:"Lucida Console";color:#000096;background:white'>&gt;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:black;background:white'><br>
+ </span><span style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#005AB4;background:white'>&lt;xsl:text&gt;</span><span style='font-size:
+9.0pt;line-height:125%;font-family:"Lucida Console";color:black;background:
+white'>,</span><span style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#969600;background:white'>&amp;#10;</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:black;background:white'>
+&quot;type&quot;: &quot;Organization&quot;</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:#005AB4;background:white'>&lt;/xsl:text&gt;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:black;background:white'><br>
+ </span><span style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#005AB4;background:white'>&lt;/xsl:when&gt;</span><span style='font-size:
+9.0pt;line-height:125%;font-family:"Lucida Console";color:black;background:
+white'> </span></p>
+
+<p class='MsoNormal' style='margin-bottom:6.0pt;line-height:125%;background:white;
+text-autospace:none;border:none;padding:0in'><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:black;background:white'>
+</span><span style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#005AB4;background:white'>&lt;xsl:otherwise&gt;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:black;background:white'><br>
+ </span><span style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#005AB4;background:white'>&lt;xsl:text&gt;</span><span style='font-size:
+9.0pt;line-height:125%;font-family:"Lucida Console";color:black;background:
+white'>,</span><span style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#969600;background:white'>&amp;#10;</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:black;background:white'>
+&quot;type&quot;: &quot;Person&quot;</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:#005AB4;background:white'>&lt;/xsl:text&gt;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:black;background:white'><br>
+ </span><span style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#005AB4;background:white'>&lt;/xsl:otherwise&gt;</span></p>
+
+<p class='MsoNormal' style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+125%;background:white;text-autospace:none;border:none;padding:0in'><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:black;background:white'> </span><span style='font-size:9.0pt;line-height:
+125%;font-family:"Lucida Console";color:#005AB4;background:white'>&lt;/xsl:choose&gt;</span></p>
+
+</div>
+
+<p class='MsoNormal' align='center' style='margin-bottom:0in;margin-bottom:.0001pt;
+text-align:center'>Figure 13: Binding the <i>$myLinks</i> variable, calling the
+addValues template, and expressing the object type</p>
+
+<p class='MsoNormal' style='margin-bottom:0in;margin-bottom:.0001pt'>&#xA0;</p>
+
+<div style='border:solid windowtext 2.25pt;padding:1.0pt 4.0pt 1.0pt 4.0pt;
+background:white;margin-left:.6in;margin-right:.6in'>
+
+<p class='MsoNormal' style='margin-bottom:6.0pt;line-height:125%;background:white;
+text-autospace:none;border:none;padding:0in'><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:black;background:white'></span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#005AB4;background:white'>&lt;xsl:template</span><span style='font-size:
+9.0pt;line-height:125%;font-family:"Lucida Console";color:#F5844C;background:
+white'> name</span><span style='font-size:9.0pt;line-height:125%;font-family:
+"Lucida Console";color:#FF8040;background:white'>=</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#993300;background:white'>&quot;addValues&quot;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#000096;background:white'>&gt;</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:black;background:white'><br>
+ </span><span style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#005AB4;background:white'>&lt;xsl:param</span><span style='font-size:
+9.0pt;line-height:125%;font-family:"Lucida Console";color:#F5844C;background:
+white'> name</span><span style='font-size:9.0pt;line-height:125%;font-family:
+"Lucida Console";color:#FF8040;background:white'>=</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#993300;background:white'>&quot;valueArray&quot;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#F5844C;background:white'> required</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:#FF8040;background:white'>=</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#993300;background:white'>&quot;yes&quot;</span><span style='font-size:
+9.0pt;line-height:125%;font-family:"Lucida Console";color:#000096;background:
+white'>/&gt;</span><span style='font-size:9.0pt;line-height:125%;font-family:
+"Lucida Console";color:black;background:white'><br>
+ </span><span style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#005AB4;background:white'>&lt;xsl:param</span><span style='font-size:
+9.0pt;line-height:125%;font-family:"Lucida Console";color:#F5844C;background:
+white'> name</span><span style='font-size:9.0pt;line-height:125%;font-family:
+"Lucida Console";color:#FF8040;background:white'>=</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#993300;background:white'>&quot;valueKey&quot;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#F5844C;background:white'> required</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:#FF8040;background:white'>=</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#993300;background:white'>&quot;yes&quot;</span><span style='font-size:
+9.0pt;line-height:125%;font-family:"Lucida Console";color:#F5844C;background:
+white'> </span><span style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#000096;background:white'>/&gt;</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:black;background:white'><br>
+ </span><span style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#005AB4;background:white'>&lt;xsl:choose&gt;</span></p>
+
+<p class='MsoNormal' style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+125%;background:white;text-autospace:none;border:none;padding:0in'><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:black;background:white'> </span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:#005AB4;background:white'>&lt;xsl:when</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#F5844C;background:white'> test</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:#FF8040;background:white'>=</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#993300;background:white'>&quot;count($valueArray/value)=1&quot;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#000096;background:white'>&gt;</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:black;background:white'><br>
+ </span><span style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#005AB4;background:white'>&lt;xsl:text&gt;</span><span style='font-size:
+9.0pt;line-height:125%;font-family:"Lucida Console";color:black;background:
+white'>,</span><span style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#969600;background:white'>&amp;#10;</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:black;background:white'>
+&quot;</span><span style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#005AB4;background:white'>&lt;/xsl:text&gt;</span></p>
+
+<p class='MsoNormal' style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+125%;background:white;text-autospace:none;border:none;padding:0in'><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#005AB4;background:white'> &lt;xsl:value-of</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#F5844C;background:white'> select</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:#FF8040;background:white'>=</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#993300;background:white'>&quot;$valueKey&quot;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#000096;background:white'>/&gt;</span></p>
+
+<p class='MsoNormal' style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+125%;background:white;text-autospace:none;border:none;padding:0in'><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#000096;background:white'> </span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:#005AB4;background:white'>&lt;xsl:text&gt;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:black;background:white'>&quot;: </span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:#005AB4;background:white'>&lt;/xsl:text&gt;</span></p>
+
+<p class='MsoNormal' style='margin-bottom:6.0pt;line-height:125%;background:white;
+text-autospace:none;border:none;padding:0in'><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:black;background:white'>
+</span><span style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#005AB4;background:white'>&lt;xsl:value-of</span><span style='font-size:
+9.0pt;line-height:125%;font-family:"Lucida Console";color:#F5844C;background:
+white'> select</span><span style='font-size:9.0pt;line-height:125%;font-family:
+"Lucida Console";color:#FF8040;background:white'>=</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#993300;background:white'>&quot;$valueArray/value&quot;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#000096;background:white'>/&gt;</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:black;background:white'><br>
+ </span><span style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#005AB4;background:white'>&lt;/xsl:when&gt;</span></p>
+
+<p class='MsoNormal' style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+125%;background:white;text-autospace:none;border:none;padding:0in'><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:black;background:white'> </span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:#005AB4;background:white'>&lt;xsl:when</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#F5844C;background:white'> test</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:#FF8040;background:white'>=</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#993300;background:white'>&quot;count($valueArray/value)&gt;1&quot;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#000096;background:white'>&gt;</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:black;background:white'><br>
+ </span><span style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#005AB4;background:white'>&lt;xsl:text&gt;</span><span style='font-size:
+9.0pt;line-height:125%;font-family:"Lucida Console";color:black;background:
+white'>,</span><span style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#969600;background:white'>&amp;#10;</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:black;background:white'>
+&quot;</span><span style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#005AB4;background:white'>&lt;/xsl:text&gt;</span></p>
+
+<p class='MsoNormal' style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+125%;background:white;text-autospace:none;border:none;padding:0in'><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#005AB4;background:white'> &lt;xsl:value-of</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#F5844C;background:white'> select</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:#FF8040;background:white'>=</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#993300;background:white'>&quot;$valueKey&quot;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#000096;background:white'>/&gt;</span></p>
+
+<p class='MsoNormal' style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+125%;background:white;text-autospace:none;border:none;padding:0in'><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#000096;background:white'> </span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:#005AB4;background:white'>&lt;xsl:text&gt;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:black;background:white'>&quot;: [</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:#005AB4;background:white'>&lt;/xsl:text&gt;</span></p>
+
+<p class='MsoNormal' style='margin-bottom:6.0pt;line-height:125%;background:white;
+text-autospace:none;border:none;padding:0in'><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:black;background:white'>
+</span><span style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#005AB4;background:white'>&lt;xsl:value-of</span><span style='font-size:
+9.0pt;line-height:125%;font-family:"Lucida Console";color:#F5844C;background:
+white'> select</span><span style='font-size:9.0pt;line-height:125%;font-family:
+"Lucida Console";color:#FF8040;background:white'>=</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#993300;background:white'>&quot;$valueArray/value&quot;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#F5844C;background:white'> separator</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:#FF8040;background:white'>=</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#993300;background:white'>&quot;, &quot;</span><span style='font-size:
+9.0pt;line-height:125%;font-family:"Lucida Console";color:#000096;background:
+white'>/&gt;<br>
+ </span><span style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#005AB4;background:white'>&lt;xsl:text&gt;</span><span style='font-size:
+9.0pt;line-height:125%;font-family:"Lucida Console";color:black;background:
+white'>]</span><span style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#005AB4;background:white'>&lt;/xsl:text&gt;</span><span style='font-size:
+9.0pt;line-height:125%;font-family:"Lucida Console";color:black;background:
+white'><br>
+ </span><span style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#005AB4;background:white'>&lt;/xsl:when&gt;</span></p>
+
+<p class='MsoNormal' style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+125%;background:white;text-autospace:none;border:none;padding:0in'><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:black;background:white'> </span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:#005AB4;background:white'>&lt;/xsl:choose&gt;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:black;background:white'><br>
+ </span><span style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#005AB4;background:white'>&lt;/xsl:template&gt;</span></p>
+
+</div>
+
+<p class='MsoNormal' align='center' style='margin-bottom:0in;margin-bottom:.0001pt;
+text-align:center'>Figure 14: The addValues named template</p>
+
+<p class='MsoNormal' style='margin-bottom:0in;margin-bottom:.0001pt'>&#xA0;</p>
+
+<p class='MsoNormal' style='margin-bottom:0in;margin-bottom:.0001pt;text-align:
+justify'><b>4. The parseValues named template</b>: The rest of the
+match=&quot;/&quot; template is shown in Figure 15. This final section of the
+template populates the remaining properties of the JSON-LD serialized RDF
+description and then adds the closing curly brace. The challenge in
+transforming spreadsheet column values in this section of the template is the
+reverse of the previous. Each column maps to a single key in the JSON-LD serialization;
+however, some of the per-column strings (e.g., in the sibling column) may in
+certain rows contain multiple conflated values delineated by a semi-colon-space
+character sequence. In these instances it is necessary to transform these
+conflated strings into a JSON-LD array. Also, as mentioned above, values in
+columns containing local identifiers must be prefixed before being saved to the
+result-tree in order to transform locally unique identifiers into globally
+unique identifiers. To avoid redundancy in the match=&quot;/&quot; template,
+these tasks are done in a named template, parseValues, shown in Figure 16. </p>
+
+<p class='MsoNormal' style='margin-bottom:0in;margin-bottom:.0001pt'>&#xA0;</p>
+
+<div style='border:solid windowtext 2.25pt;padding:1.0pt 4.0pt 1.0pt 4.0pt;
+background:white'>
+
+<p class='MsoNormal' style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+125%;background:white;text-autospace:none;border:none;padding:0in'><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:black;background:white'> </span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:#005AB4;background:white'>&lt;xsl:call-template</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#F5844C;background:white'> name</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:#FF8040;background:white'>=</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#993300;background:white'>&quot;parseValues&quot;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#000096;background:white'>&gt;</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:black;background:white'><br>
+ </span><span style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#005AB4;background:white'>&lt;xsl:with-param</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#F5844C;background:white'> name</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:#FF8040;background:white'>=</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#993300;background:white'>&quot;valueKey&quot;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#000096;background:white'>&gt;</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:black;background:white'>name</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#005AB4;background:white'>&lt;/xsl:with-param&gt;&lt;/xsl:call-template&gt;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:black;background:white'> <br>
+ </span><span style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#005AB4;background:white'>&lt;xsl:call-template</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#F5844C;background:white'> name</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:#FF8040;background:white'>=</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#993300;background:white'>&quot;parseValues&quot;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#000096;background:white'>&gt;</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:black;background:white'><br>
+ </span><span style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#005AB4;background:white'>&lt;xsl:with-param</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#F5844C;background:white'> name</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:#FF8040;background:white'>=</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#993300;background:white'>&quot;valueKey&quot;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#000096;background:white'>&gt;</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:black;background:white'>familyName</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#005AB4;background:white'>&lt;/xsl:with-param&gt;&lt;/xsl:call-template&gt;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:black;background:white'> <br>
+ </span><span style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#005AB4;background:white'>&lt;xsl:call-template</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#F5844C;background:white'> name</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:#FF8040;background:white'>=</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#993300;background:white'>&quot;parseValues&quot;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#000096;background:white'>&gt;</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:black;background:white'><br>
+ </span><span style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#005AB4;background:white'>&lt;xsl:with-param</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#F5844C;background:white'> name</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:#FF8040;background:white'>=</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#993300;background:white'>&quot;valueKey&quot;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#000096;background:white'>&gt;</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:black;background:white'>givenName</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#005AB4;background:white'>&lt;/xsl:with-param&gt;&lt;/xsl:call-template&gt;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:black;background:white'> <br>
+ </span><span style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#005AB4;background:white'>&lt;xsl:call-template</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#F5844C;background:white'> name</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:#FF8040;background:white'>=</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#993300;background:white'>&quot;parseValues&quot;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#000096;background:white'>&gt;</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:black;background:white'><br>
+ </span><span style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#005AB4;background:white'>&lt;xsl:with-param</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#F5844C;background:white'> name</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:#FF8040;background:white'>=</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#993300;background:white'>&quot;valueKey&quot;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#000096;background:white'>&gt;</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:black;background:white'>birthDate</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#005AB4;background:white'>&lt;/xsl:with-param&gt;&lt;/xsl:call-template&gt;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:black;background:white'> <br>
+ </span><span style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#005AB4;background:white'>&lt;xsl:call-template</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#F5844C;background:white'> name</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:#FF8040;background:white'>=</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#993300;background:white'>&quot;parseValues&quot;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#000096;background:white'>&gt;</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:black;background:white'><br>
+ </span><span style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#005AB4;background:white'>&lt;xsl:with-param</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#F5844C;background:white'> name</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:#FF8040;background:white'>=</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#993300;background:white'>&quot;valueKey&quot;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#000096;background:white'>&gt;</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:black;background:white'>deathDate</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#005AB4;background:white'>&lt;/xsl:with-param&gt;&lt;/xsl:call-template&gt;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:black;background:white'> <br>
+ </span><span style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#005AB4;background:white'>&lt;xsl:call-template</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#F5844C;background:white'> name</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:#FF8040;background:white'>=</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#993300;background:white'>&quot;parseValues&quot;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#000096;background:white'>&gt;</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:black;background:white'><br>
+ </span><span style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#005AB4;background:white'>&lt;xsl:with-param</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#F5844C;background:white'> name</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:#FF8040;background:white'>=</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#993300;background:white'>&quot;valueKey&quot;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#000096;background:white'>&gt;</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:black;background:white'>gender</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#005AB4;background:white'>&lt;/xsl:with-param&gt;&lt;/xsl:call-template&gt;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:black;background:white'> <br>
+ </span><span style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#005AB4;background:white'>&lt;xsl:call-template</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#F5844C;background:white'> name</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:#FF8040;background:white'>=</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#993300;background:white'>&quot;parseValues&quot;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#000096;background:white'>&gt;</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:black;background:white'><br>
+ </span><span style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#005AB4;background:white'>&lt;xsl:with-param</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#F5844C;background:white'> name</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:#FF8040;background:white'>=</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#993300;background:white'>&quot;valueKey&quot;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#000096;background:white'>&gt;</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:black;background:white'>description</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#005AB4;background:white'>&lt;/xsl:with-param&gt;&lt;/xsl:call-template&gt;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:black;background:white'> <br>
+ </span><span style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#005AB4;background:white'>&lt;xsl:call-template</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#F5844C;background:white'> name</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:#FF8040;background:white'>=</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#993300;background:white'>&quot;parseValues&quot;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#000096;background:white'>&gt;</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:black;background:white'><br>
+ </span><span style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#005AB4;background:white'>&lt;xsl:with-param</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#F5844C;background:white'> name</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:#FF8040;background:white'>=</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#993300;background:white'>&quot;valueKey&quot;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#000096;background:white'>&gt;</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:black;background:white'>parent</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#005AB4;background:white'>&lt;/xsl:with-param&gt;&lt;/xsl:call-template&gt;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:black;background:white'><br>
+ </span><span style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#005AB4;background:white'>&lt;xsl:call-template</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#F5844C;background:white'> name</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:#FF8040;background:white'>=</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#993300;background:white'>&quot;parseValues&quot;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#000096;background:white'>&gt;</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:black;background:white'><br>
+ </span><span style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#005AB4;background:white'>&lt;xsl:with-param</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#F5844C;background:white'> name</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:#FF8040;background:white'>=</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#993300;background:white'>&quot;valueKey&quot;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#000096;background:white'>&gt;</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:black;background:white'>sibling</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#005AB4;background:white'>&lt;/xsl:with-param&gt;&lt;/xsl:call-template&gt;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:black;background:white'><br>
+ </span><span style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#005AB4;background:white'>&lt;xsl:call-template</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#F5844C;background:white'> name</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:#FF8040;background:white'>=</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#993300;background:white'>&quot;parseValues&quot;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#000096;background:white'>&gt;</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:black;background:white'><br>
+ </span><span style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#005AB4;background:white'>&lt;xsl:with-param</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#F5844C;background:white'> name</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:#FF8040;background:white'>=</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#993300;background:white'>&quot;valueKey&quot;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#000096;background:white'>&gt;</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:black;background:white'>children</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#005AB4;background:white'>&lt;/xsl:with-param&gt;&lt;/xsl:call-template&gt;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:black;background:white'><br>
+<br>
+ </span><span style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#005AB4;background:white'>&lt;xsl:text&gt;</span><span style='font-size:
+9.0pt;line-height:125%;font-family:"Lucida Console";color:#969600;background:
+white'>&amp;#10;</span><span style='font-size:9.0pt;line-height:125%;
+font-family:"Lucida Console";color:black;background:white'>}</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#005AB4;background:white'>&lt;/xsl:text&gt;</span><span style='font-size:
+9.0pt;line-height:125%;font-family:"Lucida Console";color:black;background:
+white'><br>
+ </span><span style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#005AB4;background:white'>&lt;/xsl:result-document&gt;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:black;background:white'><br>
+</span><span style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#005AB4;background:white'>&lt;/xsl:for-each&gt;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:black;background:white'><br>
+</span><span style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#005AB4;background:white'>&lt;/xsl:template&gt;</span></p>
+
+</div>
+
+<p class='MsoNormal' align='center' style='margin-bottom:0in;margin-bottom:.0001pt;
+text-align:center'>Figure 15: The rest of the XSLT's main template</p>
+
+<p class='MsoNormal' style='margin-bottom:0in;margin-bottom:.0001pt'>&#xA0;</p>
+
+<p class='MsoNormal' style='margin-bottom:0in;margin-bottom:.0001pt;text-align:
+justify'>The parseValues template requires a single parameter, <i>$valueKey</i>.
+This parameter is used to pass in the column name which is also the JSON-LD key
+that will be written to the result-tree (i.e., and also the Schema.org
+predicate corresponding to the column). The task of the parseValues template is
+to construct a node sequence, which is bound to the <i>$valueArray</i>
+variable, containing the string value(s) found in the column identified by the <i>$valueKey</i>.
+A xsl:for-each instruction is used to select the column value. Note that the
+select attribute value for this for-each instruction is determined using the
+XPath 2.0 tokenize function to split the spreadsheet value on semi-colon-space sequence
+when found. Note also that columns having a name in the <i>$needPrefix</i> list
+are added to the node sequence with a prefix (so as to create globally unique
+identifiers from the locally unique identifier values contained in the
+spreadsheet column). Once the <i>$valueArray</i> variable has been populated,
+the parseValues template then calls the addValues template and output is
+written to the result-tree by that template as described above. </p>
+
+<p class='MsoNormal' style='margin-bottom:0in;margin-bottom:.0001pt'>&#xA0;</p>
+
+<div style='border:solid windowtext 2.25pt;padding:1.0pt 4.0pt 1.0pt 4.0pt;
+background:white'>
+
+<p class='MsoNormal' style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+125%;background:white;text-autospace:none;border:none;padding:0in'><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#005AB4;background:white'>&lt;xsl:template</span><span style='font-size:
+9.0pt;line-height:125%;font-family:"Lucida Console";color:#F5844C;background:
+white'> name</span><span style='font-size:9.0pt;line-height:125%;font-family:
+"Lucida Console";color:#FF8040;background:white'>=</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#993300;background:white'>&quot;parseValues&quot;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#000096;background:white'>&gt;</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:black;background:white'><br>
+ </span><span style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#005AB4;background:white'>&lt;xsl:param</span><span style='font-size:
+9.0pt;line-height:125%;font-family:"Lucida Console";color:#F5844C;background:
+white'> name</span><span style='font-size:9.0pt;line-height:125%;font-family:
+"Lucida Console";color:#FF8040;background:white'>=</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#993300;background:white'>&quot;valueKey&quot;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#F5844C;background:white'> required</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:#FF8040;background:white'>=</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#993300;background:white'>&quot;yes&quot;</span><span style='font-size:
+9.0pt;line-height:125%;font-family:"Lucida Console";color:#000096;background:
+white'>/&gt;</span><span style='font-size:9.0pt;line-height:125%;font-family:
+"Lucida Console";color:black;background:white'><br>
+ </span><span style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#005AB4;background:white'>&lt;xsl:variable</span><span style='font-size:
+9.0pt;line-height:125%;font-family:"Lucida Console";color:#F5844C;background:
+white'> name</span><span style='font-size:9.0pt;line-height:125%;font-family:
+"Lucida Console";color:#FF8040;background:white'>=</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#993300;background:white'>&quot;valueArray&quot;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#000096;background:white'>&gt;</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:black;background:white'><br>
+ </span><span style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#005AB4;background:white'>&lt;xsl:for-each</span><span style='font-size:
+9.0pt;line-height:125%;font-family:"Lucida Console";color:#F5844C;background:
+white'> </span></p>
+
+<p class='MsoNormal' style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+125%;background:white;text-autospace:none;border:none;padding:0in'><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#F5844C;background:white'> select</span><span style='font-size:
+9.0pt;line-height:125%;font-family:"Lucida Console";color:#FF8040;background:
+white'>=</span><span style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#993300;background:white'>&quot;tokenize(./ss:Cell[ss:NamedCell/@ss:Name=$valueKey]/ss:Data,
+'; ')&quot;</span><span style='font-size:9.0pt;line-height:125%;font-family:
+"Lucida Console";color:#000096;background:white'>&gt;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:black;background:white'><br>
+ </span><span style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#005AB4;background:white'>&lt;xsl:choose&gt;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:black;background:white'><br>
+ </span><span style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#005AB4;background:white'>&lt;xsl:when</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:#F5844C;background:white'>
+test</span><span style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#FF8040;background:white'>=</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:#993300;background:white'>&quot;contains($needPrefix,
+$valueKey)&quot;</span><span style='font-size:9.0pt;line-height:125%;
+font-family:"Lucida Console";color:#000096;background:white'>&gt;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:black;background:white'><br>
+ </span><span style='font-size:9.0pt;line-height:125%;font-family:
+"Lucida Console";color:#000096;background:white'>&lt;value&gt;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:black;background:white'>&quot;</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:#005AB4;background:white'>&lt;xsl:value-of</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#F5844C;background:white'> select</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:#FF8040;background:white'>=</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#993300;background:white'>&quot;$prefix&quot;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#000096;background:white'>/&gt;</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:#005AB4;background:white'>&lt;xsl:value-of</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#F5844C;background:white'> select</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:#FF8040;background:white'>=</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#993300;background:white'>&quot;.&quot;</span><span style='font-size:
+9.0pt;line-height:125%;font-family:"Lucida Console";color:#000096;background:
+white'>/&gt;</span><span style='font-size:9.0pt;line-height:125%;font-family:
+"Lucida Console";color:black;background:white'>&quot;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#000096;background:white'>&lt;/value&gt;</span><span style='font-size:
+9.0pt;line-height:125%;font-family:"Lucida Console";color:black;background:
+white'><br>
+ </span><span style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#005AB4;background:white'>&lt;/xsl:when&gt;</span><span style='font-size:
+9.0pt;line-height:125%;font-family:"Lucida Console";color:black;background:
+white'><br>
+ </span><span style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#005AB4;background:white'>&lt;xsl:otherwise&gt;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:black;background:white'><br>
+ </span><span style='font-size:9.0pt;line-height:125%;font-family:
+"Lucida Console";color:#000096;background:white'>&lt;value&gt;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:black;background:white'>&quot;</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:#005AB4;background:white'>&lt;xsl:value-of</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#F5844C;background:white'> select</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:#FF8040;background:white'>=</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#993300;background:white'>&quot;.&quot;</span><span style='font-size:
+9.0pt;line-height:125%;font-family:"Lucida Console";color:#000096;background:
+white'>/&gt;</span><span style='font-size:9.0pt;line-height:125%;font-family:
+"Lucida Console";color:black;background:white'>&quot;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#000096;background:white'>&lt;/value&gt;</span><span style='font-size:
+9.0pt;line-height:125%;font-family:"Lucida Console";color:black;background:
+white'> <br>
+ </span><span style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#005AB4;background:white'>&lt;/xsl:otherwise&gt;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:black;background:white'><br>
+ </span><span style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#005AB4;background:white'>&lt;/xsl:choose&gt;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:black;background:white'><br>
+ </span><span style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#005AB4;background:white'>&lt;/xsl:for-each&gt;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:black;background:white'><br>
+ </span><span style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#005AB4;background:white'>&lt;/xsl:variable&gt;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:black;background:white'><br>
+ </span><span style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#005AB4;background:white'>&lt;xsl:call-template</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#F5844C;background:white'> name</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:#FF8040;background:white'>=</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#993300;background:white'>&quot;addValues&quot;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#000096;background:white'>&gt;</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:black;background:white'><br>
+ </span><span style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#005AB4;background:white'>&lt;xsl:with-param</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#F5844C;background:white'> name</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:#FF8040;background:white'>=</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#993300;background:white'>&quot;valueKey&quot;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#F5844C;background:white'> select</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:#FF8040;background:white'>=</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#993300;background:white'>&quot;$valueKey&quot;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#000096;background:white'>/&gt;</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:black;background:white'><br>
+ </span><span style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#005AB4;background:white'>&lt;xsl:with-param</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#F5844C;background:white'> name</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:#FF8040;background:white'>=</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#993300;background:white'>&quot;valueArray&quot;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#F5844C;background:white'> select</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:#FF8040;background:white'>=</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#993300;background:white'>&quot;$valueArray&quot;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#000096;background:white'>/&gt;</span><span style='font-size:9.0pt;
+line-height:125%;font-family:"Lucida Console";color:black;background:white'><br>
+ </span><span style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#005AB4;background:white'>&lt;/xsl:call-template&gt;</span><span
+style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:black;background:white'><br>
+</span><span style='font-size:9.0pt;line-height:125%;font-family:"Lucida Console";
+color:#005AB4;background:white'>&lt;/xsl:template&gt;</span></p>
+
+</div>
+
+<p class='MsoNormal' align='center' style='margin-bottom:0in;margin-bottom:.0001pt;
+text-align:center'>Figure 16: parseValues named template</p>
+
+<p class='MsoNormal' style='margin-bottom:0in;margin-bottom:.0001pt'>&#xA0;</p>
+
+<p class='MsoNormal' style='margin-bottom:0in;margin-bottom:.0001pt'><i>Summary</i></p>
+
+<p class='MsoNormal' style='margin-bottom:0in;margin-bottom:.0001pt'>&#xA0;</p>
+
+<p class='MsoNormal' style='margin-bottom:0in;margin-bottom:.0001pt;text-align:
+justify'>This XSLT example illustrates how XSLT can be integrated into
+real-world workflows and facilitate the bridging of even non-XML serializations
+of information. Obviously the plain-text nature of JSON-LD and the similarities
+between JSON and XML, facilitates the use of XSLT for this workflow, as does
+being able to save spreadsheets in an XML serialization. But the attraction of
+using XSLT is the power of named templates, the availability of the
+xsl:result-document instruction and the utility of features like the separator
+attribute for the xsl:value-of element and the tokenize XPath function. The
+ability to create both globally-scoped and template-scope variables is useful,
+especially given the option to bind node-sequences to these variables. This
+example illustrates the potential of XSLT as a programming language. This
+example XSLT was created for <i>Coding with XML for Efficiencies in Cataloging
+and Metadata: Practical Applications of XSD, XSLT, and XQuery (An ALCTS
+Monograph)</i>, published by ALA Editions, ISBN: 978-0-8389-1653-7. See: <a
+href="http://www.alastore.ala.org/detail.aspx?ID=12189">http://www.alastore.ala.org/detail.aspx?ID=12189</a>
+</p>
+
+<p class='MsoNormal' style='margin-bottom:0in;margin-bottom:.0001pt'>&#xA0;</p>
+
+<p class='MsoNormal' style='margin-bottom:0in;margin-bottom:.0001pt'>&#xA0;</p>
+
+</div>
+
+<div><br clear='all'>
+
+<hr align=left size=1 width="33%">
+
+<div id=edn1>
+
+<p class='MsoEndnoteText'><a href="#_ednref1" name="_edn1" title=""><span
+class='MsoEndnoteReference'><span class='MsoEndnoteReference'><span
+style='font-size:10.0pt;line-height:107%;font-family:"Calibri",sans-serif'>[1]</span></span></span></a>
+<a href="http://kolbproust.library.illinois.edu/proust/search?smode=advanced">http://kolbproust.library.illinois.edu/proust/search?smode=advanced</a>
+</p>
+
+</div>
+
+<div id=edn2>
+
+<p class='MsoEndnoteText'><a href="#_ednref2" name="_edn2" title=""><span
+class='MsoEndnoteReference'><span class='MsoEndnoteReference'><span
+style='font-size:10.0pt;line-height:107%;font-family:"Calibri",sans-serif'>[2]</span></span></span></a>
+<a href="http://schema.org/">http://schema.org/</a></p>
+
+</div>
+
+<div id=edn3>
+
+<p class='MsoEndnoteText'><a href="#_ednref3" name="_edn3" title=""><span
+class='MsoEndnoteReference'><span class='MsoEndnoteReference'><span
+style='font-size:10.0pt;line-height:107%;font-family:"Calibri",sans-serif'>[3]</span></span></span></a>
+The top-level specification for version 1.1 of RDF is: <a
+href="http://www.w3.org/TR/rdf11-concepts/">http://www.w3.org/TR/rdf11-concepts/</a>
+</p>
+
+</div>
+
+<div id=edn4>
+
+<p class='MsoEndnoteText'><a href="#_ednref4" name="_edn4" title=""><span
+class='MsoEndnoteReference'><span class='MsoEndnoteReference'><span
+style='font-size:10.0pt;line-height:107%;font-family:"Calibri",sans-serif'>[4]</span></span></span></a>
+<a href="http://schema.org/Person">http://schema.org/Person</a> </p>
+
+</div>
+
+<div id=edn5>
+
+<p class='MsoEndnoteText'><a href="#_ednref5" name="_edn5" title=""><span
+class='MsoEndnoteReference'><span class='MsoEndnoteReference'><span
+style='font-size:10.0pt;line-height:107%;font-family:"Calibri",sans-serif'>[5]</span></span></span></a>
+<a href="http://schema.org/Organization">http://schema.org/Organization</a> </p>
+
+</div>
+
+<div id=edn6>
+
+<p class='MsoEndnoteText'><a href="#_ednref6" name="_edn6" title=""><span
+class='MsoEndnoteReference'><span class='MsoEndnoteReference'><span
+style='font-size:10.0pt;line-height:107%;font-family:"Calibri",sans-serif'>[6]</span></span></span></a>
+<a
+href="http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf">http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf</a>,
+<a href="http://www.json.org/">http://www.json.org/</a>, <a
+href="https://tools.ietf.org/pdf/rfc7159.pdf">https://tools.ietf.org/pdf/rfc7159.pdf</a></p>
+
+</div>
+
+<div id=edn7>
+
+<p class='MsoEndnoteText'><a href="#_ednref7" name="_edn7" title=""><span
+class='MsoEndnoteReference'><span class='MsoEndnoteReference'><span
+style='font-size:10.0pt;line-height:107%;font-family:"Calibri",sans-serif'>[7]</span></span></span></a>
+<a
+href="http://www.ecma-international.org/publications/files/ECMA-ST/Ecma-262.pdf">http://www.ecma-international.org/publications/files/ECMA-ST/Ecma-262.pdf</a>,
+<a href="https://www.javascript.com/">https://www.javascript.com/</a> </p>
+
+</div>
+
+<div id=edn8>
+
+<p class='MsoEndnoteText'><a href="#_ednref8" name="_edn8" title=""><span
+class='MsoEndnoteReference'><span class='MsoEndnoteReference'><span
+style='font-size:10.0pt;line-height:107%;font-family:"Calibri",sans-serif'>[8]</span></span></span></a>
+<a href="https://www.w3.org/RDF/Validator/">https://www.w3.org/RDF/Validator/</a>
+</p>
+
+</div>
+
+</div>
+
+</body>
+
+</html>
