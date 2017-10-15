@@ -125,8 +125,7 @@
       ss:Name="gender"/></Cell>
     <Cell ss:Index="13"><Data ss:Type="String">http://viaf.org/viaf/29542201</Data><NamedCell
       ss:Name="VIAF_Link"/></Cell>
-    <Cell><Data ss:Type="String"> </Data><NamedCell ss:Name="EN_WIKIPEDIA"/></Cell>
-    <Cell><Data ss:Type="String">https://fr.wikipedia.org/wiki/Antoine_Adam</Data><NamedCell
+     <Cell ss:Index="15"><Data ss:Type="String">https://fr.wikipedia.org/wiki/Antoine_Adam</Data><NamedCell
       ss:Name="FR_WIKIPEDIA"/></Cell>
    </Row>
    <Row ss:AutoFitHeight="0" ss:Height="21.9375">
@@ -142,8 +141,7 @@
       ss:Name="description"/></Cell>
     <Cell ss:Index="13"><Data ss:Type="String">http://viaf.org/viaf/36912154</Data><NamedCell
       ss:Name="VIAF_Link"/></Cell>
-    <Cell><Data ss:Type="String"> </Data><NamedCell ss:Name="EN_WIKIPEDIA"/></Cell>
-    <Cell><Data ss:Type="String">https://fr.wikipedia.org/wiki/Edmond_Adam</Data><NamedCell
+     <Cell ss:Index="15"><Data ss:Type="String">https://fr.wikipedia.org/wiki/Edmond_Adam</Data><NamedCell
       ss:Name="FR_WIKIPEDIA"/></Cell>
    </Row>
    <Row ss:AutoFitHeight="0" ss:Height="21.9375">
