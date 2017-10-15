@@ -1,7 +1,7 @@
 { 
  "@context": "http://schema.org", 
  "id": "http://catalogdata.library.illinois.edu/lod/entities/Persons/kp/adam9",
- "sameAs": ["http://viaf.org/viaf/36912154", " ", "https://fr.wikipedia.org/wiki/Edmond_Adam"],
+ "sameAs": ["http://viaf.org/viaf/36912154", "https://fr.wikipedia.org/wiki/Edmond_Adam"],
  "type": "Person",
  "name": "Adam, Edmond",
  "familyName": "Adam",
