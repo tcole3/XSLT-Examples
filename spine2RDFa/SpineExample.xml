@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<biblioDesc xmlns="http://diglib.hab.de/rules/schema/emblem"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/mods.xsd
+  http://diglib.hab.de/rules/schema/emblem http://diglib.hab.de/rules/schema/emblem/emblem-1-2.xsd"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+  <mods:mods xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:mods="http://www.loc.gov/mods/v3"
+    xmlns:tei="http://www.tei-c.org/ns/1.0"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    version="3.4">
+    <mods:titleInfo>
+      <mods:title>Meditationes emblematicae de restaurata pace Germaniae =</mods:title>
+      <mods:subTitle>Sinnebilder von dem widergebrachten Teutschen Frieden</mods:subTitle>
+    </mods:titleInfo>
+    <mods:titleInfo type="alternative">
+      <mods:title>Sinnebilder von dem widergebrachten Teutschen Frieden</mods:title>
+    </mods:titleInfo>
+    <mods:titleInfo type="alternative">
+      <mods:title>Meditationes de restaurata pace</mods:title>
+    </mods:titleInfo>
+    <mods:titleInfo type="alternative">
+      <mods:title>Sinnbilder von dem wiedergebrachten Frieden in Teutschlandt</mods:title>
+    </mods:titleInfo>
+    <mods:name type="personal">
+      <mods:namePart>Vogel, Johann</mods:namePart>
+      <mods:namePart type="date">1589-1663</mods:namePart>
+      <mods:role>
+        <mods:roleTerm authority="marcrelator" type="text">creator</mods:roleTerm>
+      </mods:role>
+    </mods:name>
+    <mods:name type="personal">
+      <mods:namePart>Zunner, Johann David</mods:namePart>
+      <mods:namePart type="date">d. 1653</mods:namePart>
+      <mods:role>
+        <mods:roleTerm type="text">printer.</mods:roleTerm>
+      </mods:role>
+    </mods:name>
+    <mods:typeOfResource>text</mods:typeOfResource>
+    <mods:genre authority="rbgenr">Emblem books-Germany-17th century.</mods:genre>
+    <mods:originInfo>
+      <mods:place>
+        <mods:placeTerm type="code" authority="marccountry">gw</mods:placeTerm>
+      </mods:place>
+      <mods:place>
+        <mods:placeTerm type="text">Francofurti</mods:placeTerm>
+      </mods:place>
+      <mods:publisher>Apud Joh. Dav. Zunnerum</mods:publisher>
+      <mods:dateIssued>[1649]</mods:dateIssued>
+      <mods:issuance>monographic</mods:issuance>
+    </mods:originInfo>
+    <mods:language>
+      <mods:languageTerm authority="iso639-2b" type="code">lat</mods:languageTerm>
+    </mods:language>
+    <mods:language>
+      <mods:languageTerm authority="iso639-2b" type="code">ger</mods:languageTerm>
+    </mods:language>
+    <mods:physicalDescription>
+      <mods:digitalOrigin>reformatted digital</mods:digitalOrigin>
+      <mods:form authority="marcform">print</mods:form>
+      <mods:extent>[5], XXIV, XXIV, [3] p. : ill. (engravings) ; 22 cm (4to)</mods:extent>
+    </mods:physicalDescription>
+    <mods:note type="statement of responsibility">k&#x00FC;rzlich erkl&#x00E4;rt durch Johann Vogel.</mods:note>
+    <mods:note>Publication date appears as chronogram on title-page.</mods:note>
+    <mods:note>Place of publication and printer from additional engraved title-page: "Meditationes de restaurata pace = Sinnbilder von dem wiedergebrachten Frieden in Teutschlandt / Johannis Vogelij", with imprint: "Francofurti : Apud Joh. Dav. Zunnerum."</mods:note>
+    <mods:note>Opposite pages bear duplicate numbering.</mods:note>
+    <mods:note>Signatures: A-G.</mods:note>
+    <mods:note>Added title-page has ornamental border; initials; head-pieces; [24] engraved emblems.</mods:note>
+    <mods:note>"1649" inscribed in ink on title-page.</mods:note>
+    <mods:note type="language">Text in Latin and German.</mods:note>
+    <mods:subject authority="lcsh">
+      <mods:topic>Emblems</mods:topic>
+      <mods:genre>Early works to 1800</mods:genre>
+    </mods:subject>
+    <mods:subject authority="lcsh">
+      <mods:topic>Emblem books, Latin</mods:topic>
+      <mods:geographic>Germany</mods:geographic>
+      <mods:temporal>17th century</mods:temporal>
+    </mods:subject>
+    <mods:subject authority="lcsh">
+      <mods:topic>Emblem books, German</mods:topic>
+      <mods:geographic>Germany</mods:geographic>
+      <mods:temporal>17th century</mods:temporal>
+    </mods:subject>
+    <mods:location>
+      <mods:url displayLabel="Full text - UIUC" usage="primary display">http://hdl.handle.net/10111/UIUCOCA:meditationesembl00voge</mods:url>
+    </mods:location>
+    <mods:location>
+      <mods:url displayLabel="Full text - OCA">http://www.archive.org/details/meditationesembl00voge</mods:url>
+    </mods:location>
+    <mods:location>
+      <mods:url displayLabel="Full text - Arkyves">http://www.arkyves.org/uid/uiuc_5676683</mods:url>
+    </mods:location>
+    <mods:location>
+      <mods:url displayLabel="Mets Navigator">http://libsysdigi.library.illinois.edu/oca/Books2009-11/meditationesembl00voge/meditationesembl00voge.xml</mods:url>
+    </mods:location>
+    <mods:recordInfo>
+      <mods:descriptionStandard>aacr2</mods:descriptionStandard>
+      <mods:descriptionStandard>rakwb</mods:descriptionStandard>
+      <mods:recordContentSource authority="marcorg">GyGoGBV</mods:recordContentSource>
+      <mods:recordCreationDate encoding="marc">070710</mods:recordCreationDate>
+      <mods:recordChangeDate encoding="iso8601">20100830160116.0</mods:recordChangeDate>
+      <mods:recordIdentifier>5676683</mods:recordIdentifier>
+      <mods:recordOrigin>Converted from MARCXML to MODS version 3.3 using MARC21slim2MODS3-3.xsl (Revision 1.54)</mods:recordOrigin>
+      <mods:languageOfCataloging>
+        <mods:languageTerm authority="iso639-2b" type="code">ger</mods:languageTerm>
+      </mods:languageOfCataloging>
+    </mods:recordInfo>
+    <mods:genre authority="aat" type="concept" valueURI="http://vocab.getty.edu/aat/300026286" >emblem books</mods:genre>
+    <mods:identifier type="LGM" displayLabel="Landwehr, J. German emblem books">628</mods:identifier>
+    <mods:identifier type="MN" displayLabel="McGeary &amp; Nash. Emblem books at the University of Illinois">V36</mods:identifier>
+    <mods:identifier type="vd17" displayLabel="VD 17 (online)">23:000260P</mods:identifier>
+  </mods:mods>
+  <copyDesc>
+    <copyID>uiu5676683</copyID>
+    <owner countryCode="US">University of Illinois</owner>
+    <digDesc comp="complete" scope="all" xml:id="meditationesembl00voge" globalID="http://hdl.handle.net/10111/UIUCOCA:meditationesembl00voge" pageImages="http://emblemimages.grainger.illinois.edu/meditationesembl00voge/meditationesembl00voge_jp2.zip">Digital RGB (8 bit x 3) color facsimile scanned at between 300 and 500 dpi by the Open Content Alliance on an OCA Scribe workstation (Canon 5D) at the University of Illinois at Urbana-Champaign. <copyID>10111/UIUCOCA:meditationesembl00voge</copyID>
+      <owner countryCode="US">University of Illinois</owner>
+    </digDesc>
+    <digDesc comp="complete" scope="all" globalID="http://www.archive.org/details/meditationesembl00voge">View in Internet Archive <copyID>meditationesembl00voge</copyID>
+      <owner countryCode="US">Internet Archive</owner>
+    </digDesc>
+    <digDesc comp="complete" scope="all" globalID="http://www.arkyves.org/uid/uiuc_5676683">View in Arkyves <copyID>uiuc_5676683</copyID>
+      <owner countryCode="NL">Arkyves</owner>
+    </digDesc>
+  </copyDesc>
+  <emblem xmlns:xlink="http://www.w3.org/1999/xlink" citeNo="I." xlink:href="http://djatoka.grainger.illinois.edu/index.html?url=http://emblemimages.grainger.illinois.edu/meditationesembl00voge/JP2Processed/meditationesembl00voge_0010-0011.jp2&amp;crop=false" xml:id="E000001" globalID="http://hdl.handle.net/10111/EmblemRegistry:E000001">
+    <motto>
+      <transcription xml:lang="de">Hie sol nun seyn de&#x00DF; Krieges Ziel.
+        <normalisation xml:lang="de">Hier soll nun des Krieges Ziel sein.</normalisation>
+      </transcription>
+      <transcription xml:lang="la">Hic belli terminus esto.</transcription>
+    </motto>
+    <pictura xlink:href="http://djatoka.grainger.illinois.edu/adore-djatoka/resolver?url_ver=Z39.88-2004&amp;rft_id=http://emblemimages.grainger.illinois.edu/meditationesembl00voge/JP2Processed/meditationesembl00voge_0010-0011.jp2&amp;svc_id=info:lanl-repo/svc/getRegion&amp;svc_val_fmt=info:ofi/fmt:kev:mtx:jpeg2000&amp;svc.format=image/jpeg&amp;svc.level=5&amp;svc.rotate=0&amp;svc.region=768,2832,1440,1240" xml:id="E000001_P1">
+      <iconclass rdf:about="http://www.iconclass.org/rkd/22C11">
+        <skos:notation>22C11</skos:notation>
+        <skos:prefLabel>rays of natural light</skos:prefLabel>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/25H1124">
+        <skos:notation>25H1124</skos:notation>
+        <skos:prefLabel>boulder, stone</skos:prefLabel>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/45A20">
+        <skos:notation>45A20</skos:notation>
+        <skos:prefLabel>symbols, allegories of peace, 'Pax'; 'Pace' (Ripa)</skos:prefLabel>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/61A(1649)">
+        <skos:notation>61A(...)</skos:notation>
+        <skos:prefLabel>historical events and situations (with DATE)</skos:prefLabel>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/61K(THIRTY YEARS' WAR)">
+        <skos:notation>61K(...)</skos:notation>
+        <skos:prefLabel>(other) historical names (with NAME)</skos:prefLabel>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/86(HIC BELLI TERMINUS ESTO)">
+        <skos:notation>86(...)</skos:notation>
+        <skos:prefLabel>proverbs, sayings, etc. (with TEXT)</skos:prefLabel>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/86(HIER SOLL NUN DES KRIEGES ZIEL SEIN)">
+        <skos:notation>86(...) </skos:notation>
+        <skos:prefLabel>proverbs, sayings, etc. (with TEXT)</skos:prefLabel>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/96A16">
+        <skos:notation>96A16</skos:notation>
+        <skos:prefLabel>Terminus</skos:prefLabel>
+      </iconclass>
+    </pictura>
+  </emblem>
+  <!-- Descriptions of additional emblems removed for brevity -->
+</biblioDesc>
