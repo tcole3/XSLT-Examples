@@ -30,7 +30,7 @@
       </xsl:for-each>
       <xsl:for-each select="//marc:datafield[@tag=020] | //marc:datafield[@tag=022] | //marc:datafield[@tag=024]">
         <xsl:element name="identifier" namespace="http://purl.org/dc/elements/1.1/">
-          <xsl:value-of select="marc:subfield[@code='a']"/></xsl:element>
+          <xsl:value-of select="marc:subfield[@code='a'] | marc:subfield[@code='z']"/></xsl:element>
       </xsl:for-each>
       <xsl:for-each select="marc:record/marc:datafield[@tag=856]/marc:subfield[@code='u']">
         <xsl:element name="identifier" namespace="http://purl.org/dc/elements/1.1/">
