@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+           xmlns="http://purl.org/dc/elements/1.1/"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xmlns:dc="http://purl.org/dc/elements/1.1/"
+           xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+   <title>XML for catalogers and metadata librarians /</title>
+   <creator>Cole, Timothy W.</creator>
+   <creator>Han, Myung-Ja K.</creator>
+   <description>Includes bibliographical references and index.</description>
+   <description>"This book provides a foundation of knowledge for catalogers, metadata librarians, and library school students on the Extensible Markup Language (XML)--one of the most commonly listed qualifications in today's cataloger and metadata librarian job postings. How are today's librarians to manage and describe the ever-expanding volumes of resources, in both digital and print formats? The use of XML in cataloging and metadata workflows can improve metadata quality, the consistency of cataloging workflows, and adherence to standards. This book is intended to enable current and future catalogers and metadata librarians to progress beyond a bare surface-level acquaintance with XML, thereby enabling them to integrate XML technologies more fully into their cataloging workflows. Building on the wealth of work on library descriptive practices, cataloging, and metadata, XML for Catalogers and Metadata Librarians explores the use of XML to serialize, process, share, and manage library catalog and metadata records. The authors' expert treatment of the topic is written to be accessible to those with little or no prior practical knowledge of or experience with how XML is used. Readers will gain an educated appreciation of the nuances of XML and grasp the benefit of more advanced and complex XML techniques as applied to applications relevant to catalogers and metadata librarians."--Publisher's website.</description>
+   <description>Part 1: Introduction and overview. XML: What is it? ; XML: Why is it important to catalogers and metadata librarians ; XML: Core syntax and grammar. -- Part 2: Structured metadata in XML. MARCXML: Library catalog records ; Other metadata standards in XML: Dublin core, MODS and ONIX ; Interoperable XML: Namespaces, sharable metadata, and application profiles. -- Part 3: Authoring and validating XML. Valid XML (Part 1): Document type definitions ; Valid XML (Part 2): XML schemas ; Advanced XML grammars: Schemes and namespaces, uniqueness, and keys. -- Part 5: Metadata crosswalks, XML transformations and RDF XML. Transforming XML (Part 1): Metadata crosswalking and XPath ; Transforming XML (Part 2): Extensible stylesheet language for transformations ; RDF and XML: Serializing triples (Statements) in XML ; XML and the future of descriptive cataloging.</description>
+   <subject>XML (Document markup language)</subject>
+   <subject>Cataloging</subject>
+   <subject>Metadata.</subject>
+   <subject>LANGUAGE ARTS &amp; DISCIPLINES / Library &amp; Information Science / General.</subject>
+   <subject>LANGUAGE ARTS &amp; DISCIPLINES / Library &amp; Information Science / Cataloging &amp; Classification.</subject>
+   <subject>XML.</subject>
+   <subject>Katalogisierung.</subject>
+   <subject>Metadaten.</subject>
+   <subject>Datenverarbeitung.</subject>
+   <identifier>9781598845198 (pbk. : acid-free paper)</identifier>
+   <identifier>1598845195 (pbk. : acid-free paper)</identifier>
+   <identifier/>
+   <language>eng</language>
+   <date>2013</date>
+   <type>text</type>
+</oai_dc:dc>
