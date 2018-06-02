@@ -1,0 +1,1309 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<biblioDesc xmlns="http://diglib.hab.de/rules/schema/emblem" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://diglib.hab.de/rules/schema/emblem http://diglib.hab.de/rules/schema/emblem/emblem-1-2.xsd http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/mods.xsd ">
+  <mods xmlns="http://www.loc.gov/mods/v3" version="3.4" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-4.xsd">
+    <titleInfo>
+      <title>Emblemata politica</title>
+      <subTitle>in aula magna Curiµ Norinbergensis depicta : quµ sacra virtutum suggerunt monita prudenter administrandi fortiterque defendendi rempublicam</subTitle>
+    </titleInfo>
+    <titleInfo type="alternative">
+      <title>Emblemata politica</title>
+    </titleInfo>
+    <name type="personal" usage="primary">
+      <namePart>Iselberg, Peter</namePart>
+      <namePart type="date">ca. 1568-ca. 1630</namePart>
+    </name>
+    <name type="personal">
+      <namePart>Remus, Georg</namePart>
+      <namePart type="date">1561-1625</namePart>
+    </name>
+    <typeOfResource>text</typeOfResource>
+    <genre authority="rbgenr">Emblem books-Germany-17th century.</genre>
+    <originInfo>
+      <place>
+        <placeTerm type="code" authority="marccountry">gw</placeTerm>
+      </place>
+      <place>
+        <placeTerm type="text">Nurembergµ</placeTerm>
+      </place>
+      <dateIssued encoding="marc">1617</dateIssued>
+      <issuance>monographic</issuance>
+    </originInfo>
+    <language>
+      <languageTerm authority="iso639-2b" type="code">lat</languageTerm>
+    </language>
+    <physicalDescription>
+      <form authority="marcform">print</form>
+      <extent>[10] p., [2], 32 leaves of plates : ill. : 20 cm.</extent>
+    </physicalDescription>
+    <note>Letterpress pages incl. dedication by P. Iselburg, the engraver, and German versions ("Kurtze erklèarung") of the Latin poems in the emblem plates.</note>
+    <note>Plates include, besides 32 emblems, engraved t.-p. (signed: Petrus Iselburg excudit) and dedicatory plate (arms of the senators?) dated 1617.</note>
+    <note>Latin mottoes and poems by G. Remus.</note>
+    <subject authority="lcsh">
+      <topic>Emblems</topic>
+      <genre>Early works to 1800</genre>
+    </subject>
+    <subject authority="lcsh">
+      <topic>Emblems, Latin</topic>
+      <genre>Early works to 1800</genre>
+    </subject>
+    <subject authority="lcsh">
+      <topic>Emblems, German</topic>
+      <genre>Early works to 1800</genre>
+    </subject>
+    <location>
+      <physicalLocation>eresour-nc</physicalLocation>
+      <shelfLocator>Online Resource 1</shelfLocator>
+    </location>
+    <location>
+      <url usage="primary display" displayLabel="Emblematica Online">http://emblematica.library.illinois.edu/detail/book/emblematapolitic00isel</url>
+    </location>
+    <location>
+      <url displayLabel="Full text - OCA">http://www.archive.org/details/emblematapolitic00isel</url>
+    </location>
+    <relatedItem type="isReferencedBy">
+      <titleInfo>
+        <title>McGeary &amp; Nash.  Emblem books at the University of Illinois,</title>
+      </titleInfo>
+      <note>I1</note>
+    </relatedItem>
+    <identifier type="oclc">ocm62275544</identifier>
+    <recordInfo>
+      <recordContentSource authority="marcorg">IBV</recordContentSource>
+      <recordCreationDate encoding="marc">051115</recordCreationDate>
+      <recordChangeDate encoding="iso8601">20091111110621.0</recordChangeDate>
+      <recordIdentifier>5528792</recordIdentifier>
+      <recordOrigin>Converted from MARCXML to MODS version 3.4 using MARC21slim2MODS3-4.xsl
+				(Revision 1.77 2012/03/23)</recordOrigin>
+    </recordInfo>
+    <identifier type="ark">ark:/13960/t0qr5b33q</identifier>
+    <location>
+      <url displayLabel="HathiTrust Digital Library">http://hdl.handle.net/2027/uiuo.ark:/13960/t0qr5b33q</url>
+    </location>
+  </mods>
+  <?query @attr 1=12 "5528792" ?>
+  <?count 1 ?>
+  <copyDesc xmlns:spine="http://diglib.hab.de/rules/schema/emblem">
+    <copyID>uiu5528792</copyID>
+    <owner countryCode="US">University of Illinois</owner>
+    <digDesc comp="complete" scope="all" xml:id="emblematapolitic00isel" globalID="http://hdl.handle.net/10111/UIUCOCA:emblematapolitic00isel" pageImages="http://emblemimages.grainger.illinois.edu/emblematapolitic00isel/emblematapolitic00isel_jp2.zip">Digital RGB (8
+			bit x 3) color facsimile scanned at between 300 and 500 dpi by the Open Content Alliance
+			on an OCA Scribe workstation (Canon 5D) at the University of Illinois at
+			Urbana-Champaign.
+			<copyID>10111/UIUCOCA:emblematapolitic00isel</copyID><owner countryCode="US">University of Illinois</owner></digDesc>
+    <digDesc comp="complete" scope="all" globalID="http://www.arkyves.org/uid/uiuc_5528792">
+			View in Arkyves
+			<copyID>uiuc_5528792</copyID><owner countryCode="NE">Arkyves</owner></digDesc>
+    <digDesc comp="complete" scope="all" globalID="http://www.archive.org/details/emblematapolitic00isel">View in Internet
+			Archive<copyID>emblematapolitic00isel</copyID><owner countryCode="US">Internet Archive</owner></digDesc>
+  </copyDesc>
+  <emblem xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:spine="http://diglib.hab.de/rules/schema/emblem" xml:id="E000912" citeNo="1.0" xlink:href="http://emblemimages.grainger.illinois.edu/emblematapolitic00isel/JP2Processed/emblematapolitic00isel_0019.jp2" globalID="http://hdl.handle.net/10111/EmblemRegistry:E000912">
+    <motto>
+      <transcription xml:lang="la">Fortuna Volubilis errat.</transcription>
+    </motto>
+    <pictura xml:id="E000912_P1" xlink:href="http://djatoka.grainger.illinois.edu/adore-djatoka/resolver?url_ver=Z39.88-2004&amp;rft_id=http://emblemimages.grainger.illinois.edu/emblematapolitic00isel/JP2Processed/emblematapolitic00isel_0019.jp2&amp;svc_id=info:lanl-repo/svc/getRegion&amp;svc_val_fmt=info:ofi/fmt:kev:mtx:jpeg2000&amp;svc.format=image/jpeg&amp;svc.level=5&amp;svc.rotate=0&amp;svc.region=412,324,1756,1328">
+      <iconclass rdf:about="http://www.iconclass.org/rkd/31A2352">
+        <skos:notation>31A2352</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/31A25562">
+        <skos:notation>31A25562</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/31A2747">
+        <skos:notation>31A2747</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/43A421">
+        <skos:notation>43A421</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/44B113">
+        <skos:notation>44B113</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/44B192">
+        <skos:notation>44B192</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/45I612(+0)">
+        <skos:notation>45I612(+0)</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/54F121(+4)">
+        <skos:notation>54F121(+4)</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/57AA91(+5)">
+        <skos:notation>57AA91(+5)</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/86(FORTUNA VOLUBILIS ERRAT)">
+        <skos:notation>86(FORTUNA VOLUBILIS ERRAT)</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/98B(SESOSTRIS)4">
+        <skos:notation>98B(SESOSTRIS)4</skos:notation>
+      </iconclass>
+    </pictura>
+  </emblem>
+  <emblem xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:spine="http://diglib.hab.de/rules/schema/emblem" xml:id="E000913" citeNo="2.0" xlink:href="http://emblemimages.grainger.illinois.edu/emblematapolitic00isel/JP2Processed/emblematapolitic00isel_0021.jp2" globalID="http://hdl.handle.net/10111/EmblemRegistry:E000913">
+    <motto>
+      <transcription xml:lang="la">In pace quae belli sunt.</transcription>
+    </motto>
+    <pictura xml:id="E000913_P1" xlink:href="http://djatoka.grainger.illinois.edu/adore-djatoka/resolver?url_ver=Z39.88-2004&amp;rft_id=http://emblemimages.grainger.illinois.edu/emblematapolitic00isel/JP2Processed/emblematapolitic00isel_0021.jp2&amp;svc_id=info:lanl-repo/svc/getRegion&amp;svc_val_fmt=info:ofi/fmt:kev:mtx:jpeg2000&amp;svc.format=image/jpeg&amp;svc.level=5&amp;svc.rotate=0&amp;svc.region=396,344,1764,1328">
+      <iconclass rdf:about="http://www.iconclass.org/rkd/25F23(FOX)(+535)">
+        <skos:notation>25F23(FOX)(+535)</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/25F24(BOAR)(+5211)">
+        <skos:notation>25F24(BOAR)(+5211)</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/25G3">
+        <skos:notation>25G3</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/45A10">
+        <skos:notation>45A10</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/45A20">
+        <skos:notation>45A20</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/45A132">
+        <skos:notation>45A132</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/54D1(+4)">
+        <skos:notation>54D1(+4)</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/86(IN PACE QUAE BELLI SUNT)">
+        <skos:notation>86(IN PACE QUAE BELLI SUNT)</skos:notation>
+      </iconclass>
+    </pictura>
+  </emblem>
+  <emblem xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:spine="http://diglib.hab.de/rules/schema/emblem" xml:id="E000914" citeNo="3.0" xlink:href="http://emblemimages.grainger.illinois.edu/emblematapolitic00isel/JP2Processed/emblematapolitic00isel_0023.jp2" globalID="http://hdl.handle.net/10111/EmblemRegistry:E000914">
+    <motto>
+      <transcription xml:lang="la">Nosce teipsum.</transcription>
+      <note>Lack of space between "te" and "ipsum" is a typographical error on the part of the
+				printer.</note>
+    </motto>
+    <pictura xml:id="E000914_P1" xlink:href="http://djatoka.grainger.illinois.edu/adore-djatoka/resolver?url_ver=Z39.88-2004&amp;rft_id=http://emblemimages.grainger.illinois.edu/emblematapolitic00isel/JP2Processed/emblematapolitic00isel_0023.jp2&amp;svc_id=info:lanl-repo/svc/getRegion&amp;svc_val_fmt=info:ofi/fmt:kev:mtx:jpeg2000&amp;svc.format=image/jpeg&amp;svc.level=5&amp;svc.rotate=0&amp;svc.region=272,272,1756,1324">
+      <iconclass rdf:about="http://www.iconclass.org/rkd/25F35(PEACOCK)(+341):51DD4(+3)">
+        <skos:notation>25F35(PEACOCK)(+341):51DD4(+3)</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/25F35(PEACOCK)(+352):51D4(+3)">
+        <skos:notation>25F35(PEACOCK)(+352):51D4(+3)</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/51DD2(+4)">
+        <skos:notation>51DD2(+4)</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/54AA7(+4)">
+        <skos:notation>54AA7(+4)</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/86(NOSCE TEIPSUM)">
+        <skos:notation>86(NOSCE TEIPSUM)</skos:notation>
+      </iconclass>
+    </pictura>
+  </emblem>
+  <emblem xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:spine="http://diglib.hab.de/rules/schema/emblem" xml:id="E000915" citeNo="4.0" xlink:href="http://emblemimages.grainger.illinois.edu/emblematapolitic00isel/JP2Processed/emblematapolitic00isel_0025.jp2" globalID="http://hdl.handle.net/10111/EmblemRegistry:E000915">
+    <motto>
+      <transcription xml:lang="la">Stultus amor nostri.</transcription>
+    </motto>
+    <pictura xml:id="E000915_P1" xlink:href="http://djatoka.grainger.illinois.edu/adore-djatoka/resolver?url_ver=Z39.88-2004&amp;rft_id=http://emblemimages.grainger.illinois.edu/emblematapolitic00isel/JP2Processed/emblematapolitic00isel_0025.jp2&amp;svc_id=info:lanl-repo/svc/getRegion&amp;svc_val_fmt=info:ofi/fmt:kev:mtx:jpeg2000&amp;svc.format=image/jpeg&amp;svc.level=5&amp;svc.rotate=0&amp;svc.region=416,408,1780,1320">
+      <iconclass rdf:about="http://www.iconclass.org/rkd/25G3(+21)">
+        <skos:notation>25G3(+21)</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/25I3">
+        <skos:notation>25I3</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/31AA2223(+89)">
+        <skos:notation>31AA2223(+89)</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/31AA2351">
+        <skos:notation>31AA2351</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/31A5111">
+        <skos:notation>31A5111</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/31D13">
+        <skos:notation>31D13</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/41D921">
+        <skos:notation>41D921</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/52AA51(+4)">
+        <skos:notation>52AA51(+4)</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/56F241(+4)">
+        <skos:notation>56F241(+4)</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/86(STULTUS AMOR NOSTRI)">
+        <skos:notation>86(STULTUS AMOR NOSTRI)</skos:notation>
+      </iconclass>
+    </pictura>
+  </emblem>
+  <emblem xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:spine="http://diglib.hab.de/rules/schema/emblem" xml:id="E000916" citeNo="5.0" xlink:href="http://emblemimages.grainger.illinois.edu/emblematapolitic00isel/JP2Processed/emblematapolitic00isel_0027.jp2" globalID="http://hdl.handle.net/10111/EmblemRegistry:E000916">
+    <motto>
+      <transcription xml:lang="la">Humana Consilia Vana.</transcription>
+    </motto>
+    <pictura xml:id="E000916_P1" xlink:href="http://djatoka.grainger.illinois.edu/adore-djatoka/resolver?url_ver=Z39.88-2004&amp;rft_id=http://emblemimages.grainger.illinois.edu/emblematapolitic00isel/JP2Processed/emblematapolitic00isel_0027.jp2&amp;svc_id=info:lanl-repo/svc/getRegion&amp;svc_val_fmt=info:ofi/fmt:kev:mtx:jpeg2000&amp;svc.format=image/jpeg&amp;svc.level=5&amp;svc.rotate=0&amp;svc.region=376,460,1772,1352">
+      <iconclass rdf:about="http://www.iconclass.org/rkd/11R51">
+        <skos:notation>11R51</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/22C32">
+        <skos:notation>22C32</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/41D271">
+        <skos:notation>41D271</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/44B125">
+        <skos:notation>44B125</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/44B192">
+        <skos:notation>44B192</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/47A212(+12)">
+        <skos:notation>47A212(+12)</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/47G311">
+        <skos:notation>47G311</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/47G7">
+        <skos:notation>47G7</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/71B421">
+        <skos:notation>71B421</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/86(HUMANA CONSILIA VANA)">
+        <skos:notation>86(HUMANA CONSILIA VANA)</skos:notation>
+      </iconclass>
+    </pictura>
+  </emblem>
+  <emblem xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:spine="http://diglib.hab.de/rules/schema/emblem" xml:id="E000917" citeNo="6.0" xlink:href="http://emblemimages.grainger.illinois.edu/emblematapolitic00isel/JP2Processed/emblematapolitic00isel_0029.jp2" globalID="http://hdl.handle.net/10111/EmblemRegistry:E000917">
+    <motto>
+      <transcription xml:lang="la">Assiduitate &amp; tollerantia.</transcription>
+    </motto>
+    <pictura xml:id="E000917_P1" xlink:href="http://djatoka.grainger.illinois.edu/adore-djatoka/resolver?url_ver=Z39.88-2004&amp;rft_id=http://emblemimages.grainger.illinois.edu/emblematapolitic00isel/JP2Processed/emblematapolitic00isel_0029.jp2&amp;svc_id=info:lanl-repo/svc/getRegion&amp;svc_val_fmt=info:ofi/fmt:kev:mtx:jpeg2000&amp;svc.format=image/jpeg&amp;svc.level=5&amp;svc.rotate=0&amp;svc.region=400,456,1776,1384">
+      <iconclass rdf:about="http://www.iconclass.org/rkd/31A2711">
+        <skos:notation>31A2711</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/41D91">
+        <skos:notation>41D91</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/46C1215">
+        <skos:notation>46C1215</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/47I2111(+921)">
+        <skos:notation>47I2111(+921)</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/47I2111(+95232)">
+        <skos:notation>47I2111(+95232)</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/53A21(+4)">
+        <skos:notation>53A21(+4)</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/54A7(+4)">
+        <skos:notation>54A7(+4)</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/86(ASSIDUITATE ET TOLLERANTIA)">
+        <skos:notation>86(ASSIDUITATE ET TOLLERANTIA)</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/98B(MILON)51">
+        <skos:notation>98B(MILON)51</skos:notation>
+      </iconclass>
+    </pictura>
+  </emblem>
+  <emblem xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:spine="http://diglib.hab.de/rules/schema/emblem" xml:id="E000918" citeNo="7.0" xlink:href="http://emblemimages.grainger.illinois.edu/emblematapolitic00isel/JP2Processed/emblematapolitic00isel_0031.jp2" globalID="http://hdl.handle.net/10111/EmblemRegistry:E000918">
+    <motto>
+      <transcription xml:lang="de">
+        <normalisation xml:lang="de" />
+      </transcription>
+      <transcription xml:lang="la">Sic Orbis iter.</transcription>
+    </motto>
+    <pictura xml:id="E000918_P1" xlink:href="http://djatoka.grainger.illinois.edu/adore-djatoka/resolver?url_ver=Z39.88-2004&amp;rft_id=http://emblemimages.grainger.illinois.edu/emblematapolitic00isel/JP2Processed/emblematapolitic00isel_0031.jp2&amp;svc_id=info:lanl-repo/svc/getRegion&amp;svc_val_fmt=info:ofi/fmt:kev:mtx:jpeg2000&amp;svc.format=image/jpeg&amp;svc.level=5&amp;svc.rotate=0&amp;svc.region=384,464,1744,1340">
+      <iconclass rdf:about="http://www.iconclass.org/rkd/25A13">
+        <skos:notation>25A13</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/25F716(CRAYFISH)(+521)">
+        <skos:notation>25F716(CRAYFISH)(+521)</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/25F716(CRAYFISH)(+5246)">
+        <skos:notation>25F716(CRAYFISH)(+5246)</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/51L4(+4)">
+        <skos:notation>51L4(+4)</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/51LL2(+4)">
+        <skos:notation>51LL2(+4)</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/51LL41(+4)">
+        <skos:notation>51LL41(+4)</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/51K4(+4)">
+        <skos:notation>51K4(+4)</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/86(SIC ORBIS ITER)">
+        <skos:notation>86(SIC ORBIS ITER)</skos:notation>
+      </iconclass>
+    </pictura>
+  </emblem>
+  <emblem xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:spine="http://diglib.hab.de/rules/schema/emblem" xml:id="E000919" citeNo="8.0" xlink:href="http://emblemimages.grainger.illinois.edu/emblematapolitic00isel/JP2Processed/emblematapolitic00isel_0033.jp2" globalID="http://hdl.handle.net/10111/EmblemRegistry:E000919">
+    <motto>
+      <transcription xml:lang="de">
+        <normalisation xml:lang="de" />
+      </transcription>
+      <transcription xml:lang="la">Festina lente.</transcription>
+    </motto>
+    <pictura xml:id="E000919_P1" xlink:href="http://djatoka.grainger.illinois.edu/adore-djatoka/resolver?url_ver=Z39.88-2004&amp;rft_id=http://emblemimages.grainger.illinois.edu/emblematapolitic00isel/JP2Processed/emblematapolitic00isel_0033.jp2&amp;svc_id=info:lanl-repo/svc/getRegion&amp;svc_val_fmt=info:ofi/fmt:kev:mtx:jpeg2000&amp;svc.format=image/jpeg&amp;svc.level=5&amp;svc.rotate=0&amp;svc.region=460,340,1720,1328">
+      <iconclass rdf:about="http://www.iconclass.org/rkd/25F44(+5211)">
+        <skos:notation>25F44(+5211)</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/25F44(+5246)">
+        <skos:notation>25F44(+5246)</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/26C">
+        <skos:notation>26C</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/46C24111">
+        <skos:notation>46C24111</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/51M11(+3)">
+        <skos:notation>51M11(+3)</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/51MM11(+3)">
+        <skos:notation>51MM11(+3)</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/54B4(+4)">
+        <skos:notation>54B4(+4)</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/54D3(+4)">
+        <skos:notation>54D3(+4)</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/86(FESTINA LENTE)">
+        <skos:notation>86(FESTINA LENTE)</skos:notation>
+      </iconclass>
+    </pictura>
+  </emblem>
+  <emblem xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:spine="http://diglib.hab.de/rules/schema/emblem" xml:id="E000920" citeNo="9.0" xlink:href="http://emblemimages.grainger.illinois.edu/emblematapolitic00isel/JP2Processed/emblematapolitic00isel_0035.jp2" globalID="http://hdl.handle.net/10111/EmblemRegistry:E000920">
+    <motto>
+      <transcription xml:lang="de">
+        <normalisation xml:lang="de" />
+      </transcription>
+      <transcription xml:lang="la">Duce Virtute, Comite fortuna.</transcription>
+    </motto>
+    <pictura xml:id="E000920_P1" xlink:href="http://djatoka.grainger.illinois.edu/adore-djatoka/resolver?url_ver=Z39.88-2004&amp;rft_id=http://emblemimages.grainger.illinois.edu/emblematapolitic00isel/JP2Processed/emblematapolitic00isel_0035.jp2&amp;svc_id=info:lanl-repo/svc/getRegion&amp;svc_val_fmt=info:ofi/fmt:kev:mtx:jpeg2000&amp;svc.format=image/jpeg&amp;svc.level=5&amp;svc.rotate=0&amp;svc.region=376,308,1764,1324">
+      <iconclass rdf:about="http://www.iconclass.org/rkd/25H23">
+        <skos:notation>25H23</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/46C24(+63)">
+        <skos:notation>46C24(+63)</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/54F12(+4)">
+        <skos:notation>54F12(+4)</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/57A6(+4)">
+        <skos:notation>57A6(+4)</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/86(DUCE VIRTUTE COMITE FORTUNA)">
+        <skos:notation>86(DUCE VIRTUTE COMITE FORTUNA)</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/94A23">
+        <skos:notation>94A23</skos:notation>
+      </iconclass>
+    </pictura>
+  </emblem>
+  <emblem xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:spine="http://diglib.hab.de/rules/schema/emblem" xml:id="E000921" citeNo="10.0" xlink:href="http://emblemimages.grainger.illinois.edu/emblematapolitic00isel/JP2Processed/emblematapolitic00isel_0037.jp2" globalID="http://hdl.handle.net/10111/EmblemRegistry:E000921">
+    <motto>
+      <transcription xml:lang="de">
+        <normalisation xml:lang="de" />
+      </transcription>
+      <transcription xml:lang="la">Sine numine frustra.</transcription>
+    </motto>
+    <pictura xml:id="E000921_P1" xlink:href="http://djatoka.grainger.illinois.edu/adore-djatoka/resolver?url_ver=Z39.88-2004&amp;rft_id=http://emblemimages.grainger.illinois.edu/emblematapolitic00isel/JP2Processed/emblematapolitic00isel_0037.jp2&amp;svc_id=info:lanl-repo/svc/getRegion&amp;svc_val_fmt=info:ofi/fmt:kev:mtx:jpeg2000&amp;svc.format=image/jpeg&amp;svc.level=5&amp;svc.rotate=0&amp;svc.region=504,344,1780,1324">
+      <iconclass rdf:about="http://www.iconclass.org/rkd/11A23:58B1(+4)">
+        <skos:notation>11A23:58B1(+4)</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/11H(PAUL)4">
+        <skos:notation>11H(PAUL)4</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/11I72(APOLLOS)5">
+        <skos:notation>11I72(APOLLOS)5</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/21D">
+        <skos:notation>21D</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/24A">
+        <skos:notation>24A</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/25G3(+361)">
+        <skos:notation>25G3(+361)</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/31A233">
+        <skos:notation>31A233</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/31A25552">
+        <skos:notation>31A25552</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/41A771">
+        <skos:notation>41A771</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/45C13(SWORD)">
+        <skos:notation>45C13(SWORD)</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/47I132">
+        <skos:notation>47I132</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/47I138">
+        <skos:notation>47I138</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/58A3(+4)">
+        <skos:notation>58A3(+4)</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/58AA2(+4)">
+        <skos:notation>58AA2(+4)</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/73F412(1 Cor. 3:6)">
+        <skos:notation>73F412(1 Cor. 3:6)</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/86(SINE NUMINE FRUSTRA)">
+        <skos:notation>86(SINE NUMINE FRUSTRA)</skos:notation>
+      </iconclass>
+    </pictura>
+  </emblem>
+  <emblem xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:spine="http://diglib.hab.de/rules/schema/emblem" xml:id="E000922" citeNo="11.0" xlink:href="http://emblemimages.grainger.illinois.edu/emblematapolitic00isel/JP2Processed/emblematapolitic00isel_0039-0013.jp2" globalID="http://hdl.handle.net/10111/EmblemRegistry:E000922">
+    <motto>
+      <transcription xml:lang="de">
+        <normalisation xml:lang="de" />
+      </transcription>
+      <transcription xml:lang="la">Sic cedere iuvat.</transcription>
+    </motto>
+    <pictura xml:id="E000922_P1" xlink:href="http://djatoka.grainger.illinois.edu/adore-djatoka/resolver?url_ver=Z39.88-2004&amp;rft_id=http://emblemimages.grainger.illinois.edu/emblematapolitic00isel/JP2Processed/emblematapolitic00isel_0039.jp2&amp;svc_id=info:lanl-repo/svc/getRegion&amp;svc_val_fmt=info:ofi/fmt:kev:mtx:jpeg2000&amp;svc.format=image/jpeg&amp;svc.level=5&amp;svc.rotate=0&amp;svc.region=480,312,1772,1328">
+      <iconclass rdf:about="http://www.iconclass.org/rkd/25H213">
+        <skos:notation>25H213</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/45G1211(+0)">
+        <skos:notation>45G1211(+0)</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/46C112">
+        <skos:notation>46C112</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/47I2141(+95223)">
+        <skos:notation>47I2141(+95223)</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/47I2141(+9533)">
+        <skos:notation>47I2141(+9533)</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/54A6(+4)">
+        <skos:notation>54A6(+4)</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/54E11">
+        <skos:notation>54E11</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/57A9(+4)">
+        <skos:notation>57A9(+4)</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/86(SIC CEDERE IUVAT)">
+        <skos:notation>86(SIC CEDERE IUVAT)</skos:notation>
+      </iconclass>
+    </pictura>
+  </emblem>
+  <emblem xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:spine="http://diglib.hab.de/rules/schema/emblem" xml:id="E000923" citeNo="12.0" xlink:href="http://emblemimages.grainger.illinois.edu/emblematapolitic00isel/JP2Processed/emblematapolitic00isel_0041.jp2" globalID="http://hdl.handle.net/10111/EmblemRegistry:E000923">
+    <motto>
+      <transcription xml:lang="de">
+        <normalisation xml:lang="de" />
+      </transcription>
+      <transcription xml:lang="la">Minor esca maioris.</transcription>
+    </motto>
+    <pictura xml:id="E000923_P1" xlink:href="http://djatoka.grainger.illinois.edu/adore-djatoka/resolver?url_ver=Z39.88-2004&amp;rft_id=http://emblemimages.grainger.illinois.edu/emblematapolitic00isel/JP2Processed/emblematapolitic00isel_0041.jp2&amp;svc_id=info:lanl-repo/svc/getRegion&amp;svc_val_fmt=info:ofi/fmt:kev:mtx:jpeg2000&amp;svc.format=image/jpeg&amp;svc.level=5&amp;svc.rotate=0&amp;svc.region=512,372,1744,1324">
+      <iconclass rdf:about="http://www.iconclass.org/rkd/25F62(+45):51G1">
+        <skos:notation>25F62(+45):51G1</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/25F62(+63):51GG1">
+        <skos:notation>25F62(+63):51GG1</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/25H23">
+        <skos:notation>25H23</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/46A15">
+        <skos:notation>46A15</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/46A16">
+        <skos:notation>46A16</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/46C24(+63)">
+        <skos:notation>46C24(+63)</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/54FF15(+4)">
+        <skos:notation>54FF15(+4)</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/86(MINOR ESCA MAIORIS)">
+        <skos:notation>86(MINOR ESCA MAIORIS)</skos:notation>
+      </iconclass>
+    </pictura>
+  </emblem>
+  <emblem xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:spine="http://diglib.hab.de/rules/schema/emblem" xml:id="E000924" citeNo="13.0" xlink:href="http://emblemimages.grainger.illinois.edu/emblematapolitic00isel/JP2Processed/emblematapolitic00isel_0043.jp2" globalID="http://hdl.handle.net/10111/EmblemRegistry:E000924">
+    <motto>
+      <transcription xml:lang="de">
+        <normalisation xml:lang="de" />
+      </transcription>
+      <transcription xml:lang="la">Virtutis invidia comes.</transcription>
+    </motto>
+    <pictura xml:id="E000924_P1" xlink:href="http://djatoka.grainger.illinois.edu/adore-djatoka/resolver?url_ver=Z39.88-2004&amp;rft_id=http://emblemimages.grainger.illinois.edu/emblematapolitic00isel/JP2Processed/emblematapolitic00isel_0043.jp2&amp;svc_id=info:lanl-repo/svc/getRegion&amp;svc_val_fmt=info:ofi/fmt:kev:mtx:jpeg2000&amp;svc.format=image/jpeg&amp;svc.level=5&amp;svc.rotate=0&amp;svc.region=468,296,1756,1308">
+      <iconclass rdf:about="http://www.iconclass.org/rkd/11N32">
+        <skos:notation>11N32</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/25F42(+441)">
+        <skos:notation>25F42(+441)</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/25F42(+521)">
+        <skos:notation>25F42(+521)</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/25G3(PALM-TREE)">
+        <skos:notation>25G3(PALM-TREE)</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/57A6(+4)">
+        <skos:notation>57A6(+4)</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/57AA76(+4)">
+        <skos:notation>57AA76(+4)</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/86(VIRTUTIS INVIDIA COMES)">
+        <skos:notation>86(VIRTUTIS INVIDIA COMES)</skos:notation>
+      </iconclass>
+    </pictura>
+  </emblem>
+  <emblem xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:spine="http://diglib.hab.de/rules/schema/emblem" xml:id="E000925" citeNo="14.0" xlink:href="http://emblemimages.grainger.illinois.edu/emblematapolitic00isel/JP2Processed/emblematapolitic00isel_0045.jp2" globalID="http://hdl.handle.net/10111/EmblemRegistry:E000925">
+    <motto>
+      <transcription xml:lang="de">
+        <normalisation xml:lang="de" />
+      </transcription>
+      <transcription xml:lang="la">Utroque clarescere pulchrum.</transcription>
+    </motto>
+    <pictura xml:id="E000925_P1" xlink:href="http://djatoka.grainger.illinois.edu/adore-djatoka/resolver?url_ver=Z39.88-2004&amp;rft_id=http://emblemimages.grainger.illinois.edu/emblematapolitic00isel/JP2Processed/emblematapolitic00isel_0045.jp2&amp;svc_id=info:lanl-repo/svc/getRegion&amp;svc_val_fmt=info:ofi/fmt:kev:mtx:jpeg2000&amp;svc.format=image/jpeg&amp;svc.level=5&amp;svc.rotate=0&amp;svc.region=460,380,1752,1312">
+      <iconclass rdf:about="http://www.iconclass.org/rkd/25H1124">
+        <skos:notation>25H1124</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/44B03">
+        <skos:notation>44B03</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/44B610">
+        <skos:notation>44B610</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/45C221">
+        <skos:notation>45C221</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/45D3">
+        <skos:notation>45D3</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/49C3">
+        <skos:notation>49C3</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/49M32">
+        <skos:notation>49M32</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/54E1(+4)">
+        <skos:notation>54E1(+4)</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/86(VTROQUE CLARESCERE PULCHRUM)">
+        <skos:notation>86(VTROQUE CLARESCERE PULCHRUM)</skos:notation>
+      </iconclass>
+    </pictura>
+  </emblem>
+  <emblem xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:spine="http://diglib.hab.de/rules/schema/emblem" xml:id="E000926" citeNo="15.0" xlink:href="http://emblemimages.grainger.illinois.edu/emblematapolitic00isel/JP2Processed/emblematapolitic00isel_0047.jp2" globalID="http://hdl.handle.net/10111/EmblemRegistry:E000926">
+    <motto>
+      <transcription xml:lang="de">
+        <normalisation xml:lang="de" />
+      </transcription>
+      <transcription xml:lang="la">Alit et protegit.</transcription>
+    </motto>
+    <pictura xml:id="E000926_P1" xlink:href="http://djatoka.grainger.illinois.edu/adore-djatoka/resolver?url_ver=Z39.88-2004&amp;rft_id=http://emblemimages.grainger.illinois.edu/emblematapolitic00isel/JP2Processed/emblematapolitic00isel_0047.jp2&amp;svc_id=info:lanl-repo/svc/getRegion&amp;svc_val_fmt=info:ofi/fmt:kev:mtx:jpeg2000&amp;svc.format=image/jpeg&amp;svc.level=5&amp;svc.rotate=0&amp;svc.region=468,404,1780,1292">
+      <iconclass rdf:about="http://www.iconclass.org/rkd/11P4">
+        <skos:notation>11P4</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/34B232(+52)">
+        <skos:notation>34B232(+52)</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/34B232(+942)">
+        <skos:notation>34B232(+942)</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/34B232(+945)">
+        <skos:notation>34B232(+945)</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/44B10">
+        <skos:notation>44B10</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/44B127">
+        <skos:notation>44B127</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/54E42(+4)">
+        <skos:notation>54E42(+4)</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/86(ALIT ET PROTEGIT)">
+        <skos:notation>86(ALIT ET PROTEGIT)</skos:notation>
+      </iconclass>
+    </pictura>
+  </emblem>
+  <emblem xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:spine="http://diglib.hab.de/rules/schema/emblem" xml:id="E000927" citeNo="16.0" xlink:href="http://emblemimages.grainger.illinois.edu/emblematapolitic00isel/JP2Processed/emblematapolitic00isel_0049.jp2" globalID="http://hdl.handle.net/10111/EmblemRegistry:E000927">
+    <motto>
+      <transcription xml:lang="de">
+        <normalisation xml:lang="de" />
+      </transcription>
+      <transcription xml:lang="la">Spiritus, durissima coquit.</transcription>
+    </motto>
+    <pictura xml:id="E000927_P1" xlink:href="http://djatoka.grainger.illinois.edu/adore-djatoka/resolver?url_ver=Z39.88-2004&amp;rft_id=http://emblemimages.grainger.illinois.edu/emblematapolitic00isel/JP2Processed/emblematapolitic00isel_0049.jp2&amp;svc_id=info:lanl-repo/svc/getRegion&amp;svc_val_fmt=info:ofi/fmt:kev:mtx:jpeg2000&amp;svc.format=image/jpeg&amp;svc.level=5&amp;svc.rotate=0&amp;svc.region=460,444,1736,1316">
+      <iconclass rdf:about="http://www.iconclass.org/rkd/25F38(OSTRICH)(+45)">
+        <skos:notation>25F38(OSTRICH)(+45)</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/25F38(OSTRICH)(+5245)">
+        <skos:notation>25F38(OSTRICH)(+5245)</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/25I12">
+        <skos:notation>25I12</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/47B11111">
+        <skos:notation>47B11111</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/59C2(+4)">
+        <skos:notation>59C2(+4)</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/86(SPIRITUS DURISSIMA COQUIT)">
+        <skos:notation>86(SPIRITUS DURISSIMA COQUIT)</skos:notation>
+      </iconclass>
+    </pictura>
+  </emblem>
+  <emblem xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:spine="http://diglib.hab.de/rules/schema/emblem" xml:id="E000928" citeNo="17.0" xlink:href="http://emblemimages.grainger.illinois.edu/emblematapolitic00isel/JP2Processed/emblematapolitic00isel_0051.jp2" globalID="http://hdl.handle.net/10111/EmblemRegistry:E000928">
+    <motto>
+      <transcription xml:lang="de">
+        <normalisation xml:lang="de" />
+      </transcription>
+      <transcription xml:lang="la">Hoc foedere tuti.</transcription>
+    </motto>
+    <pictura xml:id="E000928_P1" xlink:href="http://djatoka.grainger.illinois.edu/adore-djatoka/resolver?url_ver=Z39.88-2004&amp;rft_id=http://emblemimages.grainger.illinois.edu/emblematapolitic00isel/JP2Processed/emblematapolitic00isel_0051.jp2&amp;svc_id=info:lanl-repo/svc/getRegion&amp;svc_val_fmt=info:ofi/fmt:kev:mtx:jpeg2000&amp;svc.format=image/jpeg&amp;svc.level=5&amp;svc.rotate=0&amp;svc.region=484,312,1732,1344">
+      <iconclass rdf:about="http://www.iconclass.org/rkd/11A23:54E42(+4)">
+        <skos:notation>11A23:54E42(+4)</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/11Q712">
+        <skos:notation>11Q712</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/25H18">
+        <skos:notation>25H18</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/25I12">
+        <skos:notation>25I12</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/26B2">
+        <skos:notation>26B2</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/61E(NUREMBERG)">
+        <skos:notation>61E(NUREMBERG)</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/61E(NÜRNBERG)">
+        <skos:notation>61E(NÜRNBERG)</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/86(HOC FOEDERE TUTI)">
+        <skos:notation>86(HOC FOEDERE TUTI)</skos:notation>
+      </iconclass>
+    </pictura>
+  </emblem>
+  <emblem xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:spine="http://diglib.hab.de/rules/schema/emblem" xml:id="E000929" citeNo="18.0" xlink:href="http://emblemimages.grainger.illinois.edu/emblematapolitic00isel/JP2Processed/emblematapolitic00isel_0053.jp2" globalID="http://hdl.handle.net/10111/EmblemRegistry:E000929">
+    <motto>
+      <transcription xml:lang="de">
+        <normalisation xml:lang="de" />
+      </transcription>
+      <transcription xml:lang="la">Ubi onus Ibi sonus.</transcription>
+    </motto>
+    <pictura xml:id="E000929_P1" xlink:href="http://djatoka.grainger.illinois.edu/adore-djatoka/resolver?url_ver=Z39.88-2004&amp;rft_id=http://emblemimages.grainger.illinois.edu/emblematapolitic00isel/JP2Processed/emblematapolitic00isel_0053.jp2&amp;svc_id=info:lanl-repo/svc/getRegion&amp;svc_val_fmt=info:ofi/fmt:kev:mtx:jpeg2000&amp;svc.format=image/jpeg&amp;svc.level=5&amp;svc.rotate=0&amp;svc.region=464,308,1728,1340">
+      <iconclass rdf:about="http://www.iconclass.org/rkd/11R5">
+        <skos:notation>11R5</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/11R71">
+        <skos:notation>11R71</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/23U24">
+        <skos:notation>23U24</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/25I12">
+        <skos:notation>25I12</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/31A2364">
+        <skos:notation>31A2364</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/31D11221(+56)">
+        <skos:notation>31D11221(+56)</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/31D11221(+89)">
+        <skos:notation>31D11221(+89)</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/31F26">
+        <skos:notation>31F26</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/41A3372">
+        <skos:notation>41A3372</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/59B32(+4)">
+        <skos:notation>59B32(+4)</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/86(UBI ONUS IBI SONUS)">
+        <skos:notation>86(UBI ONUS IBI SONUS)</skos:notation>
+      </iconclass>
+    </pictura>
+  </emblem>
+  <emblem xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:spine="http://diglib.hab.de/rules/schema/emblem" xml:id="E000930" citeNo="19.0" xlink:href="http://emblemimages.grainger.illinois.edu/emblematapolitic00isel/JP2Processed/emblematapolitic00isel_0055.jp2" globalID="http://hdl.handle.net/10111/EmblemRegistry:E000930">
+    <motto>
+      <transcription xml:lang="de">
+        <normalisation xml:lang="de" />
+      </transcription>
+      <transcription xml:lang="la">His nititur Orbis.</transcription>
+    </motto>
+    <pictura xml:id="E000930_P1" xlink:href="http://djatoka.grainger.illinois.edu/adore-djatoka/resolver?url_ver=Z39.88-2004&amp;rft_id=http://emblemimages.grainger.illinois.edu/emblematapolitic00isel/JP2Processed/emblematapolitic00isel_0055.jp2&amp;svc_id=info:lanl-repo/svc/getRegion&amp;svc_val_fmt=info:ofi/fmt:kev:mtx:jpeg2000&amp;svc.format=image/jpeg&amp;svc.level=5&amp;svc.rotate=0&amp;svc.region=496,436,1752,1276">
+      <iconclass rdf:about="http://www.iconclass.org/rkd/25A13">
+        <skos:notation>25A13</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/44B0">
+        <skos:notation>44B0</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/45C13(SWORD)">
+        <skos:notation>45C13(SWORD)</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/49M32">
+        <skos:notation>49M32</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/53C11(+4)">
+        <skos:notation>53C11(+4)</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/53CC1(+4)">
+        <skos:notation>53CC1(+4)</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/86(HIC NITITUR ORBIS)">
+        <skos:notation>86(HIC NITITUR ORBIS)</skos:notation>
+      </iconclass>
+    </pictura>
+  </emblem>
+  <emblem xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:spine="http://diglib.hab.de/rules/schema/emblem" xml:id="E000931" citeNo="20.0" xlink:href="http://emblemimages.grainger.illinois.edu/emblematapolitic00isel/JP2Processed/emblematapolitic00isel_0057.jp2" globalID="http://hdl.handle.net/10111/EmblemRegistry:E000931">
+    <motto>
+      <transcription xml:lang="de">
+        <normalisation xml:lang="de" />
+      </transcription>
+      <transcription xml:lang="la">Lex regit arma tuentur.</transcription>
+    </motto>
+    <pictura xml:id="E000931_P1" xlink:href="http://djatoka.grainger.illinois.edu/adore-djatoka/resolver?url_ver=Z39.88-2004&amp;rft_id=http://emblemimages.grainger.illinois.edu/emblematapolitic00isel/JP2Processed/emblematapolitic00isel_0057.jp2&amp;svc_id=info:lanl-repo/svc/getRegion&amp;svc_val_fmt=info:ofi/fmt:kev:mtx:jpeg2000&amp;svc.format=image/jpeg&amp;svc.level=5&amp;svc.rotate=0&amp;svc.region=428,360,1744,1316">
+      <iconclass rdf:about="http://www.iconclass.org/rkd/11A23:54E42(+4)">
+        <skos:notation>11A23:54E42(+4)</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/11L211">
+        <skos:notation>11L211</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/11Q7141">
+        <skos:notation>11Q7141</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/31A2245(+933)">
+        <skos:notation>31A2245(+933)</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/31A25552">
+        <skos:notation>31A25552</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/31A2763(+0)">
+        <skos:notation>31A2763(+0)</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/45C13(SWORD)">
+        <skos:notation>45C13(SWORD)</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/86(LEX REGIT ARMA TUENTUR)">
+        <skos:notation>86(LEX REGIT ARMA TUENTUR)</skos:notation>
+      </iconclass>
+    </pictura>
+  </emblem>
+  <emblem xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:spine="http://diglib.hab.de/rules/schema/emblem" xml:id="E000932" citeNo="21.0" xlink:href="http://emblemimages.grainger.illinois.edu/emblematapolitic00isel/JP2Processed/emblematapolitic00isel_0059.jp2" globalID="http://hdl.handle.net/10111/EmblemRegistry:E000932">
+    <motto>
+      <transcription xml:lang="de">
+        <normalisation xml:lang="de" />
+      </transcription>
+      <transcription xml:lang="la">Pro Grege.</transcription>
+    </motto>
+    <pictura xml:id="E000932_P1" xlink:href="http://djatoka.grainger.illinois.edu/adore-djatoka/resolver?url_ver=Z39.88-2004&amp;rft_id=http://emblemimages.grainger.illinois.edu/emblematapolitic00isel/JP2Processed/emblematapolitic00isel_0059.jp2&amp;svc_id=info:lanl-repo/svc/getRegion&amp;svc_val_fmt=info:ofi/fmt:kev:mtx:jpeg2000&amp;svc.format=image/jpeg&amp;svc.level=5&amp;svc.rotate=0&amp;svc.region=500,312,1756,1296">
+      <iconclass rdf:about="http://www.iconclass.org/rkd/25D12">
+        <skos:notation>25D12</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/25F37(CRANE)(+5245)">
+        <skos:notation>25F37(CRANE)(+5245)</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/25H213">
+        <skos:notation>25H213</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/44B10">
+        <skos:notation>44B10</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/52A23(+4)">
+        <skos:notation>52A23(+4)</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/86(PRO GREGE)">
+        <skos:notation>86(PRO GREGE)</skos:notation>
+      </iconclass>
+    </pictura>
+  </emblem>
+  <emblem xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:spine="http://diglib.hab.de/rules/schema/emblem" xml:id="E000933" citeNo="22.0" xlink:href="http://emblemimages.grainger.illinois.edu/emblematapolitic00isel/JP2Processed/emblematapolitic00isel_0061.jp2" globalID="http://hdl.handle.net/10111/EmblemRegistry:E000933">
+    <motto>
+      <transcription xml:lang="de">
+        <normalisation xml:lang="de" />
+      </transcription>
+      <transcription xml:lang="la">Parcere subjectis.</transcription>
+    </motto>
+    <pictura xml:id="E000933_P1" xlink:href="http://djatoka.grainger.illinois.edu/adore-djatoka/resolver?url_ver=Z39.88-2004&amp;rft_id=http://emblemimages.grainger.illinois.edu/emblematapolitic00isel/JP2Processed/emblematapolitic00isel_0061.jp2&amp;svc_id=info:lanl-repo/svc/getRegion&amp;svc_val_fmt=info:ofi/fmt:kev:mtx:jpeg2000&amp;svc.format=image/jpeg&amp;svc.level=5&amp;svc.rotate=0&amp;svc.region=428,396,1684,1340">
+      <iconclass rdf:about="http://www.iconclass.org/rkd/25F23(LION)(+44)">
+        <skos:notation>25F23(LION)(+44)</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/25I5">
+        <skos:notation>25I5</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/44B10">
+        <skos:notation>44B10</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/44B127">
+        <skos:notation>44B127</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/47I2133(+91)">
+        <skos:notation>47I2133(+91)</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/47I2133(+944)">
+        <skos:notation>47I2133(+944)</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/47I2133(+9536)">
+        <skos:notation>47I2133(+9536)</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/53C11(+4)">
+        <skos:notation>53C11(+4)</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/53CC1(+4)">
+        <skos:notation>53CC1(+4)</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/57A73(+4)">
+        <skos:notation>57A73(+4)</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/86(PARCERE SUBIECTIS)">
+        <skos:notation>86(PARCERE SUBIECTIS)</skos:notation>
+      </iconclass>
+    </pictura>
+  </emblem>
+  <emblem xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:spine="http://diglib.hab.de/rules/schema/emblem" xml:id="E000934" citeNo="23.0" xlink:href="http://emblemimages.grainger.illinois.edu/emblematapolitic00isel/JP2Processed/emblematapolitic00isel_0063.jp2" globalID="http://hdl.handle.net/10111/EmblemRegistry:E000934">
+    <motto>
+      <transcription xml:lang="de">
+        <normalisation xml:lang="de" />
+      </transcription>
+      <transcription xml:lang="la">Pro aris focisque.</transcription>
+    </motto>
+    <pictura xml:id="E000934_P1" xlink:href="http://djatoka.grainger.illinois.edu/adore-djatoka/resolver?url_ver=Z39.88-2004&amp;rft_id=http://emblemimages.grainger.illinois.edu/emblematapolitic00isel/JP2Processed/emblematapolitic00isel_0063.jp2&amp;svc_id=info:lanl-repo/svc/getRegion&amp;svc_val_fmt=info:ofi/fmt:kev:mtx:jpeg2000&amp;svc.format=image/jpeg&amp;svc.level=5&amp;svc.rotate=0&amp;svc.region=504,404,1780,1312">
+      <iconclass rdf:about="http://www.iconclass.org/rkd/25F33(+512)">
+        <skos:notation>25F33(+512)</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/25F33(+5262)">
+        <skos:notation>25F33(+5262)</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/25F37(STORK)(+421)">
+        <skos:notation>25F37(STORK)(+421)</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/25F37(STORK)(+51)">
+        <skos:notation>25F37(STORK)(+51)</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/44B10">
+        <skos:notation>44B10</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/44B127">
+        <skos:notation>44B127</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/54E42(+4)">
+        <skos:notation>54E42(+4)</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/86(PRO ARIS FOCISQUE)">
+        <skos:notation>86(PRO ARIS FOCISQUE)</skos:notation>
+      </iconclass>
+    </pictura>
+  </emblem>
+  <emblem xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:spine="http://diglib.hab.de/rules/schema/emblem" xml:id="E000935" citeNo="24.0" xlink:href="http://emblemimages.grainger.illinois.edu/emblematapolitic00isel/JP2Processed/emblematapolitic00isel_0065.jp2" globalID="http://hdl.handle.net/10111/EmblemRegistry:E000935">
+    <motto>
+      <transcription xml:lang="de">
+        <normalisation xml:lang="de" />
+      </transcription>
+      <transcription xml:lang="la">Dulcis Concordiae fructus.</transcription>
+    </motto>
+    <pictura xml:id="E000935_P1" xlink:href="http://djatoka.grainger.illinois.edu/adore-djatoka/resolver?url_ver=Z39.88-2004&amp;rft_id=http://emblemimages.grainger.illinois.edu/emblematapolitic00isel/JP2Processed/emblematapolitic00isel_0065.jp2&amp;svc_id=info:lanl-repo/svc/getRegion&amp;svc_val_fmt=info:ofi/fmt:kev:mtx:jpeg2000&amp;svc.format=image/jpeg&amp;svc.level=5&amp;svc.rotate=0&amp;svc.region=464,312,1744,1288">
+      <iconclass rdf:about="http://www.iconclass.org/rkd/25F711(BEE)(+5262)">
+        <skos:notation>25F711(BEE)(+5262)</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/25G3(+21)">
+        <skos:notation>25G3(+21)</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/45A232">
+        <skos:notation>45A232</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/47I242">
+        <skos:notation>47I242</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/47I243(+95262)">
+        <skos:notation>47I243(+95262)</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/54E31(+4)">
+        <skos:notation>54E31(+4)</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/86(DULCIS CONCORDIAE FRUCTUS)">
+        <skos:notation>86(DULCIS CONCORDIAE FRUCTUS)</skos:notation>
+      </iconclass>
+    </pictura>
+  </emblem>
+  <emblem xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:spine="http://diglib.hab.de/rules/schema/emblem" xml:id="E000936" citeNo="25.0" xlink:href="http://emblemimages.grainger.illinois.edu/emblematapolitic00isel/JP2Processed/emblematapolitic00isel_0067.jp2" globalID="http://hdl.handle.net/10111/EmblemRegistry:E000936">
+    <motto>
+      <transcription xml:lang="de">
+        <normalisation xml:lang="de" />
+      </transcription>
+      <transcription xml:lang="la">Anima Consilii silentium.</transcription>
+    </motto>
+    <pictura xml:id="E000936_P1" xlink:href="http://djatoka.grainger.illinois.edu/adore-djatoka/resolver?url_ver=Z39.88-2004&amp;rft_id=http://emblemimages.grainger.illinois.edu/emblematapolitic00isel/JP2Processed/emblematapolitic00isel_0067.jp2&amp;svc_id=info:lanl-repo/svc/getRegion&amp;svc_val_fmt=info:ofi/fmt:kev:mtx:jpeg2000&amp;svc.format=image/jpeg&amp;svc.level=5&amp;svc.rotate=0&amp;svc.region=556,344,1752,1296">
+      <iconclass rdf:about="http://www.iconclass.org/rkd/25I5">
+        <skos:notation>25I5</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/31A233">
+        <skos:notation>31A233</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/31A25561">
+        <skos:notation>31A25561</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/41A4231">
+        <skos:notation>41A4231</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/44B1212">
+        <skos:notation>44B1212</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/44B127">
+        <skos:notation>44B127</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/44B1322">
+        <skos:notation>44B1322</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/44B192">
+        <skos:notation>44B192</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/44B195">
+        <skos:notation>44B195</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/45C22">
+        <skos:notation>45C22</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/45C221">
+        <skos:notation>45C221</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/48A9823">
+        <skos:notation>48A9823</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/52DD3(+4)">
+        <skos:notation>52DD3(+4)</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/86(ANIMA CONSILII SILENTIUM)">
+        <skos:notation>86(ANIMA CONSILII SILENTIUM)</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/98B(ALEXANDER THE GREAT)512">
+        <skos:notation>98B(ALEXANDER THE GREAT)512</skos:notation>
+      </iconclass>
+    </pictura>
+  </emblem>
+  <emblem xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:spine="http://diglib.hab.de/rules/schema/emblem" xml:id="E000937" citeNo="26.0" xlink:href="http://emblemimages.grainger.illinois.edu/emblematapolitic00isel/JP2Processed/emblematapolitic00isel_0069.jp2" globalID="http://hdl.handle.net/10111/EmblemRegistry:E000937">
+    <motto>
+      <transcription xml:lang="de">
+        <normalisation xml:lang="de" />
+      </transcription>
+      <transcription xml:lang="la">Ne Corrumpar.</transcription>
+    </motto>
+    <pictura xml:id="E000937_P1" xlink:href="http://djatoka.grainger.illinois.edu/adore-djatoka/resolver?url_ver=Z39.88-2004&amp;rft_id=http://emblemimages.grainger.illinois.edu/emblematapolitic00isel/JP2Processed/emblematapolitic00isel_0069.jp2&amp;svc_id=info:lanl-repo/svc/getRegion&amp;svc_val_fmt=info:ofi/fmt:kev:mtx:jpeg2000&amp;svc.format=image/jpeg&amp;svc.level=5&amp;svc.rotate=0&amp;svc.region=564,408,1752,1284">
+      <iconclass rdf:about="http://www.iconclass.org/rkd/31A2331">
+        <skos:notation>31A2331</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/31A2523">
+        <skos:notation>31A2523</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/31AA2531">
+        <skos:notation>31AA2531</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/33A49">
+        <skos:notation>33A49</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/41A7711">
+        <skos:notation>41A7711</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/41A777">
+        <skos:notation>41A777</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/44B10">
+        <skos:notation>44B10</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/44B1211">
+        <skos:notation>44B1211</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/44B1322">
+        <skos:notation>44B1322</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/48A9844">
+        <skos:notation>48A9844</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/59C221(+4)">
+        <skos:notation>59C221(+4)</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/86(NE CORRUMPAR)">
+        <skos:notation>86(NE CORRUMPAR)</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/98B(FABRICIUS, C.)52">
+        <skos:notation>98B(FABRICIUS, C.)52</skos:notation>
+      </iconclass>
+    </pictura>
+  </emblem>
+  <emblem xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:spine="http://diglib.hab.de/rules/schema/emblem" xml:id="E000938" citeNo="27.0" xlink:href="http://emblemimages.grainger.illinois.edu/emblematapolitic00isel/JP2Processed/emblematapolitic00isel_0071.jp2" globalID="http://hdl.handle.net/10111/EmblemRegistry:E000938">
+    <motto>
+      <transcription xml:lang="de">
+        <normalisation xml:lang="de" />
+      </transcription>
+      <transcription xml:lang="la">Affectus Comprime.</transcription>
+    </motto>
+    <pictura xml:id="E000938_P1" xlink:href="http://djatoka.grainger.illinois.edu/adore-djatoka/resolver?url_ver=Z39.88-2004&amp;rft_id=http://emblemimages.grainger.illinois.edu/emblematapolitic00isel/JP2Processed/emblematapolitic00isel_0071.jp2&amp;svc_id=info:lanl-repo/svc/getRegion&amp;svc_val_fmt=info:ofi/fmt:kev:mtx:jpeg2000&amp;svc.format=image/jpeg&amp;svc.level=5&amp;svc.rotate=0&amp;svc.region=500,392,1772,1292">
+      <iconclass rdf:about="http://www.iconclass.org/rkd/25I12">
+        <skos:notation>25I12</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/26A">
+        <skos:notation>26A</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/31A2221">
+        <skos:notation>31A2221</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/31A2245">
+        <skos:notation>31A2245</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/31A2763(+0)">
+        <skos:notation>31A2763(+0)</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/47D8(TONGS)">
+        <skos:notation>47D8(TONGS)</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/53B3(+4)">
+        <skos:notation>53B3(+4)</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/86(AFFECTUS COMPRIME)">
+        <skos:notation>86(AFFECTUS COMPRIME)</skos:notation>
+      </iconclass>
+    </pictura>
+  </emblem>
+  <emblem xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:spine="http://diglib.hab.de/rules/schema/emblem" xml:id="E000939" citeNo="28.0" xlink:href="http://emblemimages.grainger.illinois.edu/emblematapolitic00isel/JP2Processed/emblematapolitic00isel_0073.jp2" globalID="http://hdl.handle.net/10111/EmblemRegistry:E000939">
+    <motto>
+      <transcription xml:lang="de">
+        <normalisation xml:lang="de" />
+      </transcription>
+      <transcription xml:lang="la">Manet altera Reo.</transcription>
+    </motto>
+    <pictura xml:id="E000939_P1" xlink:href="http://djatoka.grainger.illinois.edu/adore-djatoka/resolver?url_ver=Z39.88-2004&amp;rft_id=http://emblemimages.grainger.illinois.edu/emblematapolitic00isel/JP2Processed/emblematapolitic00isel_0073.jp2&amp;svc_id=info:lanl-repo/svc/getRegion&amp;svc_val_fmt=info:ofi/fmt:kev:mtx:jpeg2000&amp;svc.format=image/jpeg&amp;svc.level=5&amp;svc.rotate=0&amp;svc.region=520,424,1776,1308">
+      <iconclass rdf:about="http://www.iconclass.org/rkd/31A2352">
+        <skos:notation>31A2352</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/31A2537">
+        <skos:notation>31A2537</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/31A32">
+        <skos:notation>31A32</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/41A381">
+        <skos:notation>41A381</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/41A4231">
+        <skos:notation>41A4231</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/44B1212">
+        <skos:notation>44B1212</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/44B127">
+        <skos:notation>44B127</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/44G111">
+        <skos:notation>44G111</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/44G1111(+54)">
+        <skos:notation>44G1111(+54)</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/44G6">
+        <skos:notation>44G6</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/48A9823">
+        <skos:notation>48A9823</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/59C21(+4)">
+        <skos:notation>59C21(+4)</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/86(MANET ALTERA REO)">
+        <skos:notation>86(MANET ALTERA REO)</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/98B(ALEXANDER THE GREAT)5392">
+        <skos:notation>98B(ALEXANDER THE GREAT)5392</skos:notation>
+      </iconclass>
+    </pictura>
+  </emblem>
+  <emblem xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:spine="http://diglib.hab.de/rules/schema/emblem" xml:id="E000940" citeNo="29.0" xlink:href="http://emblemimages.grainger.illinois.edu/emblematapolitic00isel/JP2Processed/emblematapolitic00isel_0075.jp2" globalID="http://hdl.handle.net/10111/EmblemRegistry:E000940">
+    <motto>
+      <transcription xml:lang="de">
+        <normalisation xml:lang="de" />
+      </transcription>
+      <transcription xml:lang="la">Pro meritis.</transcription>
+    </motto>
+    <pictura xml:id="E000940_P1" xlink:href="http://djatoka.grainger.illinois.edu/adore-djatoka/resolver?url_ver=Z39.88-2004&amp;rft_id=http://emblemimages.grainger.illinois.edu/emblematapolitic00isel/JP2Processed/emblematapolitic00isel_0075.jp2&amp;svc_id=info:lanl-repo/svc/getRegion&amp;svc_val_fmt=info:ofi/fmt:kev:mtx:jpeg2000&amp;svc.format=image/jpeg&amp;svc.level=5&amp;svc.rotate=0&amp;svc.region=552,332,1788,1288">
+      <iconclass rdf:about="http://www.iconclass.org/rkd/25H113">
+        <skos:notation>25H113</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/25I5">
+        <skos:notation>25I5</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/31A2352">
+        <skos:notation>31A2352</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/31D12(+929)">
+        <skos:notation>31D12(+929)</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/31D14(+935)">
+        <skos:notation>31D14(+935)</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/31D16(+9341)">
+        <skos:notation>31D16(+9341)</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/41A7711">
+        <skos:notation>41A7711</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/44G0">
+        <skos:notation>44G0</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/44G1">
+        <skos:notation>44G1</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/44G13">
+        <skos:notation>44G13</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/44G321(SCOURGE)">
+        <skos:notation>44G321(SCOURGE)</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/44G54">
+        <skos:notation>44G54</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/57BB13(+4)">
+        <skos:notation>57BB13(+4)</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/86(PRO MERITIS)">
+        <skos:notation>86(PRO MERITIS)</skos:notation>
+      </iconclass>
+    </pictura>
+  </emblem>
+  <emblem xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:spine="http://diglib.hab.de/rules/schema/emblem" xml:id="E000941" citeNo="30.0" xlink:href="http://emblemimages.grainger.illinois.edu/emblematapolitic00isel/JP2Processed/emblematapolitic00isel_0077.jp2" globalID="http://hdl.handle.net/10111/EmblemRegistry:E000941">
+    <motto>
+      <transcription xml:lang="de">
+        <normalisation xml:lang="de" />
+      </transcription>
+      <transcription xml:lang="la">Sine respectu.</transcription>
+    </motto>
+    <pictura xml:id="E000941_P1" xlink:href="http://djatoka.grainger.illinois.edu/adore-djatoka/resolver?url_ver=Z39.88-2004&amp;rft_id=http://emblemimages.grainger.illinois.edu/emblematapolitic00isel/JP2Processed/emblematapolitic00isel_0077.jp2&amp;svc_id=info:lanl-repo/svc/getRegion&amp;svc_val_fmt=info:ofi/fmt:kev:mtx:jpeg2000&amp;svc.format=image/jpeg&amp;svc.level=5&amp;svc.rotate=0&amp;svc.region=512,384,1740,1292">
+      <iconclass rdf:about="http://www.iconclass.org/rkd/25H11">
+        <skos:notation>25H11</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/31A233(+935)">
+        <skos:notation>31A233(+935)</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/31A2352(+9341)">
+        <skos:notation>31A2352(+9341)</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/41A4231">
+        <skos:notation>41A4231</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/44B1212">
+        <skos:notation>44B1212</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/44B1222">
+        <skos:notation>44B1222</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/44B1271">
+        <skos:notation>44B1271</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/44B152">
+        <skos:notation>44B152</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/44G6">
+        <skos:notation>44G6</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/45C13(SWORD)">
+        <skos:notation>45C13(SWORD)</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/46A24(+0)">
+        <skos:notation>46A24(+0)</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/59C2(+4)">
+        <skos:notation>59C2(+4)</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/86(SINE RESPECTU)">
+        <skos:notation>86(SINE RESPECTU)</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/98B(TRAJAN)52">
+        <skos:notation>98B(TRAJAN)52</skos:notation>
+      </iconclass>
+    </pictura>
+  </emblem>
+  <emblem xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:spine="http://diglib.hab.de/rules/schema/emblem" xml:id="E000942" citeNo="31.0" xlink:href="http://emblemimages.grainger.illinois.edu/emblematapolitic00isel/JP2Processed/emblematapolitic00isel_0079.jp2" globalID="http://hdl.handle.net/10111/EmblemRegistry:E000942">
+    <motto>
+      <transcription xml:lang="de">
+        <normalisation xml:lang="de" />
+      </transcription>
+      <transcription xml:lang="la">Aequabiliter.</transcription>
+    </motto>
+    <pictura xml:id="E000942_P1" xlink:href="http://djatoka.grainger.illinois.edu/adore-djatoka/resolver?url_ver=Z39.88-2004&amp;rft_id=http://emblemimages.grainger.illinois.edu/emblematapolitic00isel/JP2Processed/emblematapolitic00isel_0079.jp2&amp;svc_id=info:lanl-repo/svc/getRegion&amp;svc_val_fmt=info:ofi/fmt:kev:mtx:jpeg2000&amp;svc.format=image/jpeg&amp;svc.level=5&amp;svc.rotate=0&amp;svc.region=516,420,1740,1300">
+      <iconclass rdf:about="http://www.iconclass.org/rkd/25I12">
+        <skos:notation>25I12</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/26A">
+        <skos:notation>26A</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/31A2245(+933)">
+        <skos:notation>31A2245(+933)</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/31A2763(+0)">
+        <skos:notation>31A2763(+0)</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/46B3311">
+        <skos:notation>46B3311</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/51B3(+4)">
+        <skos:notation>51B3(+4)</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/59C21(+4)">
+        <skos:notation>59C21(+4)</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/86(AEQUABILITER)">
+        <skos:notation>86(AEQUABILITER)</skos:notation>
+      </iconclass>
+    </pictura>
+  </emblem>
+  <emblem xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:spine="http://diglib.hab.de/rules/schema/emblem" xml:id="E000943" citeNo="32.0" xlink:href="http://emblemimages.grainger.illinois.edu/emblematapolitic00isel/JP2Processed/emblematapolitic00isel_0081.jp2" globalID="http://hdl.handle.net/10111/EmblemRegistry:E000943">
+    <motto>
+      <transcription xml:lang="de">
+        <normalisation xml:lang="de" />
+      </transcription>
+      <transcription xml:lang="la">Rigorem clementia temperet.</transcription>
+    </motto>
+    <pictura xml:id="E000943_P1" xlink:href="http://djatoka.grainger.illinois.edu/adore-djatoka/resolver?url_ver=Z39.88-2004&amp;rft_id=http://emblemimages.grainger.illinois.edu/emblematapolitic00isel/JP2Processed/emblematapolitic00isel_0081.jp2&amp;svc_id=info:lanl-repo/svc/getRegion&amp;svc_val_fmt=info:ofi/fmt:kev:mtx:jpeg2000&amp;svc.format=image/jpeg&amp;svc.level=5&amp;svc.rotate=0&amp;svc.region=536,392,1752,1340">
+      <iconclass rdf:about="http://www.iconclass.org/rkd/25G3(OLIVE-TREE)(+22)">
+        <skos:notation>25G3(OLIVE-TREE)(+22)</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/25H11">
+        <skos:notation>25H11</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/25I12">
+        <skos:notation>25I12</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/26A">
+        <skos:notation>26A</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/31A2245(+933)">
+        <skos:notation>31A2245(+933)</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/31A2763(+0)">
+        <skos:notation>31A2763(+0)</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/45C13(SWORD)">
+        <skos:notation>45C13(SWORD)</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/53C13(+4)">
+        <skos:notation>53C13(+4)</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/54A43(+4)">
+        <skos:notation>54A43(+4)</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/57A73(+4)">
+        <skos:notation>57A73(+4)</skos:notation>
+      </iconclass>
+      <iconclass rdf:about="http://www.iconclass.org/rkd/86(RIGOREM CLEMENTIA TEMPERET)">
+        <skos:notation>86(RIGOREM CLEMENTIA TEMPERET)</skos:notation>
+      </iconclass>
+    </pictura>
+  </emblem>
+</biblioDesc>

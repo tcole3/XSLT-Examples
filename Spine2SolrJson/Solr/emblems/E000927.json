@@ -1,0 +1,46 @@
+[{
+  "id": "E000927",
+  "bookID": "emblematapolitic00isel",
+  "ark_id": "ark:/13960/t0qr5b33q",
+  "spineXML": "http://emblematica.library.illinois.edu/EmblemSpine/Illinois/emblematapolitic00isel.xml",
+  "search_keywords": "Spiritus, durissima coquit. 25F38(OSTRICH)(+45) 25F38(OSTRICH)(+5245) 25I12 47B11111 59C2(+4) 86(SPIRITUS DURISSIMA COQUIT)",
+  "search_keywords_iconclass_term": null,
+  "search_motto": [
+"Spiritus, durissima coquit."
+],
+  "search_motto_latin": [
+"Spiritus, durissima coquit."
+],
+  "search_motto_english": null,
+  "search_motto_old_german": [
+
+],
+  "search_motto_new_german": [
+
+],
+  "search_motto_dutch": null,
+  "search_motto_italian": null,
+  "search_motto_french": null,
+  "search_motto_greek": null,
+  "search_motto_spanish": null,
+ "search_iconclass": [
+"25F38(OSTRICH)(+45)",
+"25F38(OSTRICH)(+5245)",
+"25I12",
+"47B11111",
+"59C2(+4)",
+"86(SPIRITUS DURISSIMA COQUIT)"
+],
+ "display_motto": "",
+  "display_emblem_link": "http://emblemimages.grainger.illinois.edu/emblematapolitic00isel/JP2Processed/emblematapolitic00isel_0049.jp2",
+  "display_book_title": "Emblemata politica: in aula magna Curiµ Norinbergensis depicta : quµ sacra virtutum suggerunt monita prudenter administrandi fortiterque defendendi rempublicam",
+  "display_book_has_emblems": true,
+  "emblem_more_info_link": null,
+  "scanned_pictura_link": "http://djatoka.grainger.illinois.edu/adore-djatoka/resolver?url_ver=Z39.88-2004&rft_id=http://emblemimages.grainger.illinois.edu/emblematapolitic00isel/JP2Processed/emblematapolitic00isel_0049.jp2&svc_id=info:lanl-repo/svc/getRegion&svc_val_fmt=info:ofi/fmt:kev:mtx:jpeg2000&svc.format=image/jpeg&svc.level=5&svc.rotate=0&svc.region=460,444,1736,1316",
+  "facet_collection_code": "Illinois",
+  "facet_language_code": [
+"lat"
+],
+  "facet_publication_century": "17th Century",
+  "facet_publication_place": "gw Nurembergµ"
+}]
