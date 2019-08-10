@@ -15,4 +15,4 @@ Each folder in this repository contains one or more source XML files, one or mor
 * [XSLT to transform oai_dc to HTML](https://tcole3.github.io/XSLT-Examples/MARC-Illustrations/oai_dc2html.xsl)
 * [Resulting HTML](https://tcole3.github.io/XSLT-Examples/MARC-Illustrations/Results-HtmlFromOai_dc.html)
 * [XSLT extracting names from MARC and displaying as HTML](https://tcole3.github.io/XSLT-Examples/MARC-Illustrations/namesFromMARC.xsl)
-* [Resulting HTML](https://tcole3.github.io/XSLT-Examples/MARC-Illustrations/NameGraphs/Results-NamesFromMarc.html)
+* [Resulting HTML](https://tcole3.github.io/XSLT-Examples/MARC-Illustrations/Results-NamesFromMarc.html)
