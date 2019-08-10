@@ -7,3 +7,12 @@ Each folder in this repository contains one or more source XML files, one or mor
 * [Source XML](https://tcole3.github.io/XSLT-Examples/spreadsheet2jsonld/KolbProustSubset.xml)
 * [XSLT](https://tcole3.github.io/XSLT-Examples/spreadsheet2jsonld/MakeNameGraphs.xsl)
 * [Sample output](https://tcole3.github.io/XSLT-Examples/spreadsheet2jsonld/NameGraphs/adam7.jsonld)
+
+2. oai_dc and html from MARCXML
+* [Sample MARC Record - Source XML](https://tcole3.github.io/XSLT-Examples/MARC-Illustrations/MARC2oai_dc.xsl)
+* [XSLT to transform MARC to oai_dc](https://tcole3.github.io/XSLT-Examples/MARC-Illustrations/MARC2oai_dc.xsl)
+* [Resulting oai_dc record](https://tcole3.github.io/XSLT-Examples/MARC-Illustrations/Results-oai_dcFromMarc.xml)
+* [XSLT to transform oai_dc to HTML](https://tcole3.github.io/XSLT-Examples/MARC-Illustrations/oai_dc2html.xsl)
+* [Resulting HTML](https://tcole3.github.io/XSLT-Examples/MARC-Illustrations/Results-HtmlFromOai_dc.html)
+* [XSLT extracting names from MARC and displaying as HTML](https://tcole3.github.io/XSLT-Examples/MARC-Illustrations/namesFromMARC.xsl)
+* [Resulting HTML](https://tcole3.github.io/XSLT-Examples/MARC-Illustrations/NameGraphs/Results-NamesFromMarc.html)
