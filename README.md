@@ -16,3 +16,10 @@ Each folder in this repository contains one or more source XML files, one or mor
 * [Resulting HTML](https://tcole3.github.io/XSLT-Examples/MARC-Illustrations/Results-HtmlFromOai_dc.html)
 * [XSLT extracting names from MARC and displaying as HTML](https://tcole3.github.io/XSLT-Examples/MARC-Illustrations/namesFromMARC.xsl)
 * [Resulting HTML](https://tcole3.github.io/XSLT-Examples/MARC-Illustrations/Results-NamesFromMarc.html)
+
+3. RDFa from emblem spine metadata 
+* [Sample Spine Record - Source XML](https://tcole3.github.io/XSLT-Examples/spine2RDFa/SpineExample.xml)
+* [XSLT to transform book info from Spine to RDFa](https://tcole3.github.io/XSLT-Examples/spine2RDFa/Spine2BookRDFa.xsl)
+* [Resulting book-level RDFa](https://tcole3.github.io/XSLT-Examples/spine2RDFa/ResultBookRDFa.html)
+* [XSLT to transform emblem info from Spine to RDFa](https://tcole3.github.io/XSLT-Examples/spine2RDFa/Spine2EmblemRDFa.xsl)
+* [Resulting RDFa](https://tcole3.github.io/XSLT-Examples/spine2RDFa/ResultEmblemRDFa.html)
